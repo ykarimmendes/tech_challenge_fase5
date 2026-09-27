@@ -1,95 +1,234 @@
-# Agente SDR Imobiliário — POSTECH Fase 5
+# Agente SDR Imobiliário — Núcleo de IA do Karim
 
-POC acadêmica de atendimento imobiliário com IA generativa: identificar compra, aluguel ou investimento, coletar preferências, qualificar leads, consultar imóveis, retomar conversas, apoiar agendamentos e entregar resumos ao corretor.
+Parte de Karim no projeto POSTECH Fase 5: identificação de intenção, extração de informações, memória básica da conversa, condução das perguntas e resumo para o corretor.
 
-## Estado atual
+O modelo utilizado é **Qwen 2.5 3B**, executado localmente pelo **Ollama**. O Qwen interpreta as mensagens; o código Python valida os dados, atualiza o estado e decide a próxima ação. A demonstração usa o terminal e um adaptador de consulta ao catálogo de imóveis.
 
-Em 27/09/2026, foram corrigidas omissões de bairro/orçamento no aluguel e adicionada proteção da memória durante atualizações. A suíte passou com 17 testes, incluindo aluguel completo, resposta curta de bairro e compra com Qwen real. Veja a [regressão de aluguel](docs/testes/regressao_aluguel.md).
+## 1. Pré-requisitos
 
-Atualização de validação: após corrigir a extração de orçamento composto e a resposta curta de urgência, passaram 13 testes, incluindo uma conversa completa com Qwen real. Veja a [evidência de regressão](docs/testes/regressao_orcamento.md). Isso substitui a indicação anterior de ausência de teste real para esse cenário específico; a avaliação dos demais cenários continua pendente.
+- **Python 3.10 ou superior**. Python 3.11 é utilizado por Karim.
+- **Ollama** instalado e em execução.
+- Modelo **qwen2.5:3b** baixado no Ollama.
+- Arquivos deste projeto, incluindo `data/imoveis.csv`.
 
-Em 26/09/2026, foi implementada a primeira versão do núcleo de Karim: cliente Ollama, extração estruturada, validação, memória por conversa, próximos campos, resumo e demonstração por terminal com consulta aos CSVs. Os 11 testes automatizados passaram com modelo simulado; o Qwen real ainda precisa de avaliação funcional. Dashboard, persistência, scoring oficial, agendamento e follow-up automático continuam pendentes.
+Downloads oficiais: [Python](https://www.python.org/downloads/) e [Ollama](https://ollama.com/download).
 
-## Por onde começar
+Não é necessário instalar pacotes com `pip`: o núcleo e os testes usam somente a biblioteca padrão do Python. Não é necessária chave de API para executar o modelo localmente. O download inicial do modelo requer internet; o atendimento local utiliza o modelo já baixado. A velocidade depende dos recursos da máquina.
 
-1. [Situação das entregas e pendências](docs/organizacao/status_projeto.md).
-2. [Passo a passo do Karim](docs/organizacao/plano_karim.md).
-3. [Fluxos funcionais](docs/funcional/fluxos_funcionais.md) e [regras da conversa](docs/funcional/regras_conversacionais.md).
-4. [Documentação dos dados](docs/dados/documentacao_dados.md).
-5. [Especificação do dashboard](docs/dashboard/especificacao_dashboard.md).
-6. [Enunciado oficial](docs/desafio/enunciado_fase_5.pdf).
-7. [Definições técnicas e contrato para Michele](docs/organizacao/definicoes_tecnicas.md).
+Os comandos abaixo são para **PowerShell no Windows**, executados na pasta do projeto.
 
-## Organização
+## 2. Abrir a pasta e conferir o Python
 
-```text
-data/                      CSVs para consumo pela aplicação
-docs/
-  desafio/                 Enunciado oficial
-  funcional/               Fluxos e regras de Wellington
-  dados/                   Documentação e XLSX consolidado de Rúben
-  dashboard/               Especificação e indicadores de Rúben
-  organizacao/             Diagnóstico, plano de trabalho e inventário
+Na máquina do Karim:
+
+```powershell
+Set-Location 'C:\yehia\dev\fiap\fase_5'
+python --version
 ```
 
-Os 14 arquivos recebidos foram preservados sem alterar seu conteúdo, incluindo a [planilha dos 20 testes de Wellington](docs/testes/casos_de_teste_iniciais.xlsx), recebida posteriormente. O [inventário](docs/organizacao/arquivos_recebidos.json) registra origens, destinos e hashes SHA-256. Os dois PDFs eram idênticos; a segunda cópia está em `recebidos_duplicados/`, ignorada pelo Git.
+Em outro computador, substitua o caminho pela pasta em que o projeto foi salvo.
 
-## Dados disponíveis
+Se `python` não for reconhecido, tente:
 
-| Base | Registros | Finalidade |
-| --- | ---: | --- |
-| `data/imoveis.csv` | 500 | Catálogo, com 452 imóveis disponíveis |
-| `data/leads.csv` | 600 | Perfil, score, classificação e acompanhamento |
-| `data/agendamentos.csv` | 183 | Exemplos de visitas e reuniões |
-| `data/interacoes.csv` | 2.088 | Histórico sintético resumido |
-| `data/regras_qualificacao.csv` | 18 | Critérios e faixas de qualificação |
+```powershell
+py -3 --version
+```
 
-CSV em UTF-8 com BOM, separado por `;`. Campos vazios representam informação ausente. A base usa `Venda` para imóveis e `Compra` para intenção do lead. Os XLSX são materiais de conferência; os CSVs serão a entrada da aplicação. Preservar os dados sintéticos e utilizar `runtime/` para cópias alteradas nas demonstrações.
+Nos próximos comandos, use `py -3` no lugar de `python`, se necessário. Também é possível usar o executável completo. Na instalação do Karim:
 
-## Responsabilidades
+```powershell
+& 'C:\Users\karim\AppData\Local\Programs\Python\Python311\python.exe' --version
+```
 
-| Pessoa | Responsabilidade |
-| --- | --- |
-| Wellington | Fluxos, regras, testes, LGPD, arquitetura documental, README e pitch |
-| Rúben | Bases, regras e implementação de scoring, dashboard e registro de agendamentos |
-| Karim | `agent.py`, `prompts.py`, integração com LLM, intenção, extração, memória e resumo |
-| Michele | `app.py`, interface, busca, persistência e integração dos módulos, follow-up e entrega final |
+## 3. Preparar o Ollama e o Qwen
 
-Rúben implementa o dashboard; Michele integra e valida a arquitetura. Essa divisão segue a distribuição informada pelo grupo e deve orientar a integração, mesmo que a especificação do dashboard também mencione Michele como possível implementadora.
+Abra o aplicativo Ollama. Confira os modelos instalados:
 
-## Execução e entrega
+```powershell
+ollama list
+```
 
-O núcleo usa Python 3.10 ou superior e somente a biblioteca padrão, sem instalação de pacotes Python. O modelo inicial configurável é `qwen2.5:3b`; ainda precisa de avaliação no hardware de execução.
-
-Qwen 2.5 3B já está instalado no Ollama desta máquina. Em outra máquina, baixar o modelo uma vez:
+Se `qwen2.5:3b` não aparecer, baixe o modelo:
 
 ```powershell
 ollama pull qwen2.5:3b
 ```
 
-Com Ollama em execução, abrir o terminal na raiz do projeto:
+Na máquina do Karim, esse modelo já foi instalado. Não é necessário baixá-lo novamente para cada execução.
+
+Para conferir se o serviço está respondendo:
 
 ```powershell
-$env:OLLAMA_MODEL = "qwen2.5:3b"
+Invoke-RestMethod -Uri 'http://localhost:11434/api/tags'
+```
+
+Se o aplicativo não tiver iniciado o serviço, execute em **outro terminal**:
+
+```powershell
+ollama serve
+```
+
+Deixe esse terminal aberto. Se a porta já estiver ocupada pelo Ollama, utilize a instância existente.
+
+## 4. Executar o chat
+
+Configure explicitamente o modelo e o endereço na sessão do PowerShell:
+
+```powershell
+$env:OLLAMA_MODEL = 'qwen2.5:3b'
+$env:OLLAMA_BASE_URL = 'http://localhost:11434'
 python chat_cli.py
 ```
 
-Se a instalação do Windows disponibilizar apenas o lançador `py`, usar `py -3 chat_cli.py`. `.env.example` é referência; o programa lê variáveis do ambiente, não carrega `.env` automaticamente. Não é necessária chave de API para o Ollama local.
+Esses já são os valores padrão do código. Defini-los explicitamente evita utilizar configurações antigas da sessão.
 
-Experimente: “Quero comprar um apartamento em Moema até 900 mil”, responda sobre quartos e urgência, e depois diga “Meu limite agora é 750 mil”. `/resumo` mostra o perfil e `/sair` encerra. A memória do terminal termina ao fechar o processo.
-
-Para executar os testes:
+Alternativa com o Python instalado na máquina do Karim:
 
 ```powershell
+& 'C:\Users\karim\AppData\Local\Programs\Python\Python311\python.exe' .\chat_cli.py
+```
+
+A tela inicial deve mostrar:
+
+```text
+SDR Imobiliário — modelo qwen2.5:3b. /sair encerra. /resumo mostra os dados.
+Você:
+```
+
+O arquivo `.env.example` serve como referência. **O código não carrega arquivos `.env` automaticamente**; copiar ou editar esse arquivo não altera as variáveis da sessão.
+
+## 5. Fazer uma primeira conversa
+
+Digite uma mensagem por vez:
+
+```text
+Quero comprar uma casa em Moema, até 3 milhões, com 2 quartos. Minha urgência é baixa.
+Na verdade o orçamento é 2 milhões e meio.
+/resumo
+```
+
+Confira se o resumo mostra Compra, Casa, Moema, orçamento 2500000, 2 quartos e urgência Baixa. A alteração de orçamento deve preservar os demais dados.
+
+Outros exemplos para testar em conversas novas:
+
+**Aluguel:**
+
+```text
+Quero alugar um apartamento mobiliado no Tatuapé, até 4 mil por mês, com 2 quartos. Minha urgência é alta.
+/resumo
+```
+
+Esperado: Aluguel, Apartamento, Tatuapé, orçamento 4000, 2 quartos, mobiliado Sim e urgência Alta.
+
+**Investimento:**
+
+```text
+Quero investir 800 mil em imóveis. Meu perfil é moderado, espero retorno de 6% ao ano e minha urgência é média.
+/resumo
+```
+
+Esperado: Investimento, ticket 800000, perfil Moderado, retorno esperado 6 e urgência Média.
+
+O resultado depende da interpretação do modelo. Conferir os campos no resumo é parte da validação. Ausência de imóveis compatíveis não significa, por si só, falha de extração.
+
+### Comandos durante o atendimento
+
+| Comando | Resultado |
+| --- | --- |
+| `/resumo` | Exibe o perfil coletado, situação e qualificação disponível |
+| `/sair` | Encerra o programa |
+| `Ctrl+C` | Interrompe o atendimento |
+
+Para uma conversa nova, saia e execute o programa novamente. **A memória fica apenas durante a execução**: fechar ou reiniciar o chat apaga o estado daquela sessão. Após alterar o código, reinicie para carregar as mudanças.
+
+## 6. Executar os testes
+
+### Testes isolados, sem depender do Ollama
+
+```powershell
+Remove-Item Env:RUN_OLLAMA_TESTS -ErrorAction SilentlyContinue
 python -m unittest discover -s tests -v
 ```
 
-Leia o [guia de integração da primeira versão](docs/organizacao/integracao_v1.md). O adaptador de catálogo demonstra busca local por bairro exato (ignorando acentos), preço máximo, mínimo de quartos e preferências positivas. Não interpreta endereços livres ou proximidade geográfica.
+Os testes com IA real aparecem como ignorados (`skipped`). Isso é esperado nesse modo.
 
-O Qwen extrai os dados; nesta primeira versão as perguntas e o resumo são montados pelo código para manter fidelidade ao estado. A naturalidade e a extração precisam ser avaliadas com o modelo real. Não há confirmação ou registro de agendamento nesta versão.
+### Testes com o Qwen real
 
-A pasta ainda não é um repositório Git. Para aproveitar o histórico do grupo, incorporar esta estrutura ao clone do repositório compartilhado. Se este for o início oficial do projeto, inicializar o Git aqui e configurar o remoto correto. Nenhum commit ou envio foi realizado nesta organização.
+Com Ollama ativo e modelo baixado:
 
-Mensagem sugerida para o primeiro commit desses materiais: `docs: organiza bases e especificacoes iniciais do SDR imobiliario`.
+```powershell
+$env:OLLAMA_MODEL = 'qwen2.5:3b'
+$env:OLLAMA_BASE_URL = 'http://localhost:11434'
+$env:RUN_OLLAMA_TESTS = '1'
+python -m unittest discover -s tests -v
+```
 
-A entrega final deverá incluir repositório, README com instruções reais, arquitetura, demonstração funcional, pitch técnico e explicação da IA utilizada, conforme o enunciado.
+Depois, para voltar ao modo sem IA real:
+
+```powershell
+Remove-Item Env:RUN_OLLAMA_TESTS -ErrorAction SilentlyContinue
+```
+
+A última execução registrada aprovou **17 testes**, sendo 14 isolados e 3 métodos com Qwen real. A suíte real inclui aluguel e uma variação, resposta curta de bairro e compra com alteração de orçamento. Os tempos podem variar por máquina.
+
+Evidências: [regressão de aluguel](docs/testes/regressao_aluguel.md) e [regressão de orçamento](docs/testes/regressao_orcamento.md). Esses testes não equivalem à aprovação de todos os 20 casos integrados de Wellington.
+
+## 7. Arquivos da implementação
+
+| Arquivo | Responsabilidade |
+| --- | --- |
+| `agent.py` | Orquestra o atendimento pela função `processar_mensagem(entrada, servicos)` |
+| `prompts.py` | Define instruções e prepara mensagens para extração pela IA |
+| `llm_client.py` | Conecta ao Qwen pela API local do Ollama |
+| `schemas.py` | Define o formato dos dados e valida entradas e extrações |
+| `chat_cli.py` | Interface de demonstração no terminal e memória durante a sessão |
+| `catalogo.py` | Adaptador de leitura e filtro de imóveis para demonstração |
+| `data/imoveis.csv` | Catálogo sintético consultado pela demonstração |
+| `tests/test_agent.py` | Testes da lógica com serviços simulados |
+| `tests/test_ollama_live.py` | Testes opcionais com o modelo real |
+| `.env.example` | Referência das variáveis de configuração |
+
+O catálogo utiliza CSV UTF-8 com BOM, separado por ponto e vírgula. Filtra por tipo, negócio, localização, orçamento e preferências. Quartos são tratados como **quantidade mínima**; apresenta até três opções em ordem crescente de preço. A urgência não altera essa ordenação. A aplicação de demonstração não modifica os CSVs.
+
+## 8. Entrega para Michele
+
+O ponto de integração é:
+
+```python
+resultado = processar_mensagem(entrada, servicos)
+```
+
+A aplicação envia identificadores, mensagem, estado anterior, histórico e data/hora com fuso. Recebe resposta, estado atualizado, campos alterados/faltantes, ação, imóveis apresentados e resumo. Ela deve guardar o estado devolvido e enviá-lo na próxima chamada.
+
+Consulte o [exemplo completo de integração](docs/organizacao/integracao_v1.md).
+
+### Limites desta entrega
+
+- O Qwen interpreta as mensagens; perguntas e resumo são majoritariamente montados pelo Python.
+- Score e classificação permanecem pendentes enquanto o serviço de Rúben não estiver conectado.
+- Pedido de humano devolve uma ação para a aplicação; não envia contato a um corretor real.
+- O núcleo não confirma nem registra agendamentos. O campo de solicitação está reservado.
+- Interface final, armazenamento permanente, dashboard e disparo automático de follow-up pertencem à integração do projeto.
+
+## 9. Problemas comuns
+
+| Problema | Como verificar |
+| --- | --- |
+| `python` não reconhecido | Use `py -3` ou o caminho completo do executável |
+| `ollama` não reconhecido | Confira a instalação e reabra o terminal após instalar |
+| Não foi possível interpretar a mensagem | Confira o serviço, `ollama list` e o modelo configurado; a mensagem também pode indicar saída inválida da IA |
+| A resposta demora | O primeiro uso pode carregar o modelo; o cliente tem limite padrão de 60 segundos por chamada |
+| O modelo exibido não é Qwen | Defina `OLLAMA_MODEL=qwen2.5:3b` na sessão e reinicie o chat |
+| Não encontrou imóveis | Confira `/resumo`; todos os filtros precisam corresponder a registros disponíveis |
+| Alterações no código não aparecem | Encerre e execute novamente o programa |
+| Conversa desapareceu após fechar | A versão de terminal não possui persistência |
+
+## Materiais do grupo
+
+- [Fluxos funcionais](docs/funcional/fluxos_funcionais.md) e [regras conversacionais](docs/funcional/regras_conversacionais.md).
+- [Documentação das bases](docs/dados/documentacao_dados.md).
+- [Casos de teste de Wellington](docs/testes/casos_de_teste_iniciais.xlsx).
+- [Inventário dos arquivos recebidos](docs/organizacao/arquivos_recebidos.json).
+- [Enunciado do desafio](docs/desafio/enunciado_fase_5.pdf).
+
+Código, testes, bases sintéticas e documentação devem ser versionados. O `.gitignore` exclui ambientes locais, credenciais, caches, modelos e futuros dados de execução em `runtime/`.
