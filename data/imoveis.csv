@@ -1,0 +1,501 @@
+﻿id_imovel;tipo_negocio;tipo_imovel;cidade;zona;bairro;preco;quartos;banheiros;area_m2;vagas;condominio;iptu;mobiliado;aceita_pet;proximo_metro;imovel_novo;disponivel;aluguel_estimado;yield_anual_pct;destaque;descricao
+IMV0001;Aluguel;Cobertura;São Paulo;Norte;Mandaqui;10450;2;3;264;4;1350;330;Não;Sim;Sim;Sim;Sim;10450;4.67;Não;Cobertura em Mandaqui, 264 m², 2 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0002;Venda;Casa;São Paulo;Leste;Penha;1290000;4;4;218;4;0;300;Não;Sim;Sim;Não;Sim;7350;6.84;Não;Casa em Penha, 218 m², 4 quarto(s), 4 banheiro(s), 4 vaga(s).
+IMV0003;Venda;Apartamento;São Paulo;Norte;Santana;780000;3;3;120;3;2000;470;Não;Não;Não;Não;Sim;4400;6.77;Não;Apartamento em Santana, 120 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0004;Aluguel;Apartamento;São Paulo;Centro;Consolação;2500;2;3;69;2;1200;760;Não;Sim;Sim;Não;Sim;2500;4.96;Não;Apartamento em Consolação, 69 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0005;Venda;Apartamento;São Paulo;Leste;Belém;1075000;3;4;147;2;2200;420;Sim;Sim;Não;Não;Sim;5750;6.42;Não;Apartamento em Belém, 147 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0006;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;2375000;4;4;199;3;550;410;Não;Sim;Sim;Não;Sim;12400;6.27;Não;Apartamento em Alto de Pinheiros, 199 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0007;Venda;Cobertura;São Paulo;Oeste;Butantã;4110000;3;2;273;2;450;570;Não;Sim;Sim;Não;Sim;22550;6.58;Não;Cobertura em Butantã, 273 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0008;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;3850;2;2;66;2;500;490;Não;Sim;Não;Não;Sim;3850;5.96;Sim;Apartamento em Jaguaré, 66 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0009;Venda;Apartamento;São Paulo;Norte;Santana;390000;1;2;57;1;2150;390;Não;Sim;Sim;Não;Não;1800;5.54;Não;Apartamento em Santana, 57 m², 1 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0010;Venda;Studio;São Paulo;Leste;Mooca;325000;1;1;46;0;950;190;Não;Sim;Sim;Não;Sim;1250;4.62;Não;Studio em Mooca, 46 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0011;Venda;Apartamento;São Paulo;Leste;Belém;360000;2;2;58;1;1300;620;Não;Não;Sim;Não;Sim;2050;6.83;Não;Apartamento em Belém, 58 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0012;Venda;Studio;São Paulo;Centro;Bela Vista;410000;0;1;47;0;1200;680;Não;Sim;Sim;Não;Sim;1650;4.83;Sim;Studio em Bela Vista, 47 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0013;Aluguel;Cobertura;São Paulo;Leste;Vila Prudente;6000;2;2;181;3;1900;160;Não;Sim;Não;Não;Sim;6000;4.44;Sim;Cobertura em Vila Prudente, 181 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0014;Venda;Casa;São Paulo;Leste;Penha;870000;3;2;139;1;0;560;Não;Sim;Sim;Não;Sim;3800;5.24;Não;Casa em Penha, 139 m², 3 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0015;Aluguel;Studio;São Paulo;Sul;Morumbi;2400;0;1;47;0;1650;250;Não;Sim;Sim;Não;Sim;2400;4.76;Não;Studio em Morumbi, 47 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0016;Aluguel;Apartamento;São Paulo;Sul;Vila Mariana;4800;3;4;75;2;1150;630;Sim;Sim;Não;Não;Sim;4800;6.16;Não;Apartamento em Vila Mariana, 75 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0017;Venda;Apartamento;São Paulo;Sul;Santo Amaro;1600000;3;3;136;2;1150;720;Não;Sim;Não;Não;Sim;6350;4.76;Sim;Apartamento em Santo Amaro, 136 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0018;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;4400;4;4;109;3;1100;500;Sim;Sim;Sim;Não;Sim;4400;4.55;Não;Apartamento em Jaguaré, 109 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0019;Venda;Casa;São Paulo;Centro;Bela Vista;1745000;3;2;216;1;0;280;Sim;Sim;Sim;Não;Sim;8550;5.88;Não;Casa em Bela Vista, 216 m², 3 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0020;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;755000;2;2;115;2;900;580;Não;Sim;Sim;Sim;Sim;3600;5.72;Não;Apartamento em Vila Guilherme, 115 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0021;Venda;Casa;São Paulo;Centro;Consolação;2020000;3;2;302;2;0;120;Sim;Sim;Sim;Sim;Sim;9250;5.5;Sim;Casa em Consolação, 302 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0022;Aluguel;Cobertura;São Paulo;Centro;Liberdade;22050;2;2;333;2;950;310;Sim;Sim;Não;Não;Sim;22050;6.75;Não;Cobertura em Liberdade, 333 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0023;Venda;Apartamento;São Paulo;Sul;Saúde;860000;2;2;79;1;2000;440;Sim;Sim;Sim;Não;Sim;3450;4.81;Não;Apartamento em Saúde, 79 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0024;Aluguel;Apartamento;São Paulo;Norte;Santana;2350;1;1;78;0;1150;540;Não;Sim;Não;Sim;Sim;2350;5.27;Não;Apartamento em Santana, 78 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0025;Aluguel;Apartamento;São Paulo;Norte;Tucuruvi;4900;4;4;122;3;2200;200;Sim;Não;Sim;Sim;Sim;4900;6.36;Não;Apartamento em Tucuruvi, 122 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0026;Aluguel;Casa;São Paulo;Sul;Morumbi;10750;3;3;187;1;0;500;Não;Sim;Sim;Não;Sim;10750;6.65;Não;Casa em Morumbi, 187 m², 3 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0027;Aluguel;Apartamento;São Paulo;Oeste;Butantã;4250;2;2;95;2;2200;80;Não;Não;Não;Não;Sim;4250;4.57;Não;Apartamento em Butantã, 95 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0028;Venda;Casa;São Paulo;Norte;Tucuruvi;1660000;3;3;241;2;0;580;Sim;Não;Não;Sim;Sim;9750;7.05;Não;Casa em Tucuruvi, 241 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0029;Venda;Apartamento;São Paulo;Leste;Mooca;805000;4;4;117;3;600;560;Não;Sim;Não;Não;Sim;4700;7.01;Não;Apartamento em Mooca, 117 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0030;Venda;Studio;São Paulo;Leste;Mooca;325000;0;1;43;0;400;800;Não;Sim;Sim;Não;Sim;1850;6.83;Não;Studio em Mooca, 43 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0031;Aluguel;Apartamento;São Paulo;Centro;Cambuci;3250;3;3;92;3;2050;300;Não;Sim;Não;Não;Sim;3250;5.1;Não;Apartamento em Cambuci, 92 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0032;Venda;Casa;São Paulo;Centro;Bela Vista;1475000;5;3;179;1;0;370;Não;Sim;Sim;Sim;Sim;7400;6.02;Não;Casa em Bela Vista, 179 m², 5 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0033;Venda;Apartamento;São Paulo;Sul;Interlagos;1545000;3;4;133;2;700;550;Sim;Sim;Não;Não;Sim;5950;4.62;Sim;Apartamento em Interlagos, 133 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0034;Venda;Apartamento;São Paulo;Oeste;Lapa;1360000;2;3;126;2;1700;340;Não;Não;Sim;Sim;Sim;6050;5.34;Sim;Apartamento em Lapa, 126 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0035;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;1240000;3;3;97;2;1200;660;Não;Sim;Sim;Sim;Sim;5250;5.08;Não;Apartamento em Chácara Santo Antônio, 97 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0036;Venda;Apartamento;São Paulo;Norte;Tucuruvi;575000;3;3;76;3;1800;510;Sim;Sim;Sim;Não;Sim;2850;5.95;Não;Apartamento em Tucuruvi, 76 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0037;Aluguel;Cobertura;São Paulo;Sul;Brooklin;24000;3;3;313;4;2150;120;Sim;Sim;Sim;Não;Sim;24000;5.49;Sim;Cobertura em Brooklin, 313 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0038;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;1605000;3;4;162;2;1500;200;Não;Sim;Sim;Não;Sim;8850;6.62;Não;Apartamento em Vila Madalena, 162 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0039;Venda;Casa;São Paulo;Centro;Liberdade;1510000;3;2;189;1;0;690;Não;Sim;Não;Não;Sim;7250;5.76;Não;Casa em Liberdade, 189 m², 3 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0040;Aluguel;Apartamento;São Paulo;Centro;Consolação;5600;2;3;127;1;1050;270;Não;Sim;Sim;Não;Sim;5600;6.86;Não;Apartamento em Consolação, 127 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0041;Venda;Apartamento;São Paulo;Sul;Jabaquara;845000;2;2;75;1;1200;420;Não;Não;Não;Não;Sim;3250;4.62;Não;Apartamento em Jabaquara, 75 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0042;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;5050;3;4;112;3;1000;410;Não;Sim;Sim;Não;Sim;5050;5.25;Não;Apartamento em Jaguaré, 112 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0043;Venda;Apartamento;São Paulo;Leste;Anália Franco;780000;3;3;130;2;750;260;Sim;Sim;Não;Sim;Não;3850;5.92;Não;Apartamento em Anália Franco, 130 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0044;Venda;Casa;São Paulo;Sul;Morumbi;1600000;2;3;143;3;0;150;Não;Sim;Não;Não;Sim;6250;4.69;Sim;Casa em Morumbi, 143 m², 2 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0045;Venda;Casa;São Paulo;Sul;Vila Mariana;3065000;3;4;307;3;0;450;Sim;Sim;Sim;Não;Sim;17400;6.81;Sim;Casa em Vila Mariana, 307 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0046;Venda;Apartamento;São Paulo;Centro;Bela Vista;410000;1;2;48;0;1800;200;Não;Não;Não;Não;Sim;1700;4.98;Não;Apartamento em Bela Vista, 48 m², 1 quarto(s), 2 banheiro(s), 0 vaga(s).
+IMV0047;Venda;Casa;São Paulo;Centro;Liberdade;725000;3;4;106;2;0;790;Não;Não;Sim;Sim;Sim;3850;6.37;Não;Casa em Liberdade, 106 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0048;Venda;Apartamento;São Paulo;Centro;República;575000;2;2;67;1;1700;600;Não;Sim;Sim;Não;Sim;2550;5.32;Não;Apartamento em República, 67 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0049;Venda;Studio;São Paulo;Oeste;Pompeia;305000;0;1;29;0;500;730;Não;Não;Sim;Não;Sim;1650;6.49;Não;Studio em Pompeia, 29 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0050;Venda;Apartamento;São Paulo;Leste;Belém;1045000;3;3;151;2;300;250;Sim;Sim;Sim;Não;Sim;4950;5.68;Não;Apartamento em Belém, 151 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0051;Venda;Studio;São Paulo;Leste;Itaquera;270000;1;1;35;0;1000;270;Sim;Sim;Sim;Sim;Sim;1450;6.44;Não;Studio em Itaquera, 35 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0052;Aluguel;Apartamento;São Paulo;Sul;Jabaquara;9300;4;4;160;3;1200;670;Não;Sim;Sim;Não;Sim;9300;5.92;Não;Apartamento em Jabaquara, 160 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0053;Venda;Studio;São Paulo;Oeste;Alto de Pinheiros;440000;0;1;35;0;2000;630;Não;Sim;Sim;Não;Sim;1700;4.64;Não;Studio em Alto de Pinheiros, 35 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0054;Venda;Apartamento;São Paulo;Centro;Santa Cecília;1030000;3;3;119;3;1500;120;Não;Não;Sim;Não;Sim;5200;6.06;Não;Apartamento em Santa Cecília, 119 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0055;Venda;Studio;São Paulo;Sul;Santo Amaro;460000;1;1;38;1;600;150;Não;Sim;Não;Não;Sim;2050;5.35;Não;Studio em Santo Amaro, 38 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0056;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1070000;2;2;96;1;1600;780;Não;Não;Não;Sim;Sim;5650;6.34;Não;Apartamento em Pinheiros, 96 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0057;Venda;Casa;São Paulo;Centro;Liberdade;1625000;4;3;207;1;0;280;Sim;Não;Não;Não;Sim;7400;5.46;Não;Casa em Liberdade, 207 m², 4 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0058;Aluguel;Apartamento;São Paulo;Leste;Anália Franco;4300;4;4;159;3;1900;480;Não;Sim;Sim;Sim;Sim;4300;4.55;Não;Apartamento em Anália Franco, 159 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0059;Aluguel;Apartamento;São Paulo;Leste;Itaquera;2200;2;3;66;2;800;620;Não;Não;Sim;Não;Sim;2200;6.0;Não;Apartamento em Itaquera, 66 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0060;Venda;Apartamento;São Paulo;Oeste;Perdizes;950000;3;3;80;3;1200;530;Sim;Sim;Sim;Sim;Sim;3750;4.74;Não;Apartamento em Perdizes, 80 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0061;Venda;Apartamento;São Paulo;Centro;Cambuci;1415000;4;4;182;3;600;780;Sim;Sim;Não;Sim;Sim;7000;5.94;Não;Apartamento em Cambuci, 182 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0062;Aluguel;Apartamento;São Paulo;Sul;Chácara Santo Antônio;4100;4;4;79;3;1000;440;Não;Sim;Não;Não;Sim;4100;5.41;Sim;Apartamento em Chácara Santo Antônio, 79 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0063;Aluguel;Casa;São Paulo;Oeste;Jaguaré;4550;3;2;104;2;0;210;Não;Sim;Não;Sim;Sim;4550;5.25;Não;Casa em Jaguaré, 104 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0064;Aluguel;Cobertura;São Paulo;Norte;Tremembé;6950;3;3;123;2;750;400;Não;Não;Sim;Sim;Sim;6950;6.02;Não;Cobertura em Tremembé, 123 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0065;Venda;Casa;São Paulo;Centro;Cambuci;1585000;3;3;199;4;0;80;Não;Não;Sim;Não;Sim;6500;4.92;Não;Casa em Cambuci, 199 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0066;Venda;Apartamento;São Paulo;Norte;Casa Verde;530000;3;4;81;2;300;210;Não;Não;Sim;Não;Sim;3050;6.91;Não;Apartamento em Casa Verde, 81 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0067;Venda;Apartamento;São Paulo;Centro;Liberdade;1270000;3;3;141;3;1100;530;Não;Sim;Sim;Não;Sim;6500;6.14;Não;Apartamento em Liberdade, 141 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0068;Venda;Apartamento;São Paulo;Leste;Anália Franco;670000;4;4;110;3;1750;140;Não;Não;Não;Sim;Sim;3850;6.9;Não;Apartamento em Anália Franco, 110 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0069;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;500000;3;3;69;3;1700;700;Não;Sim;Não;Não;Sim;2900;6.96;Não;Apartamento em Vila Guilherme, 69 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0070;Venda;Apartamento;São Paulo;Leste;Anália Franco;735000;3;3;106;2;1500;400;Sim;Sim;Sim;Não;Não;2950;4.82;Não;Apartamento em Anália Franco, 106 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0071;Venda;Casa;São Paulo;Sul;Campo Belo;2095000;2;2;208;2;0;360;Não;Não;Sim;Sim;Sim;12200;6.99;Sim;Casa em Campo Belo, 208 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0072;Venda;Apartamento;São Paulo;Norte;Santana;380000;1;1;59;1;400;700;Não;Sim;Sim;Sim;Sim;1750;5.53;Não;Apartamento em Santana, 59 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0073;Venda;Casa;São Paulo;Sul;Saúde;1730000;3;2;174;2;0;780;Não;Não;Não;Não;Sim;9650;6.69;Não;Casa em Saúde, 174 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0074;Aluguel;Apartamento;São Paulo;Sul;Morumbi;5150;3;3;83;3;1200;390;Sim;Sim;Não;Não;Sim;5150;5.83;Não;Apartamento em Morumbi, 83 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0075;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;1100000;2;3;97;2;950;580;Não;Sim;Sim;Sim;Sim;4500;4.91;Não;Apartamento em Alto de Pinheiros, 97 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0076;Venda;Apartamento;São Paulo;Sul;Campo Belo;1015000;2;2;96;1;2050;610;Não;Não;Sim;Não;Sim;4350;5.14;Não;Apartamento em Campo Belo, 96 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0077;Venda;Apartamento;São Paulo;Sul;Moema;1125000;2;2;99;2;1350;130;Não;Sim;Sim;Não;Sim;5800;6.19;Não;Apartamento em Moema, 99 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0078;Venda;Studio;São Paulo;Sul;Vila Mariana;430000;1;1;36;0;2050;110;Não;Sim;Sim;Não;Sim;2450;6.84;Não;Studio em Vila Mariana, 36 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0079;Aluguel;Casa;São Paulo;Oeste;Vila Madalena;6850;4;4;124;1;0;690;Não;Sim;Não;Não;Sim;6850;6.18;Não;Casa em Vila Madalena, 124 m², 4 quarto(s), 4 banheiro(s), 1 vaga(s).
+IMV0080;Venda;Apartamento;São Paulo;Sul;Vila Mariana;1460000;3;4;118;2;1700;210;Não;Sim;Sim;Sim;Sim;8350;6.86;Não;Apartamento em Vila Mariana, 118 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0081;Venda;Apartamento;São Paulo;Sul;Jabaquara;680000;2;3;63;2;950;90;Não;Sim;Sim;Não;Sim;3100;5.47;Não;Apartamento em Jabaquara, 63 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0082;Venda;Studio;São Paulo;Oeste;Pompeia;525000;0;1;41;0;300;480;Não;Sim;Não;Não;Sim;2750;6.29;Não;Studio em Pompeia, 41 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0083;Aluguel;Studio;São Paulo;Sul;Vila Mariana;2950;1;1;41;0;2100;530;Não;Não;Sim;Não;Sim;2950;6.68;Não;Studio em Vila Mariana, 41 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0084;Venda;Cobertura;São Paulo;Sul;Jabaquara;2335000;2;3;148;2;800;80;Não;Sim;Não;Sim;Sim;11000;5.65;Não;Cobertura em Jabaquara, 148 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0085;Aluguel;Apartamento;São Paulo;Leste;Belém;2050;1;1;73;0;1500;320;Não;Não;Não;Não;Sim;2050;5.53;Não;Apartamento em Belém, 73 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0086;Venda;Casa;São Paulo;Oeste;Pompeia;1720000;4;5;157;2;0;200;Não;Não;Sim;Não;Sim;7550;5.27;Não;Casa em Pompeia, 157 m², 4 quarto(s), 5 banheiro(s), 2 vaga(s).
+IMV0087;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;975000;2;2;129;2;300;140;Não;Sim;Não;Não;Sim;4200;5.17;Não;Apartamento em Vila Guilherme, 129 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0088;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;560000;2;2;82;2;1700;220;Não;Sim;Não;Não;Sim;2750;5.89;Não;Apartamento em Vila Guilherme, 82 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0089;Venda;Casa;São Paulo;Oeste;Vila Madalena;2480000;4;2;249;2;0;100;Não;Sim;Não;Não;Sim;11400;5.52;Sim;Casa em Vila Madalena, 249 m², 4 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0090;Venda;Apartamento;São Paulo;Norte;Casa Verde;550000;3;3;85;2;400;360;Sim;Sim;Não;Não;Não;2850;6.22;Não;Apartamento em Casa Verde, 85 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0091;Venda;Apartamento;São Paulo;Leste;Mooca;850000;2;3;120;2;1550;370;Não;Não;Sim;Sim;Sim;4650;6.56;Não;Apartamento em Mooca, 120 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0092;Aluguel;Casa;São Paulo;Oeste;Lapa;7700;4;2;129;1;0;450;Não;Sim;Não;Não;Sim;7700;6.84;Não;Casa em Lapa, 129 m², 4 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0093;Venda;Apartamento;São Paulo;Oeste;Pompeia;1105000;2;3;95;2;2150;520;Não;Sim;Sim;Sim;Sim;4950;5.38;Sim;Apartamento em Pompeia, 95 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0094;Aluguel;Apartamento;São Paulo;Leste;Belém;1950;3;3;62;2;1650;500;Sim;Sim;Sim;Não;Sim;1950;5.85;Sim;Apartamento em Belém, 62 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0095;Venda;Apartamento;São Paulo;Leste;Carrão;605000;2;2;101;1;1850;570;Sim;Sim;Sim;Sim;Sim;3000;5.95;Sim;Apartamento em Carrão, 101 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0096;Venda;Studio;São Paulo;Oeste;Alto de Pinheiros;370000;1;1;32;0;600;800;Sim;Sim;Não;Não;Sim;2200;7.14;Não;Studio em Alto de Pinheiros, 32 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0097;Venda;Apartamento;São Paulo;Oeste;Lapa;1000000;2;3;85;1;2200;390;Sim;Sim;Sim;Não;Sim;5850;7.02;Não;Apartamento em Lapa, 85 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0098;Aluguel;Apartamento;São Paulo;Sul;Jabaquara;9300;3;3;160;3;1400;600;Sim;Sim;Não;Não;Não;9300;5.98;Não;Apartamento em Jabaquara, 160 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0099;Venda;Apartamento;São Paulo;Leste;Belém;805000;2;2;109;1;2000;320;Sim;Sim;Não;Não;Sim;4050;6.04;Não;Apartamento em Belém, 109 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0100;Venda;Casa;São Paulo;Sul;Chácara Santo Antônio;2125000;4;3;214;2;0;740;Sim;Sim;Sim;Sim;Sim;11850;6.69;Sim;Casa em Chácara Santo Antônio, 214 m², 4 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0101;Venda;Studio;São Paulo;Sul;Chácara Santo Antônio;575000;1;1;43;1;750;380;Sim;Não;Sim;Sim;Sim;3400;7.1;Não;Studio em Chácara Santo Antônio, 43 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0102;Aluguel;Apartamento;São Paulo;Leste;Itaquera;4200;2;2;118;2;1800;520;Sim;Sim;Sim;Sim;Sim;4200;6.63;Não;Apartamento em Itaquera, 118 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0103;Aluguel;Apartamento;São Paulo;Sul;Chácara Santo Antônio;2700;1;1;47;0;1350;660;Não;Sim;Não;Não;Sim;2700;6.29;Não;Apartamento em Chácara Santo Antônio, 47 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0104;Venda;Studio;São Paulo;Norte;Mandaqui;265000;0;1;34;1;1400;170;Não;Sim;Sim;Não;Sim;1200;5.43;Não;Studio em Mandaqui, 34 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0105;Aluguel;Studio;São Paulo;Centro;Bela Vista;1250;0;1;35;0;1050;430;Sim;Sim;Não;Não;Sim;1250;5.26;Não;Studio em Bela Vista, 35 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0106;Venda;Casa;São Paulo;Norte;Santana;850000;3;4;129;3;0;160;Não;Sim;Não;Não;Sim;4500;6.35;Não;Casa em Santana, 129 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0107;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;1985000;4;4;198;3;1800;460;Sim;Sim;Não;Não;Sim;8100;4.9;Não;Apartamento em Vila Madalena, 198 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0108;Venda;Apartamento;São Paulo;Leste;Penha;540000;1;1;73;0;300;690;Sim;Não;Sim;Não;Sim;2050;4.56;Não;Apartamento em Penha, 73 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0109;Venda;Apartamento;São Paulo;Leste;Penha;1150000;4;4;174;3;1800;100;Não;Sim;Não;Não;Sim;4700;4.9;Não;Apartamento em Penha, 174 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0110;Venda;Apartamento;São Paulo;Centro;Cambuci;960000;4;4;113;3;400;780;Não;Sim;Sim;Sim;Sim;4850;6.06;Não;Apartamento em Cambuci, 113 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0111;Aluguel;Studio;São Paulo;Leste;Penha;1800;0;1;46;0;800;800;Não;Sim;Não;Não;Sim;1800;6.97;Não;Studio em Penha, 46 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0112;Venda;Cobertura;São Paulo;Oeste;Vila Madalena;2680000;4;3;156;2;1000;80;Não;Sim;Sim;Não;Sim;15500;6.94;Não;Cobertura em Vila Madalena, 156 m², 4 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0113;Venda;Studio;São Paulo;Centro;Bela Vista;370000;0;1;42;0;1550;760;Não;Sim;Não;Não;Sim;2200;7.14;Não;Studio em Bela Vista, 42 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0114;Aluguel;Cobertura;São Paulo;Oeste;Pompeia;21600;2;3;296;3;1850;680;Sim;Não;Sim;Não;Não;21600;5.57;Não;Cobertura em Pompeia, 296 m², 2 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0115;Venda;Apartamento;São Paulo;Centro;Bela Vista;605000;2;3;72;2;2050;70;Não;Sim;Não;Não;Sim;3450;6.84;Não;Apartamento em Bela Vista, 72 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0116;Venda;Apartamento;São Paulo;Oeste;Butantã;1380000;3;3;140;3;1950;360;Não;Sim;Não;Não;Sim;6850;5.96;Não;Apartamento em Butantã, 140 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0117;Venda;Apartamento;São Paulo;Centro;Consolação;410000;1;1;56;1;1450;490;Sim;Sim;Não;Sim;Sim;2350;6.88;Não;Apartamento em Consolação, 56 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0118;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;730000;2;2;65;1;1900;780;Não;Sim;Não;Sim;Sim;3750;6.16;Não;Apartamento em Chácara Santo Antônio, 65 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0119;Aluguel;Apartamento;São Paulo;Norte;Tremembé;5200;3;4;157;2;1450;320;Não;Não;Sim;Não;Sim;5200;5.22;Não;Apartamento em Tremembé, 157 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0120;Aluguel;Apartamento;São Paulo;Leste;Carrão;2650;2;2;70;1;2150;680;Sim;Não;Não;Sim;Sim;2650;6.91;Não;Apartamento em Carrão, 70 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0121;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;775000;2;3;111;1;1250;660;Não;Sim;Não;Não;Sim;2900;4.49;Não;Apartamento em Vila Guilherme, 111 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0122;Venda;Studio;São Paulo;Sul;Morumbi;525000;1;1;44;0;750;750;Sim;Sim;Sim;Não;Sim;2100;4.8;Não;Studio em Morumbi, 44 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0123;Venda;Studio;São Paulo;Centro;Santa Cecília;235000;1;1;27;1;1850;340;Não;Sim;Sim;Sim;Sim;1000;5.11;Não;Studio em Santa Cecília, 27 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0124;Venda;Studio;São Paulo;Leste;Tatuapé;365000;0;1;48;0;2200;190;Sim;Sim;Não;Não;Sim;1650;5.42;Não;Studio em Tatuapé, 48 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0125;Venda;Apartamento;São Paulo;Oeste;Pompeia;1100000;2;3;100;2;1150;370;Sim;Não;Não;Não;Sim;4700;5.13;Não;Apartamento em Pompeia, 100 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0126;Venda;Apartamento;São Paulo;Oeste;Butantã;930000;2;3;81;2;1300;250;Não;Sim;Sim;Não;Sim;5500;7.1;Não;Apartamento em Butantã, 81 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0127;Aluguel;Studio;São Paulo;Oeste;Perdizes;2150;0;1;42;0;1700;500;Não;Sim;Sim;Não;Sim;2150;5.86;Não;Studio em Perdizes, 42 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0128;Aluguel;Apartamento;São Paulo;Sul;Santo Amaro;3100;2;2;62;2;650;240;Sim;Sim;Sim;Não;Sim;3100;5.51;Não;Apartamento em Santo Amaro, 62 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0129;Aluguel;Apartamento;São Paulo;Leste;Belém;2600;3;3;77;2;1300;340;Sim;Sim;Sim;Não;Sim;2600;5.94;Sim;Apartamento em Belém, 77 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0130;Venda;Apartamento;São Paulo;Sul;Moema;995000;2;2;87;2;1550;310;Sim;Sim;Não;Não;Sim;5600;6.75;Não;Apartamento em Moema, 87 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0131;Aluguel;Apartamento;São Paulo;Norte;Tremembé;2050;3;3;74;3;1400;410;Não;Sim;Sim;Não;Sim;2050;5.12;Sim;Apartamento em Tremembé, 74 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0132;Aluguel;Apartamento;São Paulo;Oeste;Pinheiros;5350;3;3;119;3;1750;160;Sim;Sim;Sim;Não;Sim;5350;4.92;Não;Apartamento em Pinheiros, 119 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0133;Aluguel;Apartamento;São Paulo;Leste;Belém;3050;2;2;108;1;2200;560;Não;Sim;Não;Não;Sim;3050;4.6;Não;Apartamento em Belém, 108 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0134;Venda;Apartamento;São Paulo;Oeste;Jaguaré;1655000;3;4;142;3;900;390;Não;Sim;Sim;Não;Sim;8500;6.16;Sim;Apartamento em Jaguaré, 142 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0135;Venda;Studio;São Paulo;Leste;Vila Prudente;260000;1;1;41;0;650;780;Sim;Sim;Não;Não;Sim;1400;6.46;Não;Studio em Vila Prudente, 41 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0136;Aluguel;Apartamento;São Paulo;Sul;Vila Mariana;6750;3;4;112;3;350;70;Sim;Não;Sim;Sim;Sim;6750;6.21;Não;Apartamento em Vila Mariana, 112 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0137;Venda;Apartamento;São Paulo;Oeste;Butantã;745000;2;2;69;2;850;780;Não;Não;Sim;Não;Sim;3650;5.88;Não;Apartamento em Butantã, 69 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0138;Venda;Studio;São Paulo;Oeste;Pompeia;630000;1;1;50;0;850;680;Não;Sim;Sim;Não;Não;3500;6.67;Não;Studio em Pompeia, 50 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0139;Aluguel;Apartamento;São Paulo;Leste;Carrão;3150;2;2;94;1;650;450;Não;Sim;Sim;Não;Não;3150;5.95;Não;Apartamento em Carrão, 94 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0140;Venda;Apartamento;São Paulo;Oeste;Butantã;660000;1;2;64;0;1050;250;Não;Sim;Não;Não;Sim;3700;6.73;Não;Apartamento em Butantã, 64 m², 1 quarto(s), 2 banheiro(s), 0 vaga(s).
+IMV0141;Aluguel;Apartamento;São Paulo;Leste;Tatuapé;4350;3;4;141;2;350;420;Não;Não;Sim;Não;Sim;4350;5.7;Não;Apartamento em Tatuapé, 141 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0142;Venda;Apartamento;São Paulo;Oeste;Perdizes;1055000;3;3;94;2;950;120;Não;Não;Sim;Não;Não;4800;5.46;Não;Apartamento em Perdizes, 94 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0143;Aluguel;Studio;São Paulo;Oeste;Vila Madalena;2750;0;1;50;0;2100;700;Não;Não;Não;Não;Sim;2750;5.45;Não;Studio em Vila Madalena, 50 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0144;Venda;Apartamento;São Paulo;Leste;Belém;1020000;3;4;160;2;1900;520;Não;Não;Não;Não;Sim;4350;5.12;Não;Apartamento em Belém, 160 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0145;Aluguel;Casa;São Paulo;Sul;Vila Mariana;12450;3;2;258;3;0;190;Não;Não;Sim;Sim;Sim;12450;5.46;Não;Casa em Vila Mariana, 258 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0146;Aluguel;Cobertura;São Paulo;Sul;Interlagos;23200;3;5;283;3;1000;410;Sim;Sim;Sim;Sim;Não;23200;5.29;Não;Cobertura em Interlagos, 283 m², 3 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0147;Venda;Apartamento;São Paulo;Leste;Penha;935000;3;4;156;3;600;380;Não;Não;Sim;Não;Sim;3900;5.01;Sim;Apartamento em Penha, 156 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0148;Venda;Casa;São Paulo;Leste;Tatuapé;2000000;3;2;334;1;0;700;Sim;Sim;Não;Sim;Sim;8200;4.92;Não;Casa em Tatuapé, 334 m², 3 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0149;Venda;Cobertura;São Paulo;Oeste;Vila Madalena;2360000;4;3;154;2;2150;470;Não;Sim;Sim;Não;Sim;10250;5.21;Não;Cobertura em Vila Madalena, 154 m², 4 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0150;Aluguel;Apartamento;São Paulo;Leste;Itaquera;2900;3;3;103;3;2100;640;Não;Não;Sim;Sim;Sim;2900;4.97;Não;Apartamento em Itaquera, 103 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0151;Venda;Apartamento;São Paulo;Norte;Santana;715000;4;4;103;3;2150;780;Sim;Sim;Não;Não;Sim;3900;6.55;Sim;Apartamento em Santana, 103 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0152;Venda;Apartamento;São Paulo;Leste;Anália Franco;590000;2;3;85;2;600;270;Não;Não;Sim;Não;Sim;2250;4.58;Não;Apartamento em Anália Franco, 85 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0153;Venda;Studio;São Paulo;Oeste;Jaguaré;475000;0;1;40;1;1100;760;Não;Sim;Sim;Sim;Sim;2100;5.31;Não;Studio em Jaguaré, 40 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0154;Venda;Casa;São Paulo;Oeste;Perdizes;1020000;3;4;106;2;0;480;Sim;Não;Não;Não;Sim;5550;6.53;Não;Casa em Perdizes, 106 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0155;Venda;Apartamento;São Paulo;Leste;Penha;1075000;3;3;151;2;1500;310;Sim;Sim;Sim;Não;Sim;5650;6.31;Não;Apartamento em Penha, 151 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0156;Venda;Studio;São Paulo;Sul;Santo Amaro;290000;1;1;24;0;1150;510;Sim;Sim;Não;Não;Sim;1250;5.17;Não;Studio em Santo Amaro, 24 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0157;Aluguel;Casa;São Paulo;Norte;Tremembé;5700;2;3;195;1;0;520;Não;Sim;Não;Não;Sim;5700;5.52;Não;Casa em Tremembé, 195 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0158;Aluguel;Apartamento;São Paulo;Sul;Interlagos;4250;2;2;75;1;1450;450;Não;Sim;Não;Não;Não;4250;6.54;Não;Apartamento em Interlagos, 75 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0159;Aluguel;Casa;São Paulo;Norte;Tremembé;7800;3;2;217;3;0;490;Não;Sim;Sim;Sim;Sim;7800;6.46;Não;Casa em Tremembé, 217 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0160;Venda;Apartamento;São Paulo;Norte;Tremembé;545000;3;3;72;3;700;550;Não;Sim;Não;Não;Sim;3100;6.83;Não;Apartamento em Tremembé, 72 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0161;Aluguel;Apartamento;São Paulo;Leste;Anália Franco;2900;4;4;114;3;2050;410;Não;Sim;Não;Não;Sim;2900;4.64;Não;Apartamento em Anália Franco, 114 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0162;Venda;Apartamento;São Paulo;Norte;Mandaqui;810000;3;3;119;3;600;480;Não;Não;Sim;Não;Sim;4450;6.59;Não;Apartamento em Mandaqui, 119 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0163;Aluguel;Apartamento;São Paulo;Oeste;Vila Madalena;4600;2;3;95;2;1950;270;Sim;Sim;Sim;Sim;Sim;4600;5.52;Não;Apartamento em Vila Madalena, 95 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0164;Aluguel;Apartamento;São Paulo;Centro;República;3550;3;3;72;2;1950;620;Sim;Sim;Sim;Sim;Sim;3550;6.82;Não;Apartamento em República, 72 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0165;Aluguel;Apartamento;São Paulo;Oeste;Pinheiros;7250;4;4;122;3;1050;730;Não;Sim;Não;Não;Sim;7250;6.54;Não;Apartamento em Pinheiros, 122 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0166;Venda;Studio;São Paulo;Leste;Tatuapé;280000;0;1;41;1;1750;490;Não;Não;Não;Não;Sim;1300;5.57;Não;Studio em Tatuapé, 41 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0167;Aluguel;Casa;São Paulo;Sul;Morumbi;7500;4;3;124;3;0;410;Não;Sim;Sim;Sim;Sim;7500;7.09;Não;Casa em Morumbi, 124 m², 4 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0168;Venda;Apartamento;São Paulo;Centro;Cambuci;600000;2;2;73;2;1850;750;Sim;Sim;Sim;Não;Sim;2700;5.4;Não;Apartamento em Cambuci, 73 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0169;Venda;Casa;São Paulo;Oeste;Pinheiros;1390000;2;3;135;4;0;740;Não;Sim;Não;Não;Sim;7150;6.17;Não;Casa em Pinheiros, 135 m², 2 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0170;Aluguel;Casa;São Paulo;Leste;Belém;5100;5;4;221;2;0;510;Sim;Não;Não;Não;Não;5100;5.0;Não;Casa em Belém, 221 m², 5 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0171;Venda;Apartamento;São Paulo;Centro;República;1005000;2;3;129;2;1650;610;Não;Sim;Sim;Não;Não;4550;5.43;Não;Apartamento em República, 129 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0172;Venda;Apartamento;São Paulo;Sul;Jabaquara;1580000;3;4;130;2;1250;280;Não;Sim;Sim;Sim;Sim;8850;6.72;Não;Apartamento em Jabaquara, 130 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0173;Aluguel;Apartamento;São Paulo;Centro;Consolação;5550;3;4;145;2;1250;320;Não;Sim;Não;Não;Sim;5550;5.69;Não;Apartamento em Consolação, 145 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0174;Venda;Apartamento;São Paulo;Leste;Vila Prudente;555000;3;3;93;2;1950;440;Não;Sim;Não;Não;Sim;2650;5.73;Sim;Apartamento em Vila Prudente, 93 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0175;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;720000;1;1;66;0;450;140;Não;Não;Não;Não;Sim;2700;4.5;Não;Apartamento em Chácara Santo Antônio, 66 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0176;Venda;Casa;São Paulo;Leste;Carrão;695000;2;3;111;2;0;340;Não;Sim;Sim;Não;Sim;3000;5.18;Não;Casa em Carrão, 111 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0177;Venda;Apartamento;São Paulo;Oeste;Butantã;1125000;4;4;110;3;350;720;Sim;Não;Não;Sim;Sim;4250;4.53;Não;Apartamento em Butantã, 110 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0178;Venda;Casa;São Paulo;Leste;Carrão;1050000;4;4;157;1;0;170;Não;Sim;Sim;Não;Sim;4600;5.26;Sim;Casa em Carrão, 157 m², 4 quarto(s), 4 banheiro(s), 1 vaga(s).
+IMV0179;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;645000;4;4;83;3;1350;460;Não;Sim;Sim;Não;Sim;3400;6.33;Não;Apartamento em Vila Guilherme, 83 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0180;Aluguel;Apartamento;São Paulo;Sul;Santo Amaro;7050;2;2;105;2;1150;650;Sim;Sim;Não;Não;Sim;7050;6.38;Não;Apartamento em Santo Amaro, 105 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0181;Venda;Studio;São Paulo;Oeste;Jaguaré;340000;1;1;32;0;800;710;Sim;Sim;Não;Não;Sim;1950;6.88;Não;Studio em Jaguaré, 32 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0182;Aluguel;Casa;São Paulo;Norte;Vila Guilherme;4050;5;3;115;4;0;220;Não;Sim;Sim;Sim;Não;4050;6.35;Não;Casa em Vila Guilherme, 115 m², 5 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0183;Venda;Apartamento;São Paulo;Norte;Tucuruvi;880000;3;3;123;2;1750;220;Sim;Não;Não;Sim;Sim;5050;6.89;Não;Apartamento em Tucuruvi, 123 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0184;Venda;Apartamento;São Paulo;Oeste;Jaguaré;840000;2;3;75;1;1850;340;Não;Sim;Não;Não;Sim;3950;5.64;Não;Apartamento em Jaguaré, 75 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0185;Aluguel;Apartamento;São Paulo;Oeste;Lapa;3200;2;2;69;1;2000;670;Sim;Sim;Não;Não;Sim;3200;5.41;Não;Apartamento em Lapa, 69 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0186;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;3000;2;3;63;1;2150;360;Não;Não;Não;Não;Sim;3000;5.22;Não;Apartamento em Jaguaré, 63 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0187;Venda;Casa;São Paulo;Norte;Santana;1105000;4;2;174;4;0;660;Não;Sim;Não;Não;Sim;6100;6.62;Não;Casa em Santana, 174 m², 4 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0188;Aluguel;Apartamento;São Paulo;Sul;Interlagos;3600;2;2;58;1;1950;670;Não;Não;Sim;Não;Não;3600;6.17;Não;Apartamento em Interlagos, 58 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0189;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1205000;2;2;105;1;1000;70;Não;Sim;Sim;Sim;Não;6450;6.42;Sim;Apartamento em Pinheiros, 105 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0190;Venda;Studio;São Paulo;Oeste;Pompeia;490000;0;1;40;1;1500;440;Não;Não;Sim;Sim;Sim;2150;5.27;Não;Studio em Pompeia, 40 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0191;Venda;Casa;São Paulo;Oeste;Jaguaré;940000;3;4;96;4;0;440;Não;Não;Sim;Não;Sim;3900;4.98;Não;Casa em Jaguaré, 96 m², 3 quarto(s), 4 banheiro(s), 4 vaga(s).
+IMV0192;Aluguel;Apartamento;São Paulo;Norte;Tremembé;2050;2;2;58;2;1100;580;Não;Sim;Sim;Não;Sim;2050;5.59;Não;Apartamento em Tremembé, 58 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0193;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;795000;2;3;73;2;800;230;Não;Sim;Sim;Não;Sim;4100;6.19;Não;Apartamento em Chácara Santo Antônio, 73 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0194;Venda;Casa;São Paulo;Oeste;Pinheiros;2470000;4;3;255;4;0;730;Não;Sim;Sim;Não;Sim;11250;5.47;Sim;Casa em Pinheiros, 255 m², 4 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0195;Aluguel;Apartamento;São Paulo;Sul;Saúde;8350;3;4;156;3;600;250;Sim;Sim;Não;Sim;Sim;8350;5.43;Sim;Apartamento em Saúde, 156 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0196;Venda;Apartamento;São Paulo;Centro;República;675000;4;4;82;3;2150;760;Não;Sim;Sim;Sim;Sim;2650;4.71;Não;Apartamento em República, 82 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0197;Aluguel;Apartamento;São Paulo;Leste;Tatuapé;2650;2;2;96;1;1550;290;Não;Sim;Sim;Sim;Sim;2650;4.71;Não;Apartamento em Tatuapé, 96 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0198;Venda;Casa;São Paulo;Centro;Consolação;1565000;4;3;189;4;0;620;Não;Sim;Sim;Não;Sim;9100;6.98;Não;Casa em Consolação, 189 m², 4 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0199;Venda;Studio;São Paulo;Oeste;Jaguaré;355000;1;1;32;0;1950;80;Não;Não;Não;Não;Sim;1950;6.59;Não;Studio em Jaguaré, 32 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0200;Venda;Apartamento;São Paulo;Norte;Santana;655000;3;3;87;3;750;250;Sim;Sim;Não;Não;Sim;3500;6.41;Sim;Apartamento em Santana, 87 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0201;Venda;Studio;São Paulo;Centro;República;340000;0;1;39;0;1550;440;Sim;Sim;Não;Não;Sim;1500;5.29;Sim;Studio em República, 39 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0202;Aluguel;Casa;São Paulo;Centro;Cambuci;6150;3;3;143;4;0;630;Não;Sim;Sim;Não;Sim;6150;6.25;Sim;Casa em Cambuci, 143 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0203;Aluguel;Apartamento;São Paulo;Leste;Penha;2300;3;3;77;3;1550;490;Sim;Não;Sim;Não;Sim;2300;5.81;Não;Apartamento em Penha, 77 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0204;Venda;Studio;São Paulo;Sul;Morumbi;455000;1;1;40;0;1500;330;Não;Sim;Sim;Não;Sim;2550;6.73;Não;Studio em Morumbi, 40 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0205;Aluguel;Casa;São Paulo;Leste;Itaquera;3650;4;2;128;1;0;520;Não;Sim;Não;Não;Sim;3650;5.58;Não;Casa em Itaquera, 128 m², 4 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0206;Aluguel;Casa;São Paulo;Sul;Morumbi;11250;4;2;189;4;0;580;Não;Sim;Sim;Não;Sim;11250;6.47;Não;Casa em Morumbi, 189 m², 4 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0207;Aluguel;Apartamento;São Paulo;Centro;Consolação;1900;1;1;48;1;450;780;Sim;Sim;Não;Não;Sim;1900;6.33;Sim;Apartamento em Consolação, 48 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0208;Venda;Casa;São Paulo;Sul;Interlagos;2250000;3;2;191;1;0;130;Não;Não;Não;Não;Sim;9200;4.91;Não;Casa em Interlagos, 191 m², 3 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0209;Venda;Casa;São Paulo;Sul;Moema;2605000;3;4;240;4;0;330;Sim;Sim;Sim;Sim;Sim;13200;6.08;Não;Casa em Moema, 240 m², 3 quarto(s), 4 banheiro(s), 4 vaga(s).
+IMV0210;Venda;Apartamento;São Paulo;Leste;Tatuapé;435000;2;2;62;2;1300;770;Sim;Sim;Sim;Sim;Sim;2500;6.9;Sim;Apartamento em Tatuapé, 62 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0211;Venda;Casa;São Paulo;Sul;Morumbi;3325000;2;2;335;2;0;250;Não;Sim;Sim;Sim;Sim;14250;5.14;Não;Casa em Morumbi, 335 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0212;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;1725000;3;3;152;2;650;380;Não;Sim;Não;Não;Sim;8300;5.77;Não;Apartamento em Alto de Pinheiros, 152 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0213;Venda;Studio;São Paulo;Leste;Mooca;300000;0;1;44;0;2000;150;Sim;Sim;Sim;Sim;Sim;1450;5.8;Sim;Studio em Mooca, 44 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0214;Aluguel;Cobertura;São Paulo;Centro;Cambuci;11350;2;3;181;4;1100;140;Não;Sim;Não;Não;Sim;11350;5.99;Não;Cobertura em Cambuci, 181 m², 2 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0215;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;6050;2;3;123;1;650;620;Não;Não;Sim;Não;Sim;6050;5.3;Não;Apartamento em Jaguaré, 123 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0216;Aluguel;Studio;São Paulo;Centro;Liberdade;1450;0;1;45;0;1700;170;Não;Sim;Sim;Não;Sim;1450;4.7;Não;Studio em Liberdade, 45 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0217;Aluguel;Casa;São Paulo;Leste;Belém;10350;2;2;331;2;0;320;Não;Sim;Sim;Não;Sim;10350;6.13;Não;Casa em Belém, 331 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0218;Venda;Studio;São Paulo;Leste;Anália Franco;350000;0;1;47;0;1850;450;Não;Sim;Sim;Não;Sim;1550;5.31;Não;Studio em Anália Franco, 47 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0219;Aluguel;Casa;São Paulo;Sul;Morumbi;12050;3;2;208;2;0;380;Não;Sim;Sim;Sim;Não;12050;6.53;Não;Casa em Morumbi, 208 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0220;Venda;Apartamento;São Paulo;Leste;Tatuapé;525000;1;1;72;0;1650;640;Não;Sim;Sim;Não;Sim;2300;5.26;Não;Apartamento em Tatuapé, 72 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0221;Venda;Studio;São Paulo;Norte;Tremembé;335000;0;1;43;1;1550;650;Não;Não;Sim;Não;Sim;1500;5.37;Não;Studio em Tremembé, 43 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0222;Venda;Apartamento;São Paulo;Sul;Brooklin;1065000;3;3;91;2;1950;450;Sim;Sim;Não;Não;Sim;6100;6.87;Não;Apartamento em Brooklin, 91 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0223;Venda;Apartamento;São Paulo;Leste;Tatuapé;435000;2;2;64;2;1150;400;Não;Sim;Não;Sim;Sim;1950;5.38;Não;Apartamento em Tatuapé, 64 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0224;Venda;Cobertura;São Paulo;Norte;Mandaqui;2125000;3;5;196;3;500;170;Não;Sim;Não;Não;Sim;8550;4.83;Sim;Cobertura em Mandaqui, 196 m², 3 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0225;Aluguel;Studio;São Paulo;Norte;Casa Verde;900;1;1;35;1;2200;500;Sim;Não;Sim;Não;Não;900;4.6;Não;Studio em Casa Verde, 35 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0226;Venda;Apartamento;São Paulo;Sul;Interlagos;860000;2;2;70;1;300;140;Não;Sim;Sim;Não;Sim;3200;4.47;Não;Apartamento em Interlagos, 70 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0227;Venda;Casa;São Paulo;Norte;Casa Verde;1450000;2;2;220;4;0;190;Não;Sim;Sim;Sim;Sim;6950;5.75;Não;Casa em Casa Verde, 220 m², 2 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0228;Venda;Studio;São Paulo;Oeste;Pompeia;435000;0;1;41;0;2150;190;Não;Não;Não;Não;Sim;1900;5.24;Sim;Studio em Pompeia, 41 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0229;Venda;Casa;São Paulo;Oeste;Pompeia;3235000;2;2;324;3;0;370;Sim;Sim;Não;Não;Sim;18500;6.86;Sim;Casa em Pompeia, 324 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0230;Venda;Apartamento;São Paulo;Leste;Belém;1050000;3;4;152;3;1400;650;Não;Não;Sim;Não;Sim;6200;7.09;Não;Apartamento em Belém, 152 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0231;Venda;Apartamento;São Paulo;Oeste;Pompeia;745000;2;3;74;1;2150;710;Sim;Sim;Não;Não;Não;3000;4.83;Sim;Apartamento em Pompeia, 74 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0232;Aluguel;Apartamento;São Paulo;Sul;Campo Belo;4900;2;2;89;2;2200;190;Não;Sim;Sim;Não;Sim;4900;5.2;Não;Apartamento em Campo Belo, 89 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0233;Venda;Cobertura;São Paulo;Leste;Itaquera;1735000;3;5;168;4;1300;340;Não;Não;Não;Não;Sim;7300;5.05;Sim;Cobertura em Itaquera, 168 m², 3 quarto(s), 5 banheiro(s), 4 vaga(s).
+IMV0234;Venda;Apartamento;São Paulo;Norte;Casa Verde;435000;1;1;62;1;600;540;Não;Sim;Sim;Sim;Sim;2050;5.66;Sim;Apartamento em Casa Verde, 62 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0235;Aluguel;Casa;São Paulo;Centro;Liberdade;8550;3;2;224;3;0;380;Não;Sim;Sim;Não;Sim;8550;5.98;Não;Casa em Liberdade, 224 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0236;Aluguel;Apartamento;São Paulo;Sul;Chácara Santo Antônio;7650;2;2;128;1;600;550;Não;Sim;Sim;Sim;Sim;7650;5.68;Sim;Apartamento em Chácara Santo Antônio, 128 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0237;Aluguel;Apartamento;São Paulo;Norte;Casa Verde;3800;2;2;118;1;800;190;Não;Sim;Não;Não;Sim;3800;6.04;Não;Apartamento em Casa Verde, 118 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0238;Aluguel;Studio;São Paulo;Sul;Santo Amaro;2200;0;1;35;0;300;70;Não;Sim;Não;Não;Sim;2200;6.07;Não;Studio em Santo Amaro, 35 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0239;Aluguel;Apartamento;São Paulo;Oeste;Pinheiros;8800;3;4;144;2;1550;240;Não;Não;Não;Não;Não;8800;6.14;Não;Apartamento em Pinheiros, 144 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0240;Venda;Apartamento;São Paulo;Leste;Vila Prudente;545000;3;3;82;3;1450;580;Não;Não;Sim;Sim;Não;2300;5.06;Não;Apartamento em Vila Prudente, 82 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0241;Aluguel;Cobertura;São Paulo;Leste;Belém;15250;4;5;318;4;550;620;Não;Não;Sim;Sim;Sim;15250;6.44;Não;Cobertura em Belém, 318 m², 4 quarto(s), 5 banheiro(s), 4 vaga(s).
+IMV0242;Venda;Apartamento;São Paulo;Leste;Vila Prudente;430000;2;2;61;2;2150;500;Não;Sim;Não;Não;Não;2000;5.58;Não;Apartamento em Vila Prudente, 61 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0243;Venda;Studio;São Paulo;Oeste;Alto de Pinheiros;455000;1;1;39;0;700;110;Não;Sim;Não;Não;Sim;2450;6.46;Não;Studio em Alto de Pinheiros, 39 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0244;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1510000;2;2;126;1;1100;440;Não;Não;Não;Não;Sim;5750;4.57;Não;Apartamento em Pinheiros, 126 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0245;Venda;Cobertura;São Paulo;Centro;Bela Vista;1870000;3;5;172;2;750;770;Sim;Sim;Não;Não;Sim;7800;5.01;Não;Cobertura em Bela Vista, 172 m², 3 quarto(s), 5 banheiro(s), 2 vaga(s).
+IMV0246;Venda;Apartamento;São Paulo;Norte;Tremembé;485000;3;4;63;2;1450;590;Não;Sim;Não;Não;Sim;2350;5.81;Não;Apartamento em Tremembé, 63 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0247;Venda;Apartamento;São Paulo;Leste;Carrão;395000;1;1;65;0;450;440;Não;Sim;Sim;Não;Sim;2000;6.08;Não;Apartamento em Carrão, 65 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0248;Venda;Casa;São Paulo;Oeste;Jaguaré;950000;3;4;95;2;0;390;Não;Não;Não;Não;Sim;3500;4.42;Não;Casa em Jaguaré, 95 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0249;Aluguel;Studio;São Paulo;Oeste;Perdizes;1450;1;1;29;0;1350;200;Não;Não;Não;Não;Sim;1450;5.27;Não;Studio em Perdizes, 29 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0250;Venda;Apartamento;São Paulo;Sul;Campo Belo;1070000;2;2;92;1;1000;280;Não;Sim;Sim;Não;Sim;6000;6.73;Sim;Apartamento em Campo Belo, 92 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0251;Venda;Cobertura;São Paulo;Oeste;Pompeia;2635000;4;2;176;4;1000;460;Não;Não;Não;Sim;Sim;10500;4.78;Não;Cobertura em Pompeia, 176 m², 4 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0252;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;1500000;3;3;127;3;1150;580;Não;Sim;Sim;Não;Sim;6400;5.12;Não;Apartamento em Alto de Pinheiros, 127 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0253;Venda;Apartamento;São Paulo;Leste;Tatuapé;960000;3;3;134;3;650;480;Não;Sim;Não;Não;Sim;3950;4.94;Não;Apartamento em Tatuapé, 134 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0254;Venda;Apartamento;São Paulo;Oeste;Pompeia;1180000;2;2;117;1;500;260;Não;Sim;Não;Não;Sim;5350;5.44;Não;Apartamento em Pompeia, 117 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0255;Venda;Apartamento;São Paulo;Oeste;Pompeia;1380000;3;4;122;2;1150;490;Não;Não;Sim;Sim;Sim;8100;7.04;Não;Apartamento em Pompeia, 122 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0256;Venda;Apartamento;São Paulo;Leste;Penha;470000;3;3;73;2;350;220;Não;Sim;Sim;Não;Sim;2650;6.77;Não;Apartamento em Penha, 73 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0257;Venda;Apartamento;São Paulo;Leste;Tatuapé;780000;3;3;124;2;1900;690;Não;Sim;Não;Não;Sim;3450;5.31;Sim;Apartamento em Tatuapé, 124 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0258;Venda;Casa;São Paulo;Centro;República;2000000;2;2;277;3;0;740;Não;Sim;Sim;Não;Sim;8950;5.37;Não;Casa em República, 277 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0259;Aluguel;Apartamento;São Paulo;Oeste;Pompeia;4250;2;2;96;1;1250;300;Não;Sim;Sim;Não;Sim;4250;5.07;Não;Apartamento em Pompeia, 96 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0260;Aluguel;Studio;São Paulo;Leste;Anália Franco;1450;1;1;42;0;900;690;Não;Sim;Sim;Não;Sim;1450;6.44;Não;Studio em Anália Franco, 42 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0261;Venda;Apartamento;São Paulo;Centro;Bela Vista;970000;3;3;132;3;1800;60;Não;Sim;Sim;Não;Sim;4200;5.2;Sim;Apartamento em Bela Vista, 132 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0262;Aluguel;Apartamento;São Paulo;Leste;Belém;5850;3;3;160;3;350;650;Sim;Sim;Sim;Não;Sim;5850;6.32;Sim;Apartamento em Belém, 160 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0263;Venda;Apartamento;São Paulo;Oeste;Butantã;1675000;3;3;165;3;1400;730;Sim;Sim;Sim;Não;Sim;7650;5.48;Não;Apartamento em Butantã, 165 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0264;Aluguel;Apartamento;São Paulo;Centro;Cambuci;3550;3;3;87;2;2150;340;Não;Sim;Não;Não;Sim;3550;6.17;Não;Apartamento em Cambuci, 87 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0265;Venda;Casa;São Paulo;Sul;Jabaquara;2285000;2;3;226;2;0;470;Sim;Sim;Sim;Sim;Sim;11800;6.2;Não;Casa em Jabaquara, 226 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0266;Venda;Casa;São Paulo;Sul;Moema;2245000;2;2;213;3;0;240;Sim;Sim;Não;Não;Sim;9200;4.92;Não;Casa em Moema, 213 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0267;Venda;Studio;São Paulo;Norte;Mandaqui;320000;0;1;40;0;1700;440;Não;Sim;Não;Sim;Sim;1600;6.0;Não;Studio em Mandaqui, 40 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0268;Venda;Apartamento;São Paulo;Sul;Moema;920000;2;3;81;1;350;660;Sim;Não;Sim;Não;Não;4150;5.41;Não;Apartamento em Moema, 81 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0269;Aluguel;Studio;São Paulo;Oeste;Perdizes;1700;1;1;27;1;900;180;Não;Sim;Sim;Não;Sim;1700;6.69;Não;Studio em Perdizes, 27 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0270;Venda;Apartamento;São Paulo;Sul;Moema;940000;1;2;86;1;2050;510;Não;Sim;Não;Não;Sim;4500;5.74;Sim;Apartamento em Moema, 86 m², 1 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0271;Venda;Apartamento;São Paulo;Sul;Campo Belo;1480000;3;4;122;3;550;120;Não;Sim;Sim;Não;Sim;7150;5.8;Não;Apartamento em Campo Belo, 122 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0272;Aluguel;Studio;São Paulo;Leste;Belém;1250;1;1;34;0;1000;200;Não;Sim;Sim;Não;Sim;1250;5.77;Não;Studio em Belém, 34 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0273;Aluguel;Apartamento;São Paulo;Centro;Liberdade;4600;4;4;151;3;700;520;Sim;Não;Não;Não;Sim;4600;5.02;Não;Apartamento em Liberdade, 151 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0274;Venda;Casa;São Paulo;Centro;Consolação;740000;3;3;109;4;0;220;Não;Não;Sim;Não;Sim;3850;6.24;Não;Casa em Consolação, 109 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0275;Venda;Studio;São Paulo;Norte;Vila Guilherme;240000;1;1;30;0;1500;690;Sim;Sim;Não;Não;Sim;1250;6.25;Não;Studio em Vila Guilherme, 30 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0276;Aluguel;Casa;São Paulo;Leste;Vila Prudente;10700;2;2;328;2;0;340;Não;Não;Não;Sim;Sim;10700;6.62;Não;Casa em Vila Prudente, 328 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0277;Aluguel;Apartamento;São Paulo;Centro;República;2600;2;2;78;1;300;280;Não;Sim;Sim;Não;Sim;2600;5.29;Não;Apartamento em República, 78 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0278;Aluguel;Studio;São Paulo;Norte;Vila Guilherme;1100;1;1;26;0;2000;410;Não;Sim;Sim;Não;Sim;1100;6.95;Não;Studio em Vila Guilherme, 26 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0279;Venda;Cobertura;São Paulo;Norte;Tucuruvi;1460000;3;5;133;4;1400;760;Não;Sim;Não;Não;Não;5750;4.73;Não;Cobertura em Tucuruvi, 133 m², 3 quarto(s), 5 banheiro(s), 4 vaga(s).
+IMV0280;Aluguel;Cobertura;São Paulo;Oeste;Pinheiros;13800;4;3;179;2;1400;660;Não;Sim;Não;Sim;Sim;13800;6.39;Não;Cobertura em Pinheiros, 179 m², 4 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0281;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;590000;2;3;55;2;650;790;Não;Sim;Não;Não;Sim;2350;4.78;Sim;Apartamento em Alto de Pinheiros, 55 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0282;Aluguel;Casa;São Paulo;Leste;Tatuapé;2300;2;3;97;3;0;360;Sim;Sim;Sim;Sim;Não;2300;4.93;Sim;Casa em Tatuapé, 97 m², 2 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0283;Venda;Apartamento;São Paulo;Norte;Santana;355000;1;2;48;0;1100;200;Não;Sim;Não;Sim;Sim;1550;5.24;Não;Apartamento em Santana, 48 m², 1 quarto(s), 2 banheiro(s), 0 vaga(s).
+IMV0284;Venda;Apartamento;São Paulo;Sul;Brooklin;1420000;2;2;123;1;500;400;Não;Sim;Sim;Não;Sim;6750;5.7;Não;Apartamento em Brooklin, 123 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0285;Aluguel;Casa;São Paulo;Leste;Tatuapé;3350;4;4;125;3;0;470;Não;Sim;Não;Não;Sim;3350;5.4;Não;Casa em Tatuapé, 125 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0286;Venda;Apartamento;São Paulo;Centro;República;1115000;4;4;136;3;950;230;Não;Sim;Sim;Não;Sim;6100;6.57;Não;Apartamento em República, 136 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0287;Venda;Casa;São Paulo;Oeste;Alto de Pinheiros;1495000;4;3;150;4;0;590;Não;Não;Não;Sim;Sim;8550;6.86;Não;Casa em Alto de Pinheiros, 150 m², 4 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0288;Aluguel;Apartamento;São Paulo;Norte;Tremembé;4650;3;3;115;2;2100;270;Não;Sim;Sim;Sim;Não;4650;6.8;Não;Apartamento em Tremembé, 115 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0289;Venda;Apartamento;São Paulo;Centro;Liberdade;1370000;3;3;162;3;700;660;Sim;Não;Não;Não;Sim;5300;4.64;Não;Apartamento em Liberdade, 162 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0290;Venda;Apartamento;São Paulo;Sul;Santo Amaro;950000;2;3;74;2;1950;740;Não;Sim;Não;Sim;Sim;5450;6.88;Não;Apartamento em Santo Amaro, 74 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0291;Venda;Studio;São Paulo;Norte;Santana;260000;1;1;36;0;1800;370;Sim;Sim;Sim;Sim;Não;1450;6.69;Sim;Studio em Santana, 36 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0292;Venda;Apartamento;São Paulo;Leste;Penha;635000;2;3;98;1;600;630;Não;Sim;Não;Sim;Sim;2400;4.54;Sim;Apartamento em Penha, 98 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0293;Venda;Apartamento;São Paulo;Leste;Anália Franco;395000;2;3;60;2;1150;200;Não;Sim;Não;Não;Não;2000;6.08;Não;Apartamento em Anália Franco, 60 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0294;Venda;Apartamento;São Paulo;Oeste;Pompeia;675000;3;3;63;3;350;380;Não;Sim;Sim;Não;Sim;3800;6.76;Não;Apartamento em Pompeia, 63 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0295;Aluguel;Apartamento;São Paulo;Sul;Chácara Santo Antônio;6550;3;3;92;2;1350;750;Não;Sim;Não;Sim;Sim;6550;6.99;Não;Apartamento em Chácara Santo Antônio, 92 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0296;Venda;Casa;São Paulo;Sul;Moema;2220000;2;2;216;4;0;340;Não;Não;Sim;Não;Sim;9150;4.95;Não;Casa em Moema, 216 m², 2 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0297;Venda;Apartamento;São Paulo;Norte;Tremembé;455000;2;2;67;2;1300;160;Não;Sim;Não;Não;Sim;2450;6.46;Sim;Apartamento em Tremembé, 67 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0298;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;1395000;2;2;115;2;1150;500;Não;Sim;Sim;Não;Sim;7850;6.75;Não;Apartamento em Alto de Pinheiros, 115 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0299;Venda;Casa;São Paulo;Oeste;Perdizes;2530000;3;4;236;1;0;330;Sim;Sim;Sim;Não;Sim;10700;5.08;Não;Casa em Perdizes, 236 m², 3 quarto(s), 4 banheiro(s), 1 vaga(s).
+IMV0300;Venda;Apartamento;São Paulo;Oeste;Pompeia;655000;1;1;66;0;1600;580;Sim;Sim;Não;Não;Sim;2650;4.85;Não;Apartamento em Pompeia, 66 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0301;Venda;Apartamento;São Paulo;Sul;Morumbi;1025000;3;4;81;3;2100;460;Não;Sim;Sim;Sim;Sim;5350;6.26;Não;Apartamento em Morumbi, 81 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0302;Venda;Casa;São Paulo;Leste;Mooca;1475000;3;2;253;4;0;170;Não;Sim;Não;Não;Sim;6200;5.04;Não;Casa em Mooca, 253 m², 3 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0303;Venda;Studio;São Paulo;Sul;Interlagos;300000;1;1;27;0;300;220;Não;Sim;Sim;Sim;Sim;1500;6.0;Não;Studio em Interlagos, 27 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0304;Venda;Casa;São Paulo;Sul;Jabaquara;3670000;3;3;327;1;0;590;Não;Não;Não;Sim;Sim;14550;4.76;Não;Casa em Jabaquara, 327 m², 3 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0305;Venda;Casa;São Paulo;Norte;Mandaqui;995000;3;4;164;4;0;570;Não;Sim;Não;Sim;Sim;4750;5.73;Não;Casa em Mandaqui, 164 m², 3 quarto(s), 4 banheiro(s), 4 vaga(s).
+IMV0306;Aluguel;Apartamento;São Paulo;Leste;Vila Prudente;3050;4;4;76;3;900;410;Não;Sim;Não;Não;Sim;3050;7.04;Não;Apartamento em Vila Prudente, 76 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0307;Venda;Cobertura;São Paulo;Sul;Campo Belo;2765000;3;3;168;2;1400;550;Sim;Sim;Não;Sim;Sim;15600;6.77;Não;Cobertura em Campo Belo, 168 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0308;Aluguel;Casa;São Paulo;Norte;Mandaqui;3300;3;2;121;4;0;500;Sim;Sim;Não;Não;Sim;3300;4.77;Não;Casa em Mandaqui, 121 m², 3 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0309;Venda;Casa;São Paulo;Oeste;Pinheiros;2460000;4;4;241;4;0;350;Não;Não;Não;Não;Sim;10200;4.98;Não;Casa em Pinheiros, 241 m², 4 quarto(s), 4 banheiro(s), 4 vaga(s).
+IMV0310;Aluguel;Apartamento;São Paulo;Centro;Cambuci;5700;3;3;142;2;1150;230;Não;Sim;Sim;Não;Não;5700;6.58;Não;Apartamento em Cambuci, 142 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0311;Venda;Studio;São Paulo;Leste;Anália Franco;175000;0;1;27;0;500;420;Sim;Sim;Não;Não;Sim;650;4.46;Não;Studio em Anália Franco, 27 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0312;Aluguel;Cobertura;São Paulo;Sul;Santo Amaro;8200;3;3;134;4;850;130;Não;Sim;Não;Não;Sim;8200;4.82;Não;Cobertura em Santo Amaro, 134 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0313;Venda;Apartamento;São Paulo;Sul;Jabaquara;1250000;2;2;112;1;750;730;Sim;Sim;Sim;Não;Sim;5950;5.71;Não;Apartamento em Jabaquara, 112 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0314;Aluguel;Cobertura;São Paulo;Norte;Mandaqui;7400;4;4;163;3;1700;160;Não;Não;Não;Sim;Sim;7400;5.64;Não;Cobertura em Mandaqui, 163 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0315;Aluguel;Apartamento;São Paulo;Leste;Penha;2000;3;3;64;2;2200;520;Não;Não;Não;Não;Sim;2000;5.52;Sim;Apartamento em Penha, 64 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0316;Venda;Apartamento;São Paulo;Centro;Consolação;610000;1;1;73;0;1200;640;Sim;Não;Não;Sim;Não;2600;5.11;Não;Apartamento em Consolação, 73 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0317;Venda;Apartamento;São Paulo;Oeste;Jaguaré;915000;2;2;86;1;1750;700;Sim;Não;Não;Sim;Sim;4900;6.43;Não;Apartamento em Jaguaré, 86 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0318;Venda;Apartamento;São Paulo;Oeste;Pompeia;825000;3;3;75;2;450;600;Sim;Sim;Sim;Não;Sim;4750;6.91;Não;Apartamento em Pompeia, 75 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0319;Venda;Apartamento;São Paulo;Sul;Brooklin;900000;2;3;87;1;2100;320;Não;Sim;Sim;Não;Sim;5050;6.73;Não;Apartamento em Brooklin, 87 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0320;Venda;Apartamento;São Paulo;Oeste;Jaguaré;780000;3;3;66;3;1750;90;Não;Sim;Não;Não;Sim;3750;5.77;Sim;Apartamento em Jaguaré, 66 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0321;Venda;Apartamento;São Paulo;Centro;Cambuci;550000;2;3;71;1;1050;80;Não;Sim;Sim;Não;Sim;2550;5.56;Não;Apartamento em Cambuci, 71 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0322;Aluguel;Casa;São Paulo;Norte;Tremembé;4550;3;2;119;3;0;380;Não;Sim;Não;Não;Sim;4550;6.5;Não;Casa em Tremembé, 119 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0323;Aluguel;Casa;São Paulo;Centro;Liberdade;9550;3;2;292;2;0;260;Não;Não;Não;Não;Sim;9550;4.95;Não;Casa em Liberdade, 292 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0324;Venda;Apartamento;São Paulo;Oeste;Jaguaré;870000;2;3;84;2;550;110;Sim;Sim;Sim;Não;Sim;4650;6.41;Não;Apartamento em Jaguaré, 84 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0325;Venda;Casa;São Paulo;Oeste;Alto de Pinheiros;3360000;3;3;302;1;0;800;Não;Sim;Sim;Não;Sim;14550;5.2;Não;Casa em Alto de Pinheiros, 302 m², 3 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0326;Aluguel;Apartamento;São Paulo;Sul;Santo Amaro;6050;1;1;85;1;500;180;Não;Não;Não;Sim;Sim;6050;6.85;Sim;Apartamento em Santo Amaro, 85 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0327;Venda;Cobertura;São Paulo;Centro;Cambuci;4085000;2;2;313;3;1350;210;Não;Sim;Sim;Não;Sim;15250;4.48;Não;Cobertura em Cambuci, 313 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0328;Venda;Cobertura;São Paulo;Sul;Campo Belo;4575000;2;3;251;3;1100;540;Sim;Não;Não;Sim;Sim;25850;6.78;Não;Cobertura em Campo Belo, 251 m², 2 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0329;Venda;Studio;São Paulo;Centro;Consolação;430000;0;1;48;0;2150;680;Não;Não;Não;Não;Sim;2550;7.12;Não;Studio em Consolação, 48 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0330;Venda;Apartamento;São Paulo;Centro;Consolação;1080000;3;4;145;3;1250;590;Não;Sim;Não;Não;Sim;6200;6.89;Não;Apartamento em Consolação, 145 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0331;Aluguel;Apartamento;São Paulo;Centro;República;3650;2;2;118;2;1250;180;Não;Sim;Não;Não;Não;3650;4.56;Não;Apartamento em República, 118 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0332;Aluguel;Studio;São Paulo;Leste;Itaquera;1100;0;1;30;1;1000;430;Não;Sim;Não;Não;Sim;1100;6.0;Não;Studio em Itaquera, 30 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0333;Aluguel;Apartamento;São Paulo;Leste;Mooca;3650;3;4;112;2;600;230;Não;Sim;Não;Sim;Sim;3650;6.04;Não;Apartamento em Mooca, 112 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0334;Aluguel;Apartamento;São Paulo;Sul;Vila Mariana;5700;4;4;98;3;1700;730;Não;Sim;Sim;Sim;Sim;5700;6.13;Não;Apartamento em Vila Mariana, 98 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0335;Venda;Apartamento;São Paulo;Leste;Carrão;775000;2;2;123;1;1100;500;Não;Sim;Não;Não;Não;3250;5.03;Não;Apartamento em Carrão, 123 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0336;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;1430000;2;3;115;1;1200;180;Não;Sim;Não;Não;Não;6900;5.79;Não;Apartamento em Chácara Santo Antônio, 115 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0337;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;1390000;4;4;130;3;1900;460;Não;Sim;Sim;Não;Sim;7250;6.26;Sim;Apartamento em Alto de Pinheiros, 130 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0338;Venda;Apartamento;São Paulo;Leste;Belém;450000;3;3;69;2;800;500;Não;Sim;Não;Não;Sim;1800;4.8;Não;Apartamento em Belém, 69 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0339;Venda;Casa;São Paulo;Leste;Mooca;715000;2;2;115;3;0;500;Não;Sim;Sim;Sim;Sim;4150;6.97;Não;Casa em Mooca, 115 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0340;Venda;Apartamento;São Paulo;Centro;República;780000;3;4;94;3;1450;480;Não;Não;Sim;Não;Sim;4450;6.85;Não;Apartamento em República, 94 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0341;Venda;Casa;São Paulo;Norte;Tucuruvi;1665000;3;3;252;3;0;730;Não;Não;Sim;Sim;Sim;7250;5.23;Não;Casa em Tucuruvi, 252 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0342;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;1380000;2;3;121;2;950;480;Não;Sim;Sim;Não;Sim;7950;6.91;Não;Apartamento em Vila Madalena, 121 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0343;Venda;Casa;São Paulo;Sul;Chácara Santo Antônio;2615000;3;3;229;4;0;160;Não;Sim;Não;Não;Sim;13900;6.38;Não;Casa em Chácara Santo Antônio, 229 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0344;Venda;Casa;São Paulo;Centro;Cambuci;1650000;2;2;221;1;0;520;Não;Sim;Sim;Sim;Sim;7100;5.16;Não;Casa em Cambuci, 221 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0345;Venda;Studio;São Paulo;Leste;Tatuapé;270000;0;1;39;0;2150;480;Não;Sim;Não;Não;Sim;1300;5.78;Não;Studio em Tatuapé, 39 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0346;Venda;Apartamento;São Paulo;Sul;Vila Mariana;2410000;4;4;191;3;950;330;Não;Não;Sim;Não;Sim;11350;5.65;Não;Apartamento em Vila Mariana, 191 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0347;Venda;Apartamento;São Paulo;Norte;Mandaqui;825000;2;2;123;2;1700;390;Não;Não;Não;Não;Sim;4050;5.89;Não;Apartamento em Mandaqui, 123 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0348;Venda;Apartamento;São Paulo;Leste;Belém;930000;3;3;131;2;450;310;Não;Não;Não;Não;Sim;5200;6.71;Não;Apartamento em Belém, 131 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0349;Venda;Casa;São Paulo;Sul;Campo Belo;1285000;3;4;119;2;0;360;Não;Não;Não;Não;Sim;7550;7.05;Não;Casa em Campo Belo, 119 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0350;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;1215000;2;2;109;1;1700;760;Não;Sim;Sim;Não;Sim;4550;4.49;Não;Apartamento em Vila Madalena, 109 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0351;Venda;Apartamento;São Paulo;Leste;Tatuapé;770000;3;4;114;2;550;240;Não;Sim;Sim;Não;Não;4100;6.39;Não;Apartamento em Tatuapé, 114 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0352;Venda;Apartamento;São Paulo;Centro;República;425000;2;2;58;2;550;530;Sim;Sim;Não;Sim;Sim;1750;4.94;Sim;Apartamento em República, 58 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0353;Venda;Casa;São Paulo;Leste;Penha;710000;4;2;115;2;0;710;Não;Sim;Não;Não;Não;3250;5.49;Não;Casa em Penha, 115 m², 4 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0354;Venda;Casa;São Paulo;Oeste;Pompeia;3090000;3;3;322;4;0;600;Não;Não;Sim;Não;Sim;15800;6.14;Não;Casa em Pompeia, 322 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0355;Venda;Apartamento;São Paulo;Norte;Vila Guilherme;700000;2;3;100;2;950;520;Sim;Não;Sim;Não;Sim;3500;6.0;Sim;Apartamento em Vila Guilherme, 100 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0356;Venda;Apartamento;São Paulo;Centro;Cambuci;1030000;3;3;122;2;1200;740;Não;Não;Não;Não;Sim;4350;5.07;Não;Apartamento em Cambuci, 122 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0357;Venda;Studio;São Paulo;Oeste;Alto de Pinheiros;350000;1;1;28;0;2200;610;Não;Não;Não;Não;Sim;1400;4.8;Não;Studio em Alto de Pinheiros, 28 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0358;Aluguel;Casa;São Paulo;Centro;Consolação;5500;4;5;143;3;0;640;Não;Sim;Sim;Sim;Sim;5500;5.92;Sim;Casa em Consolação, 143 m², 4 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0359;Aluguel;Studio;São Paulo;Leste;Anália Franco;1450;1;1;45;0;2100;260;Não;Sim;Sim;Sim;Sim;1450;6.11;Sim;Studio em Anália Franco, 45 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0360;Aluguel;Apartamento;São Paulo;Leste;Anália Franco;4700;3;3;138;3;1400;550;Não;Não;Não;Não;Não;4700;5.94;Não;Apartamento em Anália Franco, 138 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0361;Venda;Apartamento;São Paulo;Centro;República;1200000;4;4;139;3;600;490;Não;Sim;Não;Não;Sim;6450;6.45;Não;Apartamento em República, 139 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0362;Aluguel;Apartamento;São Paulo;Sul;Moema;7050;3;3;129;3;350;130;Não;Não;Sim;Sim;Sim;7050;5.77;Não;Apartamento em Moema, 129 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0363;Venda;Apartamento;São Paulo;Leste;Itaquera;785000;2;2;119;1;600;270;Não;Sim;Não;Não;Sim;3850;5.89;Não;Apartamento em Itaquera, 119 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0364;Aluguel;Studio;São Paulo;Leste;Anália Franco;1650;0;1;41;0;1800;680;Não;Não;Sim;Sim;Sim;1650;6.29;Não;Studio em Anália Franco, 41 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0365;Aluguel;Apartamento;São Paulo;Oeste;Alto de Pinheiros;7750;3;3;150;2;1450;680;Não;Sim;Não;Não;Sim;7750;5.64;Não;Apartamento em Alto de Pinheiros, 150 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0366;Aluguel;Apartamento;São Paulo;Norte;Vila Guilherme;2450;2;2;84;1;2000;240;Não;Sim;Não;Sim;Não;2450;4.9;Não;Apartamento em Vila Guilherme, 84 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0367;Aluguel;Casa;São Paulo;Sul;Vila Mariana;7800;4;5;155;3;0;390;Não;Sim;Não;Sim;Sim;7800;5.74;Não;Casa em Vila Mariana, 155 m², 4 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0368;Venda;Apartamento;São Paulo;Leste;Vila Prudente;450000;3;3;66;3;1900;140;Não;Sim;Sim;Não;Sim;1900;5.07;Não;Apartamento em Vila Prudente, 66 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0369;Aluguel;Casa;São Paulo;Leste;Vila Prudente;7850;4;3;229;4;0;680;Não;Não;Sim;Sim;Sim;7850;7.03;Sim;Casa em Vila Prudente, 229 m², 4 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0370;Aluguel;Apartamento;São Paulo;Oeste;Pinheiros;5450;2;2;77;2;1400;500;Não;Sim;Não;Sim;Sim;5450;7.07;Sim;Apartamento em Pinheiros, 77 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0371;Venda;Apartamento;São Paulo;Sul;Moema;1060000;4;4;100;3;700;230;Não;Sim;Sim;Não;Sim;5400;6.11;Não;Apartamento em Moema, 100 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0372;Aluguel;Apartamento;São Paulo;Oeste;Pompeia;5050;3;3;84;3;800;510;Sim;Não;Sim;Não;Sim;5050;6.31;Não;Apartamento em Pompeia, 84 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0373;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;1045000;3;3;103;2;350;680;Não;Sim;Não;Não;Sim;4650;5.34;Não;Apartamento em Vila Madalena, 103 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0374;Aluguel;Apartamento;São Paulo;Oeste;Butantã;10350;4;4;192;3;750;660;Não;Sim;Não;Não;Sim;10350;6.49;Não;Apartamento em Butantã, 192 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0375;Venda;Cobertura;São Paulo;Norte;Mandaqui;2990000;4;2;319;2;1250;320;Não;Sim;Não;Sim;Sim;16300;6.54;Não;Cobertura em Mandaqui, 319 m², 4 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0376;Aluguel;Apartamento;São Paulo;Sul;Brooklin;5600;3;3;137;3;1700;400;Sim;Não;Sim;Não;Sim;5600;4.62;Sim;Apartamento em Brooklin, 137 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0377;Venda;Apartamento;São Paulo;Sul;Morumbi;1580000;4;4;149;3;2000;390;Não;Sim;Sim;Sim;Sim;8500;6.46;Não;Apartamento em Morumbi, 149 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0378;Aluguel;Apartamento;São Paulo;Sul;Jabaquara;6400;4;4;108;3;350;320;Não;Não;Sim;Não;Sim;6400;6.0;Sim;Apartamento em Jabaquara, 108 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0379;Venda;Casa;São Paulo;Oeste;Pinheiros;1830000;5;4;176;2;0;670;Não;Sim;Não;Não;Não;10550;6.92;Não;Casa em Pinheiros, 176 m², 5 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0380;Venda;Casa;São Paulo;Centro;Santa Cecília;680000;4;2;98;2;0;240;Não;Sim;Não;Não;Sim;3950;6.97;Sim;Casa em Santa Cecília, 98 m², 4 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0381;Venda;Apartamento;São Paulo;Leste;Itaquera;1050000;3;3;148;2;1150;280;Não;Sim;Não;Não;Sim;5700;6.51;Sim;Apartamento em Itaquera, 148 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0382;Venda;Studio;São Paulo;Centro;Bela Vista;420000;1;1;46;0;1900;770;Não;Sim;Não;Não;Sim;2250;6.43;Não;Studio em Bela Vista, 46 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0383;Aluguel;Cobertura;São Paulo;Centro;Cambuci;6000;3;2;123;2;1100;520;Não;Sim;Não;Não;Sim;6000;4.6;Não;Cobertura em Cambuci, 123 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0384;Venda;Casa;São Paulo;Oeste;Vila Madalena;2165000;2;2;230;1;0;590;Não;Sim;Não;Não;Não;12350;6.85;Sim;Casa em Vila Madalena, 230 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0385;Venda;Studio;São Paulo;Sul;Santo Amaro;675000;0;1;50;1;1900;400;Não;Sim;Não;Não;Sim;3150;5.6;Não;Studio em Santo Amaro, 50 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0386;Venda;Casa;São Paulo;Leste;Vila Prudente;805000;3;3;127;1;0;690;Sim;Sim;Sim;Não;Sim;3600;5.37;Não;Casa em Vila Prudente, 127 m², 3 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0387;Venda;Apartamento;São Paulo;Centro;Consolação;690000;2;2;86;2;300;270;Não;Não;Sim;Sim;Sim;3650;6.35;Não;Apartamento em Consolação, 86 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0388;Venda;Apartamento;São Paulo;Norte;Mandaqui;1130000;3;4;165;2;1650;530;Não;Sim;Sim;Sim;Sim;5600;5.95;Não;Apartamento em Mandaqui, 165 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0389;Venda;Apartamento;São Paulo;Sul;Campo Belo;1070000;3;3;96;3;1050;620;Não;Sim;Não;Não;Sim;4000;4.49;Não;Apartamento em Campo Belo, 96 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0390;Venda;Apartamento;São Paulo;Centro;Liberdade;775000;3;3;101;3;1450;90;Sim;Sim;Sim;Sim;Sim;4050;6.27;Não;Apartamento em Liberdade, 101 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0391;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1250000;3;4;104;2;1250;700;Não;Não;Sim;Não;Sim;4700;4.51;Não;Apartamento em Pinheiros, 104 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0392;Venda;Apartamento;São Paulo;Centro;Bela Vista;950000;2;2;116;2;950;700;Sim;Não;Sim;Não;Sim;4800;6.06;Não;Apartamento em Bela Vista, 116 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0393;Venda;Apartamento;São Paulo;Oeste;Alto de Pinheiros;875000;2;2;75;1;950;480;Sim;Sim;Sim;Não;Sim;5050;6.93;Não;Apartamento em Alto de Pinheiros, 75 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0394;Aluguel;Studio;São Paulo;Oeste;Vila Madalena;2350;1;1;44;1;1650;640;Não;Sim;Não;Não;Sim;2350;5.04;Não;Studio em Vila Madalena, 44 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0395;Venda;Studio;São Paulo;Oeste;Butantã;535000;0;1;48;1;1950;240;Não;Sim;Sim;Não;Sim;2350;5.27;Não;Studio em Butantã, 48 m², 0 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0396;Venda;Cobertura;São Paulo;Norte;Casa Verde;1415000;3;3;144;3;600;140;Não;Sim;Sim;Não;Sim;7350;6.23;Não;Cobertura em Casa Verde, 144 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0397;Venda;Studio;São Paulo;Centro;República;380000;1;1;43;0;350;70;Não;Sim;Sim;Não;Sim;1800;5.68;Não;Studio em República, 43 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0398;Aluguel;Studio;São Paulo;Sul;Interlagos;1600;0;1;25;0;900;610;Sim;Sim;Sim;Sim;Sim;1600;5.73;Não;Studio em Interlagos, 25 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0399;Aluguel;Casa;São Paulo;Sul;Morumbi;7150;2;3;115;1;0;510;Sim;Sim;Não;Sim;Sim;7150;6.7;Sim;Casa em Morumbi, 115 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0400;Venda;Apartamento;São Paulo;Centro;República;840000;2;2;107;2;1000;500;Não;Não;Sim;Sim;Sim;4350;6.21;Sim;Apartamento em República, 107 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0401;Venda;Apartamento;São Paulo;Oeste;Pinheiros;710000;3;3;68;2;1650;80;Sim;Não;Sim;Não;Sim;3700;6.25;Não;Apartamento em Pinheiros, 68 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0402;Aluguel;Casa;São Paulo;Sul;Morumbi;7200;4;2;152;3;0;190;Sim;Sim;Não;Não;Sim;7200;5.98;Não;Casa em Morumbi, 152 m², 4 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0403;Venda;Casa;São Paulo;Leste;Belém;1730000;5;5;281;3;0;590;Não;Sim;Não;Não;Sim;6600;4.58;Não;Casa em Belém, 281 m², 5 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0404;Venda;Casa;São Paulo;Leste;Penha;1010000;3;2;152;2;0;610;Não;Sim;Não;Não;Sim;3950;4.69;Não;Casa em Penha, 152 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0405;Aluguel;Apartamento;São Paulo;Leste;Anália Franco;2250;1;1;83;1;1850;350;Sim;Não;Não;Sim;Sim;2250;4.62;Não;Apartamento em Anália Franco, 83 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0406;Venda;Cobertura;São Paulo;Centro;República;3915000;2;3;340;4;1950;380;Sim;Sim;Sim;Não;Sim;15600;4.78;Sim;Cobertura em República, 340 m², 2 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0407;Aluguel;Casa;São Paulo;Leste;Penha;2950;5;5;91;3;0;710;Sim;Sim;Sim;Não;Sim;2950;6.56;Não;Casa em Penha, 91 m², 5 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0408;Aluguel;Apartamento;São Paulo;Oeste;Perdizes;4900;1;1;71;0;1550;80;Não;Não;Sim;Sim;Sim;4900;7.04;Não;Apartamento em Perdizes, 71 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0409;Aluguel;Apartamento;São Paulo;Oeste;Jaguaré;7000;3;3;163;3;1650;380;Não;Não;Não;Sim;Sim;7000;4.46;Sim;Apartamento em Jaguaré, 163 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0410;Venda;Apartamento;São Paulo;Norte;Mandaqui;430000;2;3;63;2;2000;150;Não;Sim;Sim;Não;Sim;2200;6.14;Não;Apartamento em Mandaqui, 63 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0411;Aluguel;Apartamento;São Paulo;Oeste;Pinheiros;3050;1;2;59;1;1800;580;Não;Sim;Não;Não;Sim;3050;5.67;Não;Apartamento em Pinheiros, 59 m², 1 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0412;Venda;Casa;São Paulo;Norte;Vila Guilherme;1090000;3;3;159;2;0;560;Não;Sim;Sim;Não;Sim;5300;5.83;Não;Casa em Vila Guilherme, 159 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0413;Venda;Apartamento;São Paulo;Leste;Carrão;520000;1;2;82;1;650;660;Não;Sim;Sim;Não;Sim;2500;5.77;Não;Apartamento em Carrão, 82 m², 1 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0414;Aluguel;Studio;São Paulo;Centro;República;1300;0;1;40;0;1750;670;Não;Sim;Não;Não;Sim;1300;5.03;Não;Studio em República, 40 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0415;Venda;Cobertura;São Paulo;Oeste;Jaguaré;3500000;3;3;234;4;1950;280;Não;Sim;Sim;Sim;Sim;18200;6.24;Sim;Cobertura em Jaguaré, 234 m², 3 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0416;Venda;Apartamento;São Paulo;Sul;Interlagos;875000;3;4;81;3;1700;550;Não;Sim;Sim;Sim;Sim;4250;5.83;Não;Apartamento em Interlagos, 81 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0417;Venda;Apartamento;São Paulo;Sul;Brooklin;1590000;3;3;145;2;2150;200;Não;Sim;Sim;Sim;Sim;7950;6.0;Não;Apartamento em Brooklin, 145 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0418;Aluguel;Apartamento;São Paulo;Sul;Saúde;7700;3;3;150;3;2000;280;Não;Sim;Não;Sim;Sim;7700;5.04;Sim;Apartamento em Saúde, 150 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0419;Aluguel;Studio;São Paulo;Norte;Santana;950;1;1;32;0;750;530;Não;Sim;Não;Não;Não;950;5.07;Não;Studio em Santana, 32 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0420;Venda;Apartamento;São Paulo;Oeste;Jaguaré;1360000;3;4;128;3;1600;400;Não;Sim;Sim;Não;Sim;5150;4.54;Não;Apartamento em Jaguaré, 128 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0421;Venda;Studio;São Paulo;Norte;Casa Verde;205000;0;1;27;0;1300;390;Sim;Sim;Sim;Não;Sim;1050;6.15;Não;Studio em Casa Verde, 27 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0422;Venda;Studio;São Paulo;Leste;Anália Franco;315000;1;1;41;0;750;90;Sim;Sim;Sim;Não;Sim;1750;6.67;Não;Studio em Anália Franco, 41 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0423;Aluguel;Apartamento;São Paulo;Sul;Santo Amaro;2950;1;1;55;1;900;800;Não;Não;Sim;Não;Sim;2950;5.76;Não;Apartamento em Santo Amaro, 55 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0424;Aluguel;Apartamento;São Paulo;Oeste;Pompeia;4450;2;2;101;1;1400;500;Não;Sim;Não;Não;Sim;4450;4.94;Não;Apartamento em Pompeia, 101 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0425;Venda;Casa;São Paulo;Sul;Saúde;2695000;5;3;231;3;0;500;Não;Sim;Sim;Não;Sim;15600;6.95;Não;Casa em Saúde, 231 m², 5 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0426;Aluguel;Casa;São Paulo;Leste;Vila Prudente;6950;3;2;272;3;0;260;Não;Não;Sim;Não;Sim;6950;5.49;Não;Casa em Vila Prudente, 272 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0427;Venda;Apartamento;São Paulo;Centro;Liberdade;1030000;2;2;120;1;300;100;Sim;Sim;Sim;Não;Sim;4300;5.01;Sim;Apartamento em Liberdade, 120 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0428;Venda;Cobertura;São Paulo;Sul;Santo Amaro;4290000;3;5;278;3;1050;130;Não;Sim;Não;Sim;Sim;20250;5.66;Não;Cobertura em Santo Amaro, 278 m², 3 quarto(s), 5 banheiro(s), 3 vaga(s).
+IMV0429;Venda;Apartamento;São Paulo;Oeste;Pompeia;935000;3;4;83;2;600;530;Não;Sim;Sim;Não;Sim;3650;4.68;Não;Apartamento em Pompeia, 83 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0430;Venda;Apartamento;São Paulo;Leste;Penha;1100000;3;3;154;2;2150;390;Sim;Não;Sim;Sim;Sim;6450;7.04;Não;Apartamento em Penha, 154 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0431;Aluguel;Apartamento;São Paulo;Leste;Anália Franco;3950;3;3;127;2;600;710;Não;Não;Sim;Sim;Sim;3950;6.16;Não;Apartamento em Anália Franco, 127 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0432;Aluguel;Casa;São Paulo;Oeste;Pinheiros;5800;3;2;121;3;0;790;Não;Não;Não;Não;Sim;5800;5.75;Não;Casa em Pinheiros, 121 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0433;Aluguel;Apartamento;São Paulo;Norte;Vila Guilherme;3400;2;2;81;1;1000;320;Não;Não;Sim;Não;Sim;3400;6.74;Não;Apartamento em Vila Guilherme, 81 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0434;Venda;Apartamento;São Paulo;Norte;Casa Verde;565000;4;4;73;3;1350;760;Não;Sim;Não;Não;Sim;2650;5.63;Sim;Apartamento em Casa Verde, 73 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0435;Venda;Casa;São Paulo;Oeste;Butantã;3150000;4;3;297;4;0;620;Não;Não;Não;Sim;Sim;13850;5.28;Sim;Casa em Butantã, 297 m², 4 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0436;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1205000;3;3;110;3;1500;230;Não;Não;Não;Sim;Sim;6400;6.37;Não;Apartamento em Pinheiros, 110 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0437;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1670000;3;4;160;3;1900;380;Não;Sim;Não;Não;Sim;9550;6.86;Não;Apartamento em Pinheiros, 160 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0438;Venda;Casa;São Paulo;Oeste;Perdizes;3480000;4;4;327;3;0;160;Não;Sim;Não;Não;Sim;18050;6.22;Sim;Casa em Perdizes, 327 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0439;Venda;Apartamento;São Paulo;Sul;Morumbi;755000;1;1;68;1;450;620;Não;Sim;Sim;Não;Sim;3600;5.72;Não;Apartamento em Morumbi, 68 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0440;Venda;Apartamento;São Paulo;Leste;Mooca;725000;3;4;99;2;900;290;Não;Sim;Sim;Não;Sim;4050;6.7;Não;Apartamento em Mooca, 99 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0441;Aluguel;Studio;São Paulo;Sul;Jabaquara;3050;1;1;42;0;1500;240;Não;Não;Sim;Não;Sim;3050;6.84;Sim;Studio em Jabaquara, 42 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0442;Venda;Apartamento;São Paulo;Leste;Mooca;690000;2;2;98;1;850;180;Não;Sim;Sim;Sim;Sim;3250;5.65;Não;Apartamento em Mooca, 98 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0443;Venda;Apartamento;São Paulo;Oeste;Jaguaré;1300000;2;2;117;1;850;630;Não;Sim;Sim;Sim;Sim;5950;5.49;Sim;Apartamento em Jaguaré, 117 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0444;Aluguel;Casa;São Paulo;Oeste;Pompeia;10800;3;4;196;1;0;760;Não;Sim;Sim;Não;Não;10800;6.08;Não;Casa em Pompeia, 196 m², 3 quarto(s), 4 banheiro(s), 1 vaga(s).
+IMV0445;Venda;Casa;São Paulo;Norte;Tremembé;1545000;4;2;231;3;0;560;Não;Sim;Sim;Não;Sim;7950;6.17;Sim;Casa em Tremembé, 231 m², 4 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0446;Aluguel;Apartamento;São Paulo;Centro;Cambuci;2850;2;2;95;2;900;310;Não;Não;Sim;Não;Sim;2850;4.85;Não;Apartamento em Cambuci, 95 m², 2 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0447;Venda;Apartamento;São Paulo;Leste;Carrão;730000;2;3;105;2;2000;390;Não;Sim;Não;Sim;Sim;4050;6.66;Não;Apartamento em Carrão, 105 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0448;Venda;Apartamento;São Paulo;Oeste;Pinheiros;1300000;2;3;109;2;400;140;Não;Não;Sim;Não;Sim;6700;6.18;Não;Apartamento em Pinheiros, 109 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0449;Venda;Studio;São Paulo;Sul;Campo Belo;575000;0;1;44;0;600;200;Não;Sim;Não;Não;Sim;3100;6.47;Não;Studio em Campo Belo, 44 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0450;Aluguel;Casa;São Paulo;Sul;Morumbi;11150;4;2;257;2;0;490;Não;Não;Sim;Não;Sim;11150;5.01;Sim;Casa em Morumbi, 257 m², 4 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0451;Aluguel;Casa;São Paulo;Centro;Liberdade;6100;3;2;190;2;0;190;Sim;Sim;Não;Não;Sim;6100;4.83;Não;Casa em Liberdade, 190 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0452;Venda;Casa;São Paulo;Sul;Morumbi;3680000;2;3;315;4;0;60;Não;Não;Sim;Não;Não;14450;4.71;Não;Casa em Morumbi, 315 m², 2 quarto(s), 3 banheiro(s), 4 vaga(s).
+IMV0453;Aluguel;Apartamento;São Paulo;Centro;Bela Vista;5750;3;4;150;3;1800;440;Não;Sim;Sim;Não;Sim;5750;5.66;Não;Apartamento em Bela Vista, 150 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0454;Venda;Apartamento;São Paulo;Oeste;Butantã;1330000;3;3;125;3;600;490;Não;Sim;Sim;Sim;Sim;7450;6.72;Sim;Apartamento em Butantã, 125 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0455;Venda;Casa;São Paulo;Leste;Tatuapé;2090000;4;4;325;3;0;150;Sim;Sim;Sim;Não;Sim;9450;5.43;Não;Casa em Tatuapé, 325 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0456;Venda;Cobertura;São Paulo;Sul;Jabaquara;4530000;3;2;244;4;450;750;Sim;Sim;Não;Não;Sim;22650;6.0;Sim;Cobertura em Jabaquara, 244 m², 3 quarto(s), 2 banheiro(s), 4 vaga(s).
+IMV0457;Aluguel;Apartamento;São Paulo;Sul;Chácara Santo Antônio;3800;3;4;78;2;400;100;Sim;Sim;Sim;Não;Sim;3800;4.85;Não;Apartamento em Chácara Santo Antônio, 78 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0458;Venda;Casa;São Paulo;Centro;Santa Cecília;1605000;2;3;222;1;0;600;Não;Sim;Sim;Não;Sim;6650;4.97;Sim;Casa em Santa Cecília, 222 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0459;Aluguel;Apartamento;São Paulo;Sul;Vila Mariana;3050;3;4;65;2;900;550;Sim;Sim;Não;Não;Sim;3050;4.91;Não;Apartamento em Vila Mariana, 65 m², 3 quarto(s), 4 banheiro(s), 2 vaga(s).
+IMV0460;Aluguel;Apartamento;São Paulo;Sul;Interlagos;5850;2;3;124;2;1300;240;Não;Sim;Não;Sim;Não;5850;4.44;Não;Apartamento em Interlagos, 124 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0461;Venda;Apartamento;São Paulo;Oeste;Perdizes;1045000;4;4;104;3;1500;100;Não;Não;Sim;Não;Sim;5450;6.26;Sim;Apartamento em Perdizes, 104 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0462;Aluguel;Apartamento;São Paulo;Centro;Liberdade;4500;4;4;112;3;1900;570;Não;Sim;Não;Não;Sim;4500;5.48;Não;Apartamento em Liberdade, 112 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0463;Venda;Studio;São Paulo;Leste;Carrão;320000;1;1;50;0;700;320;Não;Sim;Sim;Não;Sim;1550;5.81;Não;Studio em Carrão, 50 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0464;Venda;Cobertura;São Paulo;Leste;Penha;1410000;3;2;147;2;1050;180;Não;Sim;Sim;Não;Sim;5700;4.85;Não;Cobertura em Penha, 147 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0465;Aluguel;Studio;São Paulo;Norte;Tucuruvi;1050;1;1;37;1;750;190;Sim;Não;Não;Não;Sim;1050;4.85;Não;Studio em Tucuruvi, 37 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0466;Venda;Casa;São Paulo;Oeste;Alto de Pinheiros;2445000;2;2;255;3;0;290;Não;Sim;Não;Sim;Não;9550;4.69;Não;Casa em Alto de Pinheiros, 255 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0467;Venda;Studio;São Paulo;Centro;Consolação;265000;1;1;32;0;2100;390;Não;Não;Não;Não;Sim;1400;6.34;Não;Studio em Consolação, 32 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0468;Venda;Casa;São Paulo;Oeste;Pinheiros;2705000;2;3;271;3;0;110;Sim;Sim;Sim;Não;Não;15950;7.08;Não;Casa em Pinheiros, 271 m², 2 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0469;Aluguel;Apartamento;São Paulo;Leste;Belém;1650;1;1;53;0;650;580;Sim;Sim;Sim;Sim;Sim;1650;5.42;Não;Apartamento em Belém, 53 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0470;Aluguel;Apartamento;São Paulo;Sul;Brooklin;4050;1;1;84;0;1000;310;Sim;Sim;Não;Não;Sim;4050;4.84;Não;Apartamento em Brooklin, 84 m², 1 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0471;Venda;Studio;São Paulo;Leste;Belém;290000;1;1;41;1;950;270;Não;Sim;Não;Não;Não;1550;6.41;Não;Studio em Belém, 41 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0472;Venda;Apartamento;São Paulo;Oeste;Vila Madalena;2065000;4;4;177;3;650;470;Não;Não;Sim;Sim;Sim;8350;4.85;Não;Apartamento em Vila Madalena, 177 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0473;Venda;Apartamento;São Paulo;Centro;Bela Vista;965000;3;4;121;3;1950;370;Não;Sim;Sim;Não;Sim;4200;5.22;Não;Apartamento em Bela Vista, 121 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0474;Aluguel;Casa;São Paulo;Sul;Santo Amaro;13550;4;2;284;1;0;420;Não;Sim;Não;Não;Sim;13550;5.0;Não;Casa em Santo Amaro, 284 m², 4 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0475;Aluguel;Apartamento;São Paulo;Leste;Tatuapé;2150;2;3;79;2;700;230;Não;Sim;Sim;Não;Sim;2150;4.78;Não;Apartamento em Tatuapé, 79 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0476;Venda;Casa;São Paulo;Norte;Tremembé;2015000;4;3;331;3;0;660;Sim;Sim;Sim;Não;Sim;9900;5.9;Não;Casa em Tremembé, 331 m², 4 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0477;Aluguel;Apartamento;São Paulo;Sul;Saúde;5500;2;2;86;1;350;110;Não;Sim;Sim;Não;Sim;5500;6.23;Não;Apartamento em Saúde, 86 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0478;Venda;Studio;São Paulo;Sul;Brooklin;300000;0;1;24;0;1200;110;Sim;Sim;Sim;Não;Sim;1450;5.8;Não;Studio em Brooklin, 24 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0479;Aluguel;Casa;São Paulo;Oeste;Pinheiros;10450;3;2;236;3;0;710;Não;Sim;Não;Não;Sim;10450;5.81;Não;Casa em Pinheiros, 236 m², 3 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0480;Aluguel;Casa;São Paulo;Sul;Santo Amaro;10600;2;2;223;3;0;690;Não;Sim;Sim;Não;Sim;10600;5.49;Não;Casa em Santo Amaro, 223 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0481;Aluguel;Apartamento;São Paulo;Oeste;Vila Madalena;7650;2;2;128;1;650;600;Não;Sim;Não;Não;Sim;7650;5.9;Não;Apartamento em Vila Madalena, 128 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0482;Venda;Apartamento;São Paulo;Sul;Chácara Santo Antônio;810000;2;2;73;1;700;160;Sim;Sim;Sim;Não;Sim;4700;6.96;Não;Apartamento em Chácara Santo Antônio, 73 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0483;Venda;Apartamento;São Paulo;Centro;Santa Cecília;1385000;4;4;156;3;1350;780;Sim;Sim;Não;Sim;Sim;7250;6.28;Não;Apartamento em Santa Cecília, 156 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0484;Venda;Apartamento;São Paulo;Oeste;Pompeia;1305000;4;4;119;3;1350;190;Sim;Sim;Sim;Não;Não;6100;5.61;Não;Apartamento em Pompeia, 119 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0485;Venda;Apartamento;São Paulo;Norte;Tremembé;775000;2;3;110;2;900;150;Sim;Sim;Sim;Não;Sim;4000;6.19;Não;Apartamento em Tremembé, 110 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0486;Aluguel;Casa;São Paulo;Oeste;Vila Madalena;9850;2;2;267;3;0;770;Sim;Não;Sim;Não;Sim;9850;4.7;Não;Casa em Vila Madalena, 267 m², 2 quarto(s), 2 banheiro(s), 3 vaga(s).
+IMV0487;Venda;Apartamento;São Paulo;Sul;Brooklin;1100000;2;3;95;1;2100;210;Não;Não;Não;Não;Sim;6100;6.65;Não;Apartamento em Brooklin, 95 m², 2 quarto(s), 3 banheiro(s), 1 vaga(s).
+IMV0488;Venda;Apartamento;São Paulo;Oeste;Jaguaré;695000;2;2;62;1;2000;380;Não;Sim;Sim;Não;Sim;2650;4.58;Não;Apartamento em Jaguaré, 62 m², 2 quarto(s), 2 banheiro(s), 1 vaga(s).
+IMV0489;Aluguel;Apartamento;São Paulo;Norte;Tremembé;4850;3;3;147;3;750;160;Não;Sim;Sim;Não;Sim;4850;5.88;Não;Apartamento em Tremembé, 147 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0490;Aluguel;Studio;São Paulo;Sul;Brooklin;2350;1;1;48;1;800;790;Não;Não;Sim;Sim;Sim;2350;5.17;Não;Studio em Brooklin, 48 m², 1 quarto(s), 1 banheiro(s), 1 vaga(s).
+IMV0491;Aluguel;Casa;São Paulo;Sul;Campo Belo;19100;4;3;312;3;0;390;Não;Sim;Não;Não;Sim;19100;6.66;Não;Casa em Campo Belo, 312 m², 4 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0492;Venda;Cobertura;São Paulo;Centro;Cambuci;3100000;3;4;262;3;600;100;Não;Sim;Não;Sim;Não;15900;6.15;Não;Cobertura em Cambuci, 262 m², 3 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0493;Aluguel;Apartamento;São Paulo;Sul;Jabaquara;6200;3;3;98;2;1350;480;Não;Sim;Não;Não;Sim;6200;6.64;Sim;Apartamento em Jabaquara, 98 m², 3 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0494;Venda;Casa;São Paulo;Centro;Bela Vista;985000;3;2;133;2;0;200;Sim;Não;Sim;Não;Sim;5800;7.07;Não;Casa em Bela Vista, 133 m², 3 quarto(s), 2 banheiro(s), 2 vaga(s).
+IMV0495;Venda;Apartamento;São Paulo;Sul;Interlagos;1095000;4;4;95;3;550;470;Não;Sim;Sim;Sim;Sim;4300;4.71;Não;Apartamento em Interlagos, 95 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).
+IMV0496;Venda;Apartamento;São Paulo;Sul;Morumbi;675000;3;3;65;3;600;350;Não;Não;Não;Não;Sim;3600;6.4;Não;Apartamento em Morumbi, 65 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0497;Aluguel;Studio;São Paulo;Sul;Morumbi;2350;0;1;45;0;900;400;Não;Sim;Sim;Não;Sim;2350;5.17;Não;Studio em Morumbi, 45 m², 0 quarto(s), 1 banheiro(s), 0 vaga(s).
+IMV0498;Aluguel;Apartamento;São Paulo;Sul;Brooklin;5200;3;3;70;3;300;110;Sim;Sim;Não;Não;Sim;5200;6.93;Não;Apartamento em Brooklin, 70 m², 3 quarto(s), 3 banheiro(s), 3 vaga(s).
+IMV0499;Venda;Apartamento;São Paulo;Norte;Casa Verde;715000;2;3;97;2;1600;590;Não;Sim;Não;Não;Sim;2700;4.53;Sim;Apartamento em Casa Verde, 97 m², 2 quarto(s), 3 banheiro(s), 2 vaga(s).
+IMV0500;Venda;Apartamento;São Paulo;Centro;República;1780000;4;4;197;3;1750;450;Não;Não;Sim;Sim;Sim;8550;5.76;Não;Apartamento em República, 197 m², 4 quarto(s), 4 banheiro(s), 3 vaga(s).

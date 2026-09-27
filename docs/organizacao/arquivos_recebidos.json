@@ -1,0 +1,72 @@
+[
+  {
+    "origem": "fluxos_funcionais.md",
+    "destino": "docs/funcional/fluxos_funcionais.md",
+    "sha256": "0bf4102977abc3203b377eda13538f6dcaef7d1093679483077c6623162f8150"
+  },
+  {
+    "origem": "regras_conversacionais.md",
+    "destino": "docs/funcional/regras_conversacionais.md",
+    "sha256": "7f87c83197c9fa93de4351e2b311b77132bba5fba606e6c4cde9ce09e2620ba3"
+  },
+  {
+    "origem": "especificacao_dashboard.md",
+    "destino": "docs/dashboard/especificacao_dashboard.md",
+    "sha256": "be07d6d1fd3267e35c8e03b7a626fb4e9a05d2ff1d873eaec23ff51c2394a442"
+  },
+  {
+    "origem": "documentacao_dados.md",
+    "destino": "docs/dados/documentacao_dados.md",
+    "sha256": "190f2d634eff693dc1d410886fb83d8d0da5b8888d4d296c9d02e2566ef30b10"
+  },
+  {
+    "origem": "indicadores_dashboard.xlsx",
+    "destino": "docs/dashboard/indicadores_dashboard.xlsx",
+    "sha256": "1168682c8e1f69cd61afbd9afc7114d4e5031b861b7b03e32b6c6648eaed4c99"
+  },
+  {
+    "origem": "Informações em Excel para entendimento dos dados.xlsx",
+    "destino": "docs/dados/bases_consolidadas.xlsx",
+    "sha256": "128479bae932a1059b322c8cba8223f9c16558e2ae1ac0eaea5055c6d07609d4"
+  },
+  {
+    "origem": "POSTECH - Hacka Agente_SDR_Imobiliario -  Fase 5.pdf",
+    "destino": "docs/desafio/enunciado_fase_5.pdf",
+    "sha256": "1da24adfb0eae6c3c5866812f206934ab43f3e3d0e992b6181fe3d89a038e302"
+  },
+  {
+    "origem": "POSTECH - Hacka Agente_SDR_Imobiliario -  Fase 5 (1).pdf",
+    "destino": "recebidos_duplicados/enunciado_fase_5_copia.pdf",
+    "sha256": "1da24adfb0eae6c3c5866812f206934ab43f3e3d0e992b6181fe3d89a038e302"
+  },
+  {
+    "origem": "imoveis.csv",
+    "destino": "data/imoveis.csv",
+    "sha256": "38f4c031e0469a3e77d917f8e170ae9150622ac87b48c27270e7fceccab2ed33"
+  },
+  {
+    "origem": "leads.csv",
+    "destino": "data/leads.csv",
+    "sha256": "b9c038469d56f44da76e263830687f7cc395821a3029da2b16d8bf9345205d32"
+  },
+  {
+    "origem": "agendamentos.csv",
+    "destino": "data/agendamentos.csv",
+    "sha256": "915ecc11c76e51c3b4928fa631b854089143b66975608e13dc38a325eca8a258"
+  },
+  {
+    "origem": "interacoes.csv",
+    "destino": "data/interacoes.csv",
+    "sha256": "6fca7e45fe0f4f76d573e54748f6de26666abf18450b901219d6777563c3f014"
+  },
+  {
+    "origem": "regras_qualificacao.csv",
+    "destino": "data/regras_qualificacao.csv",
+    "sha256": "cdef5af403919a413e6871256e7ab908a69d547f93eca2decb4bcbf8afdba997"
+  },
+  {
+    "origem": "C:\\Users\\karim\\Downloads\\casos_de_teste_iniciais.xlsx",
+    "destino": "docs/testes/casos_de_teste_iniciais.xlsx",
+    "sha256": "480e006eaf68b280ab7f67301e0ef5fd1ec9112ff1b93ad686d8371fb1e0148d"
+  }
+]

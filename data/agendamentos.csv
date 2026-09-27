@@ -1,0 +1,184 @@
+﻿id_agendamento;id_lead;id_imovel;tipo_agendamento;data_agendamento;hora_agendamento;status_agendamento;responsavel;observacao
+AGD0001;LED0001;IMV0472;Visita ao imóvel;2026-10-12 00:00:00;18:30;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0002;LED0002;IMV0029;Visita ao imóvel;2026-10-12 00:00:00;18:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0003;LED0005;IMV0025;Visita ao imóvel;2026-10-04 00:00:00;14:00;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0004;LED0008;;Reunião com especialista;2026-10-07 00:00:00;17:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0005;LED0011;IMV0458;Visita ao imóvel;2026-10-14 00:00:00;15:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0006;LED0012;IMV0276;Visita ao imóvel;2026-10-11 00:00:00;17:00;Cancelado;Eduardo Nunes;
+AGD0007;LED0022;;Reunião com especialista;2026-10-12 00:00:00;15:30;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0008;LED0023;;Reunião com especialista;2026-09-27 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0009;LED0027;IMV0369;Visita ao imóvel;2026-10-05 00:00:00;17:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0010;LED0032;IMV0422;Visita ao imóvel;2026-10-19 00:00:00;18:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0011;LED0033;IMV0416;Visita ao imóvel;2026-10-01 00:00:00;15:30;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0012;LED0035;IMV0267;Visita ao imóvel;2026-10-08 00:00:00;15:30;Cancelado;Carlos Mendes;
+AGD0013;LED0040;IMV0143;Visita ao imóvel;2026-10-09 00:00:00;10:30;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0014;LED0041;IMV0343;Visita ao imóvel;2026-10-16 00:00:00;09:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0015;LED0043;IMV0312;Visita ao imóvel;2026-10-09 00:00:00;09:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0016;LED0044;;Reunião com especialista;2026-10-15 00:00:00;14:00;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0017;LED0047;IMV0453;Visita ao imóvel;2026-10-07 00:00:00;15:30;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0018;LED0051;IMV0465;Visita ao imóvel;2026-10-18 00:00:00;15:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0019;LED0053;IMV0439;Visita ao imóvel;2026-10-01 00:00:00;17:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0020;LED0056;IMV0296;Visita ao imóvel;2026-10-01 00:00:00;14:00;Cancelado;Camila Rocha;
+AGD0021;LED0060;IMV0054;Visita ao imóvel;2026-10-01 00:00:00;17:00;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0022;LED0062;IMV0428;Visita ao imóvel;2026-10-07 00:00:00;17:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0023;LED0064;IMV0078;Visita ao imóvel;2026-10-20 00:00:00;15:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0024;LED0065;IMV0248;Visita ao imóvel;2026-09-29 00:00:00;09:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0025;LED0066;;Reunião com especialista;2026-10-10 00:00:00;09:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0026;LED0067;;Reunião com especialista;2026-09-29 00:00:00;15:30;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0027;LED0068;;Visita ao imóvel;2026-10-09 00:00:00;14:00;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0028;LED0074;IMV0251;Visita ao imóvel;2026-10-08 00:00:00;09:00;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0029;LED0075;IMV0063;Visita ao imóvel;2026-10-14 00:00:00;17:00;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0030;LED0077;IMV0083;Visita ao imóvel;2026-10-19 00:00:00;09:00;Realizado;Marina Costa;
+AGD0031;LED0084;IMV0038;Visita ao imóvel;2026-10-19 00:00:00;18:30;Realizado;Eduardo Nunes;
+AGD0032;LED0087;;Reunião com especialista;2026-10-13 00:00:00;10:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0033;LED0093;;Reunião com especialista;2026-09-30 00:00:00;14:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0034;LED0095;IMV0427;Visita ao imóvel;2026-10-05 00:00:00;14:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0035;LED0097;;Reunião com especialista;2026-10-09 00:00:00;14:00;Realizado;Juliana Prado;
+AGD0036;LED0099;IMV0493;Visita ao imóvel;2026-10-15 00:00:00;15:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0037;LED0100;IMV0380;Visita ao imóvel;2026-09-26 00:00:00;14:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0038;LED0102;IMV0277;Visita ao imóvel;2026-10-12 00:00:00;14:00;Realizado;Juliana Prado;
+AGD0039;LED0103;IMV0456;Visita ao imóvel;2026-10-04 00:00:00;15:30;Cancelado;Camila Rocha;
+AGD0040;LED0104;IMV0004;Visita ao imóvel;2026-10-11 00:00:00;18:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0041;LED0105;;Reunião com especialista;2026-10-09 00:00:00;09:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0042;LED0109;;Reunião com especialista;2026-09-26 00:00:00;18:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0043;LED0115;IMV0325;Visita ao imóvel;2026-10-02 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0044;LED0116;;Reunião com especialista;2026-10-11 00:00:00;09:00;Realizado;Eduardo Nunes;
+AGD0045;LED0118;IMV0031;Visita ao imóvel;2026-10-02 00:00:00;18:30;Cancelado;Juliana Prado;
+AGD0046;LED0121;IMV0385;Visita ao imóvel;2026-09-29 00:00:00;09:00;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0047;LED0123;;Reunião com especialista;2026-10-09 00:00:00;09:00;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0048;LED0133;IMV0162;Visita ao imóvel;2026-10-11 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0049;LED0140;IMV0156;Visita ao imóvel;2026-10-07 00:00:00;17:00;Cancelado;Carlos Mendes;
+AGD0050;LED0141;IMV0427;Visita ao imóvel;2026-10-06 00:00:00;15:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0051;LED0142;IMV0211;Visita ao imóvel;2026-09-27 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0052;LED0145;IMV0485;Visita ao imóvel;2026-10-20 00:00:00;10:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0053;LED0147;IMV0318;Visita ao imóvel;2026-10-15 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0054;LED0148;IMV0407;Visita ao imóvel;2026-09-28 00:00:00;17:00;Realizado;Eduardo Nunes;
+AGD0055;LED0158;IMV0025;Visita ao imóvel;2026-10-09 00:00:00;14:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0056;LED0160;IMV0203;Visita ao imóvel;2026-10-05 00:00:00;14:00;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0057;LED0163;IMV0057;Visita ao imóvel;2026-10-10 00:00:00;15:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0058;LED0164;IMV0458;Visita ao imóvel;2026-10-06 00:00:00;15:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0059;LED0167;IMV0092;Visita ao imóvel;2026-10-12 00:00:00;09:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0060;LED0168;IMV0275;Visita ao imóvel;2026-10-12 00:00:00;14:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0061;LED0175;;Reunião com especialista;2026-10-18 00:00:00;18:30;Realizado;Camila Rocha;
+AGD0062;LED0177;IMV0380;Visita ao imóvel;2026-10-16 00:00:00;10:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0063;LED0178;;Reunião com especialista;2026-09-30 00:00:00;14:00;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0064;LED0181;IMV0074;Visita ao imóvel;2026-09-26 00:00:00;14:00;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0065;LED0182;IMV0149;Visita ao imóvel;2026-10-19 00:00:00;17:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0066;LED0184;IMV0152;Visita ao imóvel;2026-10-05 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0067;LED0188;IMV0306;Visita ao imóvel;2026-10-06 00:00:00;18:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0068;LED0191;IMV0438;Visita ao imóvel;2026-10-05 00:00:00;15:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0069;LED0198;IMV0312;Visita ao imóvel;2026-10-05 00:00:00;18:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0070;LED0202;;Reunião com especialista;2026-10-10 00:00:00;09:00;Realizado;Carlos Mendes;
+AGD0071;LED0203;IMV0223;Visita ao imóvel;2026-10-03 00:00:00;18:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0072;LED0204;IMV0205;Visita ao imóvel;2026-10-08 00:00:00;15:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0073;LED0207;IMV0317;Visita ao imóvel;2026-10-08 00:00:00;17:00;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0074;LED0209;IMV0165;Visita ao imóvel;2026-10-10 00:00:00;10:30;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0075;LED0210;IMV0096;Visita ao imóvel;2026-10-06 00:00:00;17:00;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0076;LED0211;IMV0197;Visita ao imóvel;2026-10-13 00:00:00;18:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0077;LED0214;IMV0387;Visita ao imóvel;2026-10-16 00:00:00;15:30;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0078;LED0217;IMV0441;Visita ao imóvel;2026-10-10 00:00:00;17:00;Realizado;Eduardo Nunes;
+AGD0079;LED0229;IMV0417;Visita ao imóvel;2026-10-16 00:00:00;18:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0080;LED0230;IMV0302;Visita ao imóvel;2026-10-05 00:00:00;17:00;Cancelado;Carlos Mendes;
+AGD0081;LED0232;IMV0435;Visita ao imóvel;2026-09-26 00:00:00;10:30;Realizado;Juliana Prado;
+AGD0082;LED0233;IMV0036;Visita ao imóvel;2026-10-13 00:00:00;09:00;Cancelado;Carlos Mendes;
+AGD0083;LED0238;IMV0003;Visita ao imóvel;2026-09-26 00:00:00;18:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0084;LED0241;IMV0065;Visita ao imóvel;2026-09-26 00:00:00;14:00;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0085;LED0244;IMV0319;Visita ao imóvel;2026-10-11 00:00:00;18:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0086;LED0250;IMV0062;Visita ao imóvel;2026-10-08 00:00:00;15:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0087;LED0253;IMV0350;Visita ao imóvel;2026-10-11 00:00:00;18:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0088;LED0255;IMV0054;Visita ao imóvel;2026-09-30 00:00:00;09:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0089;LED0256;IMV0257;Visita ao imóvel;2026-10-07 00:00:00;14:00;Realizado;Camila Rocha;
+AGD0090;LED0257;IMV0071;Visita ao imóvel;2026-10-18 00:00:00;18:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0091;LED0262;IMV0421;Visita ao imóvel;2026-10-08 00:00:00;17:00;Cancelado;Camila Rocha;
+AGD0092;LED0265;IMV0054;Visita ao imóvel;2026-10-16 00:00:00;15:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0093;LED0267;;Reunião com especialista;2026-10-14 00:00:00;17:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0094;LED0272;;Visita ao imóvel;2026-10-01 00:00:00;15:30;Realizado;Camila Rocha;
+AGD0095;LED0276;IMV0078;Visita ao imóvel;2026-10-05 00:00:00;15:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0096;LED0285;IMV0180;Visita ao imóvel;2026-10-05 00:00:00;17:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0097;LED0291;IMV0153;Visita ao imóvel;2026-10-05 00:00:00;17:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0098;LED0292;IMV0496;Visita ao imóvel;2026-10-07 00:00:00;15:30;Cancelado;Carlos Mendes;
+AGD0099;LED0294;IMV0402;Visita ao imóvel;2026-10-05 00:00:00;18:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0100;LED0296;;Reunião com especialista;2026-09-27 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0101;LED0306;IMV0317;Visita ao imóvel;2026-10-20 00:00:00;18:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0102;LED0307;;Reunião com especialista;2026-10-19 00:00:00;09:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0103;LED0308;IMV0205;Visita ao imóvel;2026-10-11 00:00:00;18:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0104;LED0312;IMV0015;Visita ao imóvel;2026-10-14 00:00:00;15:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0105;LED0313;IMV0216;Visita ao imóvel;2026-10-06 00:00:00;15:30;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0106;LED0314;IMV0058;Visita ao imóvel;2026-10-11 00:00:00;09:00;Cancelado;Juliana Prado;
+AGD0107;LED0320;IMV0191;Visita ao imóvel;2026-10-17 00:00:00;17:00;Cancelado;Juliana Prado;
+AGD0108;LED0322;IMV0066;Visita ao imóvel;2026-09-27 00:00:00;15:30;Cancelado;Camila Rocha;
+AGD0109;LED0327;IMV0210;Visita ao imóvel;2026-09-28 00:00:00;17:00;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0110;LED0333;IMV0475;Visita ao imóvel;2026-10-05 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0111;LED0334;IMV0421;Visita ao imóvel;2026-10-05 00:00:00;17:00;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0112;LED0342;IMV0058;Visita ao imóvel;2026-10-06 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0113;LED0346;IMV0266;Visita ao imóvel;2026-10-18 00:00:00;18:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0114;LED0354;IMV0489;Visita ao imóvel;2026-10-20 00:00:00;09:00;Cancelado;Marina Costa;
+AGD0115;LED0357;IMV0019;Visita ao imóvel;2026-10-05 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0116;LED0365;IMV0032;Visita ao imóvel;2026-09-28 00:00:00;09:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0117;LED0369;IMV0226;Visita ao imóvel;2026-10-14 00:00:00;14:00;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0118;LED0377;IMV0163;Visita ao imóvel;2026-10-19 00:00:00;14:00;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0119;LED0379;IMV0362;Visita ao imóvel;2026-10-12 00:00:00;10:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0120;LED0382;IMV0304;Visita ao imóvel;2026-10-09 00:00:00;09:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0121;LED0383;IMV0082;Visita ao imóvel;2026-10-02 00:00:00;15:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0122;LED0388;IMV0280;Visita ao imóvel;2026-09-28 00:00:00;14:00;Cancelado;Camila Rocha;
+AGD0123;LED0390;IMV0265;Visita ao imóvel;2026-09-29 00:00:00;15:30;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0124;LED0392;IMV0209;Visita ao imóvel;2026-10-20 00:00:00;09:00;Cancelado;Camila Rocha;
+AGD0125;LED0399;IMV0097;Visita ao imóvel;2026-10-11 00:00:00;14:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0126;LED0403;IMV0442;Visita ao imóvel;2026-10-07 00:00:00;17:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0127;LED0408;IMV0224;Visita ao imóvel;2026-10-15 00:00:00;09:00;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0128;LED0411;IMV0339;Visita ao imóvel;2026-10-19 00:00:00;15:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0129;LED0412;IMV0363;Visita ao imóvel;2026-10-12 00:00:00;10:30;Realizado;Marina Costa;
+AGD0130;LED0416;;Reunião com especialista;2026-09-26 00:00:00;18:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0131;LED0418;IMV0341;Visita ao imóvel;2026-10-02 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0132;LED0420;;Reunião com especialista;2026-10-04 00:00:00;15:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0133;LED0421;;Reunião com especialista;2026-09-30 00:00:00;18:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0134;LED0423;;Reunião com especialista;2026-10-18 00:00:00;09:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0135;LED0429;IMV0348;Visita ao imóvel;2026-09-30 00:00:00;10:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0136;LED0432;;Reunião com especialista;2026-10-20 00:00:00;09:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0137;LED0437;IMV0493;Visita ao imóvel;2026-10-09 00:00:00;15:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0138;LED0441;IMV0193;Visita ao imóvel;2026-10-15 00:00:00;15:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0139;LED0445;IMV0101;Visita ao imóvel;2026-10-02 00:00:00;10:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0140;LED0450;;Reunião com especialista;2026-09-28 00:00:00;10:30;Confirmado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0141;LED0453;IMV0104;Visita ao imóvel;2026-09-27 00:00:00;10:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0142;LED0463;IMV0220;Visita ao imóvel;2026-10-16 00:00:00;18:30;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0143;LED0468;IMV0274;Visita ao imóvel;2026-10-11 00:00:00;10:30;Cancelado;Camila Rocha;
+AGD0144;LED0469;IMV0030;Visita ao imóvel;2026-09-28 00:00:00;15:30;Cancelado;Eduardo Nunes;
+AGD0145;LED0470;IMV0378;Visita ao imóvel;2026-10-10 00:00:00;09:00;Realizado;Juliana Prado;
+AGD0146;LED0477;IMV0250;Visita ao imóvel;2026-09-29 00:00:00;09:00;Realizado;Camila Rocha;
+AGD0147;LED0482;IMV0199;Visita ao imóvel;2026-10-20 00:00:00;09:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0148;LED0483;IMV0104;Visita ao imóvel;2026-10-15 00:00:00;18:30;Cancelado;Camila Rocha;
+AGD0149;LED0490;IMV0047;Visita ao imóvel;2026-10-03 00:00:00;09:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0150;LED0491;IMV0018;Visita ao imóvel;2026-10-10 00:00:00;09:00;Realizado;Juliana Prado;
+AGD0151;LED0502;IMV0122;Visita ao imóvel;2026-09-30 00:00:00;14:00;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0152;LED0504;IMV0463;Visita ao imóvel;2026-09-27 00:00:00;15:30;Confirmado;Marina Costa;Contato confirmado pelo agente.
+AGD0153;LED0507;IMV0135;Visita ao imóvel;2026-09-28 00:00:00;14:00;Realizado;Marina Costa;
+AGD0154;LED0508;IMV0036;Visita ao imóvel;2026-10-06 00:00:00;14:00;Cancelado;Carlos Mendes;
+AGD0155;LED0512;IMV0343;Visita ao imóvel;2026-10-02 00:00:00;17:00;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0156;LED0515;IMV0178;Visita ao imóvel;2026-10-04 00:00:00;17:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0157;LED0517;IMV0260;Visita ao imóvel;2026-10-17 00:00:00;17:00;Realizado;Juliana Prado;
+AGD0158;LED0519;IMV0235;Visita ao imóvel;2026-10-08 00:00:00;17:00;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0159;LED0522;;Reunião com especialista;2026-10-06 00:00:00;18:30;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0160;LED0525;IMV0218;Visita ao imóvel;2026-10-13 00:00:00;17:00;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0161;LED0536;IMV0190;Visita ao imóvel;2026-10-19 00:00:00;10:30;Cancelado;Camila Rocha;
+AGD0162;LED0538;;Reunião com especialista;2026-10-18 00:00:00;10:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0163;LED0540;IMV0424;Visita ao imóvel;2026-10-18 00:00:00;14:00;Realizado;Eduardo Nunes;
+AGD0164;LED0541;;Reunião com especialista;2026-09-26 00:00:00;14:00;Confirmado;Camila Rocha;Contato confirmado pelo agente.
+AGD0165;LED0544;IMV0370;Visita ao imóvel;2026-09-30 00:00:00;14:00;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0166;LED0546;IMV0085;Visita ao imóvel;2026-10-15 00:00:00;10:30;Realizado;Eduardo Nunes;
+AGD0167;LED0555;;Reunião com especialista;2026-10-16 00:00:00;15:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0168;LED0560;IMV0116;Visita ao imóvel;2026-09-29 00:00:00;17:00;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0169;LED0561;;Reunião com especialista;2026-10-01 00:00:00;10:30;Agendado;Carlos Mendes;Contato confirmado pelo agente.
+AGD0170;LED0563;IMV0463;Visita ao imóvel;2026-10-15 00:00:00;17:00;Realizado;Marina Costa;
+AGD0171;LED0564;IMV0407;Visita ao imóvel;2026-10-02 00:00:00;10:30;Cancelado;Carlos Mendes;
+AGD0172;LED0565;;Reunião com especialista;2026-10-06 00:00:00;18:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0173;LED0568;IMV0265;Visita ao imóvel;2026-09-30 00:00:00;09:00;Realizado;Camila Rocha;
+AGD0174;LED0570;IMV0120;Visita ao imóvel;2026-09-29 00:00:00;10:30;Confirmado;Juliana Prado;Contato confirmado pelo agente.
+AGD0175;LED0574;IMV0088;Visita ao imóvel;2026-10-11 00:00:00;10:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0176;LED0580;IMV0373;Visita ao imóvel;2026-10-14 00:00:00;17:00;Realizado;Carlos Mendes;
+AGD0177;LED0583;;Reunião com especialista;2026-10-18 00:00:00;10:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0178;LED0587;IMV0422;Visita ao imóvel;2026-09-27 00:00:00;10:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0179;LED0588;IMV0040;Visita ao imóvel;2026-10-13 00:00:00;18:30;Agendado;Camila Rocha;Contato confirmado pelo agente.
+AGD0180;LED0589;IMV0378;Visita ao imóvel;2026-10-03 00:00:00;18:30;Confirmado;Eduardo Nunes;Contato confirmado pelo agente.
+AGD0181;LED0590;IMV0390;Visita ao imóvel;2026-10-02 00:00:00;10:30;Agendado;Juliana Prado;Contato confirmado pelo agente.
+AGD0182;LED0598;IMV0023;Visita ao imóvel;2026-10-10 00:00:00;18:30;Agendado;Marina Costa;Contato confirmado pelo agente.
+AGD0183;LED0600;IMV0013;Visita ao imóvel;2026-10-19 00:00:00;18:30;Agendado;Eduardo Nunes;Contato confirmado pelo agente.

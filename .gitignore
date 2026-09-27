@@ -1,0 +1,54 @@
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+
+# Ambientes virtuais Python
+.venv/
+venv/
+env/
+ENV/
+
+# Cache e arquivos compilados Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+
+# Cobertura e empacotamento
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+
+# Configurações pessoais de editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos temporários do Office e do sistema
+~$*
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Cópia idêntica preservada localmente; original em docs/desafio/
+recebidos_duplicados/
+# Futuras conversas e dados gerados durante a execução
+runtime/
+tmp/
+*.log
+
+# Modelos locais: baixar pelo Ollama, não versionar pesos
+.ollama/
+*.gguf
+*.safetensors
+
+# Manter no Git: código, tests/, data/ (bases sintéticas), docs/ e .env.example.
+# Bases de execução e históricos de clientes devem ficar em runtime/.

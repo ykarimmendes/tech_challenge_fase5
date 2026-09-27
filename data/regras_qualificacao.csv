@@ -1,0 +1,19 @@
+﻿Fluxo;Critério;Condição;Pontos máximos;Justificativa;Observação
+Compra/Aluguel;Intenção;Compra ou Aluguel identificado;10;Direciona o fluxo comercial;
+Compra/Aluguel;Orçamento;Valor informado;20;Permite filtrar imóveis compatíveis;
+Compra/Aluguel;Região;Bairro/região informada;15;Aumenta aderência da busca;
+Compra/Aluguel;Tipo de imóvel;Apartamento/Casa/Studio/Cobertura informado;10;Refina a busca;
+Compra/Aluguel;Quartos;Quantidade informada;10;Refina a necessidade;
+Compra/Aluguel;Urgência;Alta=15 / Média=10 / Baixa=5;15;Prioriza proximidade da decisão;Sem informação = 0
+Compra/Aluguel;Visita/Reunião;Aceitou visita ou reunião;20;Indica forte avanço comercial;Total máximo = 100
+Investimento;Intenção;Investimento identificado;10;Direciona o fluxo de investidor;
+Investimento;Ticket;Valor disponível informado;20;Permite selecionar oportunidades compatíveis;
+Investimento;Região;Bairro/região informada;10;Ajuda a selecionar o mercado de interesse;
+Investimento;Perfil investidor;Conservador/Moderado/Arrojado informado;15;Caracteriza apetite a risco;
+Investimento;Retorno esperado;Percentual informado;15;Permite comparar oportunidades;
+Investimento;Urgência;Alta=10 / Média=7 / Baixa=3;10;Prioriza leads mais próximos da decisão;Sem informação = 0
+Investimento;Reunião especialista;Aceitou reunião/visita;20;Indica avanço comercial;Total máximo = 100
+Classificação;Frio;0 a 39 pontos;0;Lead pouco qualificado;Nutrição / follow-up
+Classificação;Morno;40 a 69 pontos;0;Interesse relevante, mas faltam dados/compromisso;Continuar qualificação
+Classificação;Quente;70 a 100 pontos;0;Lead prioritário;Encaminhar para atendimento comercial
+Investimento;Regra de completude;Se perfil investidor OU retorno esperado estiver ausente, score máximo = 69;0;Evita classificar como Quente um investidor ainda incompletamente qualificado;Completar perfil e retorno antes de virar Quente
