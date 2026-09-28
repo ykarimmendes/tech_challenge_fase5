@@ -29,6 +29,28 @@ Além do atendimento conversacional, a aplicação possui memória persistente, 
 | Wellington     | Fluxos funcionais, regras conversacionais, cenários de atendimento, testes e documentação funcional |
 | Rúben          | Bases de dados, regras de qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
 
+
+## Arquitetura da Solução
+
+A solução utiliza uma arquitetura modular, separando a interface, o núcleo do agente, a inteligência artificial, as regras de negócio, a persistência e o acompanhamento comercial.
+
+![Arquitetura da Solução](docs/arquitetura_sdr.png)
+
+
+### Visão geral
+
+O fluxo da solução funciona da seguinte forma:
+
+- o usuário interage com a aplicação por meio da interface desenvolvida em Streamlit;
+- o Agente SDR controla o estado da conversa e as regras de negócio;
+- o modelo Qwen2.5:3b, executado via Ollama, interpreta a linguagem natural;
+- os dados extraídos passam por validações determinísticas antes de serem incorporados ao estado da conversa;
+- o motor comercial executa scoring, qualificação, busca de imóveis, agendamento e follow-up;
+- os dados são persistidos em SQLite;
+- o dashboard apresenta os principais indicadores comerciais.
+
+> **Princípio da solução:** o LLM interpreta; o código decide.
+
 ## 🎯 Objetivos
 
 - Automatizar o atendimento inicial de leads imobiliários.
@@ -124,6 +146,81 @@ Resumo para o corretor
 A aplicação também utiliza arquivos CSV como base simulada para imóveis, leads, interações, regras de qualificação e agendamentos históricos.
 
 ---
+
+## Explicação da IA Utilizada
+
+A solução utiliza o modelo **Qwen2.5:3b**, executado localmente por meio do **Ollama**, para interpretar as mensagens dos leads e extrair informações estruturadas a partir da linguagem natural.
+
+Entre os dados identificados pelo modelo estão:
+
+- intenção de compra, aluguel ou investimento;
+- orçamento ou ticket;
+- região ou bairro;
+- tipo de imóvel;
+- quantidade de quartos;
+- urgência;
+- perfil do investidor;
+- retorno esperado;
+- preferências relacionadas ao imóvel.
+
+A extração é realizada de forma estruturada por meio de **Prompt Engineering + JSON Schema**, permitindo que as informações interpretadas pelo modelo sejam utilizadas pelas regras de negócio da aplicação.
+
+### Arquitetura híbrida
+
+A solução adota uma abordagem híbrida entre inteligência artificial e regras determinísticas.
+
+O LLM é responsável por:
+
+- compreender a linguagem natural;
+- interpretar a intenção do usuário;
+- extrair informações da conversa;
+- considerar o contexto das mensagens anteriores.
+
+O código Python é responsável por:
+
+- validar os dados extraídos;
+- controlar o estado da conversa;
+- calcular o score;
+- classificar o lead;
+- buscar imóveis;
+- realizar agendamentos;
+- controlar follow-ups;
+- persistir os dados no SQLite.
+
+> **Princípio da solução:** o LLM interpreta; o código decide.
+
+### Controle de alucinações
+
+Para aumentar a confiabilidade da solução, as informações extraídas pelo modelo passam por validações determinísticas antes de serem adicionadas ao perfil do lead.
+
+Dessa forma, o sistema evita aceitar automaticamente informações que não tenham sido efetivamente fornecidas pelo usuário.
+
+### Memória e continuidade
+
+O estado da conversa é armazenado pela aplicação e persistido em SQLite.
+
+Isso permite que o agente mantenha informações já fornecidas pelo lead e retome conversas interrompidas sem solicitar novamente todos os dados.
+
+### Fluxo da IA
+
+```text
+Mensagem do usuário
+        ↓
+Contexto da conversa
+        ↓
+Prompt
+        ↓
+Qwen2.5:3b / Ollama
+        ↓
+Extração estruturada em JSON
+        ↓
+Validação determinística
+        ↓
+Estado do lead
+        ↓
+Regras de negócio
+        ↓
+Resposta do agente
 
 # 🔄 Fluxo Principal do Atendimento
 
