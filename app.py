@@ -1,9 +1,11 @@
-import streamlit as st
 import csv
 
 from datetime import datetime, date
 from pathlib import Path
 from uuid import uuid4
+
+import streamlit as st
+
 
 from agent import (
     Servicos,
@@ -45,6 +47,17 @@ from database import (
 
 
 # ==================================================
+# CONFIGURAÇÃO DA PÁGINA
+# ==================================================
+
+st.set_page_config(
+    page_title="Agente SDR Imobiliário",
+    page_icon="🏠",
+    layout="wide"
+)
+
+
+# ==================================================
 # FUNÇÕES AUXILIARES
 # ==================================================
 
@@ -53,7 +66,7 @@ def formatar_reais(valor):
     if valor is None:
         return "Não informado"
 
-    valor_formatado = f"{valor:,.2f}"
+    valor_formatado = f"{float(valor):,.2f}"
 
     valor_formatado = (
         valor_formatado
@@ -82,11 +95,11 @@ def formatar_data_hora(texto):
 
     except Exception:
 
-        return texto
+        return str(texto)
 
 
 # ==================================================
-# BUSCAR IMÓVEL
+# BUSCAR IMÓVEL POR ID
 # ==================================================
 
 def buscar_imovel_por_id(id_imovel):
@@ -96,6 +109,9 @@ def buscar_imovel_por_id(id_imovel):
         / "data"
         / "imoveis.csv"
     )
+
+    if not caminho.exists():
+        return None
 
     with open(
         caminho,
@@ -110,7 +126,8 @@ def buscar_imovel_por_id(id_imovel):
 
         for row in leitor:
 
-            if row["id_imovel"] == id_imovel:
+            if row.get("id_imovel") == id_imovel:
+
                 return row
 
     return None
@@ -131,13 +148,17 @@ def nova_conversa():
     )
 
     st.session_state.estado = None
+
     st.session_state.historico = []
 
     st.session_state.imovel_selecionado = None
+
     st.session_state.mostrar_agendamento = False
+
     st.session_state.agendamento_confirmado = None
 
     st.session_state.aviso_retomada = None
+
     st.session_state.resumo_corretor = None
 
 
@@ -151,36 +172,40 @@ def abrir_conversa(id_conversa):
         id_conversa
     )
 
-    if conversa:
+    if not conversa:
+        return
 
-        st.session_state.id_lead = (
-            conversa["id_lead"]
-        )
+    st.session_state.id_lead = (
+        conversa["id_lead"]
+    )
 
-        st.session_state.id_conversa = (
-            conversa["id_conversa"]
-        )
+    st.session_state.id_conversa = (
+        conversa["id_conversa"]
+    )
 
-        st.session_state.estado = (
-            conversa["estado"]
-        )
+    st.session_state.estado = (
+        conversa["estado"]
+    )
 
-        st.session_state.historico = (
-            conversa["historico"]
-        )
+    st.session_state.historico = (
+        conversa["historico"]
+    )
 
-        st.session_state.imovel_selecionado = None
-        st.session_state.mostrar_agendamento = False
-        st.session_state.agendamento_confirmado = None
-        st.session_state.resumo_corretor = None
+    st.session_state.imovel_selecionado = None
 
-        st.session_state.aviso_retomada = (
-            "✅ Conversa retomada com sucesso."
-        )
+    st.session_state.mostrar_agendamento = False
 
-        st.session_state.pagina = (
-            "💬 Atendimento"
-        )
+    st.session_state.agendamento_confirmado = None
+
+    st.session_state.resumo_corretor = None
+
+    st.session_state.aviso_retomada = (
+        "✅ Conversa retomada com sucesso."
+    )
+
+    st.session_state.pagina = (
+        "💬 Atendimento"
+    )
 
 
 # ==================================================
@@ -210,8 +235,11 @@ def retomar_ultima_conversa():
         )
 
         st.session_state.imovel_selecionado = None
+
         st.session_state.mostrar_agendamento = False
+
         st.session_state.agendamento_confirmado = None
+
         st.session_state.resumo_corretor = None
 
         st.session_state.aviso_retomada = (
@@ -230,7 +258,7 @@ def retomar_ultima_conversa():
 
 
 # ==================================================
-# GERAR FOLLOW-UP
+# GERAR MENSAGEM DE FOLLOW-UP
 # ==================================================
 
 def gerar_mensagem_followup(estado):
@@ -267,7 +295,20 @@ def gerar_mensagem_followup(estado):
         "quartos"
     )
 
+    perfil_investidor = perfil.get(
+        "perfil_investidor"
+    )
+
+    retorno = perfil.get(
+        "retorno_esperado_pct"
+    )
+
     partes = []
+
+
+    # ----------------------------------------------
+    # COMPRA
+    # ----------------------------------------------
 
     if intencao == "Compra":
 
@@ -276,12 +317,22 @@ def gerar_mensagem_followup(estado):
             "um imóvel para comprar"
         )
 
+
+    # ----------------------------------------------
+    # ALUGUEL
+    # ----------------------------------------------
+
     elif intencao == "Aluguel":
 
         partes.append(
             "você estava procurando "
             "um imóvel para alugar"
         )
+
+
+    # ----------------------------------------------
+    # INVESTIMENTO
+    # ----------------------------------------------
 
     elif intencao == "Investimento":
 
@@ -290,30 +341,75 @@ def gerar_mensagem_followup(estado):
             "oportunidades de investimento imobiliário"
         )
 
-    if tipo:
 
-        partes.append(
-            f"do tipo {tipo.lower()}"
-        )
+    # ----------------------------------------------
+    # DETALHES COMPRA / ALUGUEL
+    # ----------------------------------------------
 
-    if regiao:
+    if intencao in [
+        "Compra",
+        "Aluguel"
+    ]:
 
-        partes.append(
-            f"na região de {regiao}"
-        )
+        if tipo:
 
-    if quartos is not None:
+            partes.append(
+                f"do tipo {tipo.lower()}"
+            )
 
-        partes.append(
-            f"com {quartos} quarto(s)"
-        )
+        if regiao:
+
+            partes.append(
+                f"na região de {regiao}"
+            )
+
+        if quartos is not None:
+
+            partes.append(
+                f"com {quartos} quarto(s)"
+            )
+
+
+    # ----------------------------------------------
+    # DETALHES INVESTIMENTO
+    # ----------------------------------------------
+
+    if intencao == "Investimento":
+
+        if perfil_investidor:
+
+            partes.append(
+                f"com perfil {perfil_investidor.lower()}"
+            )
+
+        if retorno is not None:
+
+            partes.append(
+                f"buscando retorno de "
+                f"{retorno}% ao ano"
+            )
+
+
+    # ----------------------------------------------
+    # ORÇAMENTO / TICKET
+    # ----------------------------------------------
 
     if orcamento is not None:
 
-        partes.append(
-            f"com orçamento de até "
-            f"{formatar_reais(orcamento)}"
-        )
+        if intencao == "Investimento":
+
+            partes.append(
+                f"com ticket de até "
+                f"{formatar_reais(orcamento)}"
+            )
+
+        else:
+
+            partes.append(
+                f"com orçamento de até "
+                f"{formatar_reais(orcamento)}"
+            )
+
 
     if partes:
 
@@ -324,8 +420,9 @@ def gerar_mensagem_followup(estado):
         return (
             "Olá! 😊 Na nossa última conversa, "
             f"{contexto}. "
-            "Gostaria de continuar sua busca?"
+            "Gostaria de continuar seu atendimento?"
         )
+
 
     return (
         "Olá! 😊 Nossa conversa ficou em aberto. "
@@ -335,7 +432,76 @@ def gerar_mensagem_followup(estado):
 
 
 # ==================================================
-# GERAR RESUMO PARA O CORRETOR
+# PROCESSAR FOLLOW-UPS AUTOMATICAMENTE
+# ==================================================
+
+def processar_followups_automaticos(
+    horas=24,
+    modo_demo=False
+):
+
+    """
+    Processa automaticamente conversas elegíveis.
+
+    Em produção:
+    - considera conversas inativas há pelo menos
+      a quantidade de horas informada.
+
+    Em demonstração:
+    - ignora o tempo de espera.
+
+    A própria consulta do banco impede novo envio
+    quando já existe follow-up com status "Enviado".
+    """
+
+    pendentes = listar_followups_pendentes(
+        horas=horas,
+        modo_demo=modo_demo
+    )
+
+    enviados = 0
+
+    for item in pendentes:
+
+        estado_followup = item.get(
+            "estado"
+        )
+
+        if not estado_followup:
+            continue
+
+        mensagem = gerar_mensagem_followup(
+            estado_followup
+        )
+
+        registrar_followup(
+            id_lead=item[
+                "id_lead"
+            ],
+            id_conversa=item[
+                "id_conversa"
+            ],
+            mensagem=mensagem
+        )
+
+        salvar_mensagem(
+            id_mensagem=str(
+                uuid4()
+            ),
+            id_conversa=item[
+                "id_conversa"
+            ],
+            role="assistant",
+            content=mensagem
+        )
+
+        enviados += 1
+
+    return enviados
+
+
+# ==================================================
+# RESUMO PARA CORRETOR / ESPECIALISTA
 # ==================================================
 
 def gerar_resumo_corretor(
@@ -372,19 +538,28 @@ def gerar_resumo_corretor(
         or "Não informado"
     )
 
-    orcamento = (
-        perfil.get(
-            "orcamento_ticket"
-        )
+    orcamento = perfil.get(
+        "orcamento_ticket"
     )
 
-    quartos = (
-        perfil.get("quartos")
+    quartos = perfil.get(
+        "quartos"
     )
 
     urgencia = (
         perfil.get("urgencia")
         or "Não informada"
+    )
+
+    perfil_investidor = (
+        perfil.get(
+            "perfil_investidor"
+        )
+        or "Não informado"
+    )
+
+    retorno = perfil.get(
+        "retorno_esperado_pct"
     )
 
     score = estado.get(
@@ -487,7 +662,9 @@ def gerar_resumo_corretor(
 
     if followup:
 
-        if followup["status"] == "Respondido":
+        if followup[
+            "status"
+        ] == "Respondido":
 
             texto_followup = (
                 "Enviado e respondido"
@@ -507,52 +684,36 @@ def gerar_resumo_corretor(
 
 
     # ----------------------------------------------
-    # CAMPOS FORMATADOS
+    # FORMATAÇÃO
     # ----------------------------------------------
 
-    if orcamento is not None:
-
-        texto_orcamento = (
-            formatar_reais(
-                orcamento
-            )
+    texto_orcamento = (
+        formatar_reais(
+            orcamento
         )
+    )
 
-    else:
+    texto_quartos = (
+        str(quartos)
+        if quartos is not None
+        else "Não informado"
+    )
 
-        texto_orcamento = (
-            "Não informado"
-        )
+    texto_score = (
+        str(score)
+        if score is not None
+        else "Não calculado"
+    )
 
-
-    if quartos is not None:
-
-        texto_quartos = str(
-            quartos
-        )
-
-    else:
-
-        texto_quartos = (
-            "Não informado"
-        )
-
-
-    if score is not None:
-
-        texto_score = str(
-            score
-        )
-
-    else:
-
-        texto_score = (
-            "Não calculado"
-        )
+    texto_retorno = (
+        f"{retorno}% ao ano"
+        if retorno is not None
+        else "Não informado"
+    )
 
 
     # ----------------------------------------------
-    # RESUMO COMERCIAL
+    # OBSERVAÇÕES
     # ----------------------------------------------
 
     observacoes = []
@@ -600,11 +761,21 @@ def gerar_resumo_corretor(
     if (
         followup
         and
-        followup["status"] == "Respondido"
+        followup[
+            "status"
+        ] == "Respondido"
     ):
 
         observacoes.append(
             "retomou o contato após follow-up"
+        )
+
+
+    if intencao == "Investimento":
+
+        observacoes.append(
+            "perfil direcionado para análise "
+            "de investimento imobiliário"
         )
 
 
@@ -624,11 +795,49 @@ def gerar_resumo_corretor(
 
         resumo_comercial = (
             "Lead ainda em processo de "
-            "qualificação e coleta de informações."
+            "qualificação."
         )
 
 
-    resumo = f"""
+    # ----------------------------------------------
+    # INVESTIMENTO
+    # ----------------------------------------------
+
+    if intencao == "Investimento":
+
+        return f"""
+RESUMO DO LEAD
+
+Intenção: Investimento
+Ticket de investimento: {texto_orcamento}
+Perfil do investidor: {perfil_investidor}
+Retorno esperado: {texto_retorno}
+Urgência: {urgencia}
+
+QUALIFICAÇÃO
+
+Score: {texto_score}
+Classificação: {classificacao}
+
+OPORTUNIDADES APRESENTADAS
+
+{texto_imoveis}
+
+FOLLOW-UP
+
+{texto_followup}
+
+RESUMO COMERCIAL
+
+{resumo_comercial}
+""".strip()
+
+
+    # ----------------------------------------------
+    # COMPRA / ALUGUEL
+    # ----------------------------------------------
+
+    return f"""
 RESUMO DO LEAD
 
 Intenção: {intencao}
@@ -659,19 +868,6 @@ RESUMO COMERCIAL
 
 {resumo_comercial}
 """.strip()
-
-    return resumo
-
-
-# ==================================================
-# CONFIGURAÇÃO
-# ==================================================
-
-st.set_page_config(
-    page_title="Agente SDR Imobiliário",
-    page_icon="🏠",
-    layout="wide"
-)
 
 
 # ==================================================
@@ -754,6 +950,37 @@ if "resumo_corretor" not in st.session_state:
     st.session_state.resumo_corretor = None
 
 
+if "followups_automaticos" not in st.session_state:
+
+    st.session_state.followups_automaticos = 0
+
+
+# ==================================================
+# MOTOR AUTOMÁTICO DE FOLLOW-UP
+# ==================================================
+
+try:
+
+    quantidade_followups = (
+        processar_followups_automaticos(
+            horas=24,
+            modo_demo=False
+        )
+    )
+
+    if quantidade_followups > 0:
+
+        st.session_state.followups_automaticos += (
+            quantidade_followups
+        )
+
+except Exception:
+
+    # Follow-up não deve impedir
+    # a aplicação principal de funcionar.
+    pass
+
+
 # ==================================================
 # CABEÇALHO
 # ==================================================
@@ -766,6 +993,26 @@ st.caption(
     "Assistente inteligente para compra, "
     "aluguel e investimento em imóveis."
 )
+
+
+# ==================================================
+# AVISO DE FOLLOW-UP AUTOMÁTICO
+# ==================================================
+
+if (
+    st.session_state
+    .followups_automaticos
+    > 0
+):
+
+    st.success(
+        f"🤖 "
+        f"{st.session_state.followups_automaticos} "
+        f"follow-up(s) processado(s) "
+        f"automaticamente."
+    )
+
+    st.session_state.followups_automaticos = 0
 
 
 # ==================================================
@@ -782,6 +1029,7 @@ with st.sidebar:
         st.session_state.estado
     )
 
+
     if estado:
 
         perfil = estado.get(
@@ -789,55 +1037,138 @@ with st.sidebar:
             {}
         )
 
+        intencao = perfil.get(
+            "intencao"
+        )
+
+
         st.write(
             "**Intenção:**",
-            perfil.get(
-                "intencao"
-            )
+            intencao
             or "Não informada"
         )
 
-        st.write(
-            "**Região:**",
-            perfil.get(
-                "regiao_bairro"
-            )
-            or "Não informada"
-        )
 
-        st.write(
-            "**Tipo de imóvel:**",
-            perfil.get(
-                "tipo_imovel_interesse"
-            )
-            or "Não informado"
-        )
+        # ------------------------------------------
+        # INVESTIMENTO
+        # ------------------------------------------
 
-        st.write(
-            "**Orçamento:**",
-            formatar_reais(
-                perfil.get(
-                    "orcamento_ticket"
+        if intencao == "Investimento":
+
+            st.write(
+                "**Ticket de investimento:**",
+                formatar_reais(
+                    perfil.get(
+                        "orcamento_ticket"
+                    )
                 )
             )
-        )
 
-        st.write(
-            "**Quartos:**",
-            (
-                perfil.get("quartos")
-                if perfil.get("quartos") is not None
-                else "Não informado"
+            st.write(
+                "**Perfil do investidor:**",
+                perfil.get(
+                    "perfil_investidor"
+                )
+                or "Não informado"
             )
-        )
 
-        st.write(
-            "**Urgência:**",
-            perfil.get(
-                "urgencia"
+            retorno = perfil.get(
+                "retorno_esperado_pct"
             )
-            or "Não informada"
-        )
+
+            if retorno is not None:
+
+                st.write(
+                    "**Retorno esperado:**",
+                    f"{retorno}% ao ano"
+                )
+
+            else:
+
+                st.write(
+                    "**Retorno esperado:**",
+                    "Não informado"
+                )
+
+            st.write(
+                "**Urgência:**",
+                perfil.get(
+                    "urgencia"
+                )
+                or "Não informada"
+            )
+
+
+        # ------------------------------------------
+        # COMPRA / ALUGUEL
+        # ------------------------------------------
+
+        else:
+
+            st.write(
+                "**Região:**",
+                perfil.get(
+                    "regiao_bairro"
+                )
+                or "Não informada"
+            )
+
+            st.write(
+                "**Tipo de imóvel:**",
+                perfil.get(
+                    "tipo_imovel_interesse"
+                )
+                or "Não informado"
+            )
+
+            if intencao == "Aluguel":
+
+                st.write(
+                    "**Orçamento mensal:**",
+                    formatar_reais(
+                        perfil.get(
+                            "orcamento_ticket"
+                        )
+                    )
+                )
+
+            else:
+
+                st.write(
+                    "**Orçamento:**",
+                    formatar_reais(
+                        perfil.get(
+                            "orcamento_ticket"
+                        )
+                    )
+                )
+
+            st.write(
+                "**Quartos:**",
+                (
+                    perfil.get(
+                        "quartos"
+                    )
+                    if perfil.get(
+                        "quartos"
+                    )
+                    is not None
+                    else "Não informado"
+                )
+            )
+
+            st.write(
+                "**Urgência:**",
+                perfil.get(
+                    "urgencia"
+                )
+                or "Não informada"
+            )
+
+
+        # ------------------------------------------
+        # SCORE
+        # ------------------------------------------
 
         st.divider()
 
@@ -885,19 +1216,23 @@ with st.sidebar:
                 "**Classificação:** Pendente"
             )
 
+
     else:
 
         st.info(
             "O atendimento ainda não começou."
         )
 
+
     st.divider()
+
 
     st.button(
         "💬 Retomar última conversa",
         use_container_width=True,
         on_click=retomar_ultima_conversa
     )
+
 
     if st.button(
         "🔄 Nova conversa",
@@ -923,7 +1258,9 @@ if st.session_state.aviso_retomada:
         st.session_state.aviso_retomada
     )
 
-    if mensagem_aviso.startswith("✅"):
+    if mensagem_aviso.startswith(
+        "✅"
+    ):
 
         st.success(
             mensagem_aviso
@@ -967,16 +1304,18 @@ if pagina == "💬 Atendimento":
     )
 
 
-    # ----------------------------------------------
+    # ==================================================
     # HISTÓRICO
-    # ----------------------------------------------
+    # ==================================================
 
     for mensagem in (
         st.session_state.historico
     ):
 
         with st.chat_message(
-            mensagem["role"]
+            mensagem[
+                "role"
+            ]
         ):
 
             st.write(
@@ -986,35 +1325,60 @@ if pagina == "💬 Atendimento":
             )
 
 
-    # ----------------------------------------------
+    # ==================================================
     # IMÓVEIS
-    # ----------------------------------------------
+    # ==================================================
 
     estado = (
         st.session_state.estado
     )
 
+
     if (
         estado
-        and estado.get(
+        and
+        estado.get(
             "imoveis_ids"
         )
     ):
 
-        st.subheader(
-            "🏘️ Imóveis encontrados"
+        intencao_atual = (
+            estado.get(
+                "perfil",
+                {}
+            ).get(
+                "intencao"
+            )
         )
 
-        st.caption(
-            "Selecionamos opções compatíveis "
-            "com o seu perfil."
-        )
 
-        ids_imoveis = (
-            estado[
-                "imoveis_ids"
-            ]
-        )
+        if intencao_atual == "Investimento":
+
+            st.subheader(
+                "📈 Oportunidades encontradas"
+            )
+
+            st.caption(
+                "Oportunidades compatíveis "
+                "com o perfil de investimento."
+            )
+
+        else:
+
+            st.subheader(
+                "🏘️ Imóveis encontrados"
+            )
+
+            st.caption(
+                "Selecionamos opções compatíveis "
+                "com o seu perfil."
+            )
+
+
+        ids_imoveis = estado[
+            "imoveis_ids"
+        ]
+
 
         colunas = st.columns(
             len(
@@ -1022,107 +1386,114 @@ if pagina == "💬 Atendimento":
             )
         )
 
+
         for coluna, id_imovel in zip(
             colunas,
             ids_imoveis
         ):
 
-            imovel = (
-                buscar_imovel_por_id(
-                    id_imovel
-                )
+            imovel = buscar_imovel_por_id(
+                id_imovel
             )
 
-            if imovel:
+            if not imovel:
+                continue
 
-                with coluna:
 
-                    with st.container(
-                        border=True
+            with coluna:
+
+                with st.container(
+                    border=True
+                ):
+
+                    st.markdown(
+                        f"### 🏠 "
+                        f"{imovel['id_imovel']}"
+                    )
+
+                    st.write(
+                        f"**"
+                        f"{imovel['tipo_imovel']} "
+                        f"em {imovel['bairro']}"
+                        f"**"
+                    )
+
+                    st.write(
+                        f"🛏️ "
+                        f"{imovel['quartos']} "
+                        f"quarto(s)"
+                    )
+
+
+                    if imovel.get(
+                        "area_m2"
                     ):
 
-                        st.markdown(
-                            f"### 🏠 "
-                            f"{imovel['id_imovel']}"
-                        )
-
                         st.write(
-                            f"**"
-                            f"{imovel['tipo_imovel']} "
-                            f"em {imovel['bairro']}"
-                            f"**"
+                            f"📐 "
+                            f"{imovel['area_m2']} m²"
                         )
 
-                        st.write(
-                            f"🛏️ "
-                            f"{imovel['quartos']} "
-                            f"quarto(s)"
-                        )
 
-                        if imovel.get(
-                            "area_m2"
-                        ):
-
-                            st.write(
-                                f"📐 "
-                                f"{imovel['area_m2']} m²"
-                            )
-
-                        preco = float(
-                            imovel[
-                                "preco"
-                            ]
-                        )
-
-                        st.markdown(
-                            f"### "
-                            f"{formatar_reais(preco)}"
-                        )
-
-                        if st.button(
-                            "❤️ Tenho interesse",
-                            key=(
-                                "interesse_"
-                                + id_imovel
-                            ),
-                            use_container_width=True
-                        ):
-
-                            st.session_state[
-                                "imovel_selecionado"
-                            ] = id_imovel
-
-                            st.session_state[
-                                "mostrar_agendamento"
-                            ] = False
-
-                            st.session_state[
-                                "agendamento_confirmado"
-                            ] = None
-
-                            st.session_state[
-                                "resumo_corretor"
-                            ] = None
-
-                            st.rerun()
+                    preco = float(
+                        imovel[
+                            "preco"
+                        ]
+                    )
 
 
-    # ----------------------------------------------
+                    st.markdown(
+                        f"### "
+                        f"{formatar_reais(preco)}"
+                    )
+
+
+                    if st.button(
+                        "❤️ Tenho interesse",
+                        key=(
+                            "interesse_"
+                            + id_imovel
+                        ),
+                        use_container_width=True
+                    ):
+
+                        st.session_state[
+                            "imovel_selecionado"
+                        ] = id_imovel
+
+                        st.session_state[
+                            "mostrar_agendamento"
+                        ] = False
+
+                        st.session_state[
+                            "agendamento_confirmado"
+                        ] = None
+
+                        st.session_state[
+                            "resumo_corretor"
+                        ] = None
+
+                        st.rerun()
+
+
+    # ==================================================
     # IMÓVEL SELECIONADO
-    # ----------------------------------------------
+    # ==================================================
 
-    if st.session_state.imovel_selecionado:
+    if (
+        st.session_state
+        .imovel_selecionado
+    ):
 
         id_imovel = (
             st.session_state
             .imovel_selecionado
         )
 
-        imovel = (
-            buscar_imovel_por_id(
-                id_imovel
-            )
+        imovel = buscar_imovel_por_id(
+            id_imovel
         )
+
 
         if imovel:
 
@@ -1139,27 +1510,30 @@ if pagina == "💬 Atendimento":
                 f"em {imovel['bairro']}."
             )
 
-            col1, col2 = (
-                st.columns(2)
+
+            intencao = (
+                st.session_state
+                .estado
+                .get(
+                    "perfil",
+                    {}
+                )
+                .get(
+                    "intencao"
+                )
+                if st.session_state.estado
+                else None
             )
 
-            with col1:
+
+            # --------------------------------------
+            # INVESTIMENTO
+            # --------------------------------------
+
+            if intencao == "Investimento":
 
                 if st.button(
-                    "📅 Agendar visita",
-                    use_container_width=True
-                ):
-
-                    st.session_state[
-                        "mostrar_agendamento"
-                    ] = True
-
-                    st.rerun()
-
-            with col2:
-
-                if st.button(
-                    "👤 Falar com corretor",
+                    "📈 Falar com especialista em investimentos",
                     use_container_width=True
                 ):
 
@@ -1168,15 +1542,59 @@ if pagina == "💬 Atendimento":
                     ] = (
                         f"Tenho interesse no imóvel "
                         f"{id_imovel} e gostaria de "
-                        f"falar com um corretor."
+                        "falar com um especialista "
+                        "em investimentos imobiliários."
                     )
 
                     st.rerun()
 
 
-    # ----------------------------------------------
+            # --------------------------------------
+            # COMPRA / ALUGUEL
+            # --------------------------------------
+
+            else:
+
+                col1, col2 = (
+                    st.columns(2)
+                )
+
+
+                with col1:
+
+                    if st.button(
+                        "📅 Agendar visita",
+                        use_container_width=True
+                    ):
+
+                        st.session_state[
+                            "mostrar_agendamento"
+                        ] = True
+
+                        st.rerun()
+
+
+                with col2:
+
+                    if st.button(
+                        "👤 Falar com corretor",
+                        use_container_width=True
+                    ):
+
+                        st.session_state[
+                            "mensagem_automatica"
+                        ] = (
+                            f"Tenho interesse no imóvel "
+                            f"{id_imovel} e gostaria de "
+                            "falar com um corretor."
+                        )
+
+                        st.rerun()
+
+
+    # ==================================================
     # AGENDAMENTO
-    # ----------------------------------------------
+    # ==================================================
 
     if (
         st.session_state.imovel_selecionado
@@ -1193,29 +1611,24 @@ if pagina == "💬 Atendimento":
             .imovel_selecionado
         )
 
+
         with st.form(
             "form_agendamento"
         ):
 
-            data_visita = (
-                st.date_input(
-                    "Data da visita",
-                    min_value=date.today()
-                )
+            data_visita = st.date_input(
+                "Data da visita",
+                min_value=date.today()
             )
 
-            horario_visita = (
-                st.time_input(
-                    "Horário"
-                )
+            horario_visita = st.time_input(
+                "Horário"
             )
 
-            observacao = (
-                st.text_area(
-                    "Observação",
-                    placeholder=(
-                        "Ex.: irei acompanhado..."
-                    )
+            observacao = st.text_area(
+                "Observação",
+                placeholder=(
+                    "Ex.: irei acompanhado..."
                 )
             )
 
@@ -1225,6 +1638,7 @@ if pagina == "💬 Atendimento":
                     use_container_width=True
                 )
             )
+
 
             if confirmar:
 
@@ -1251,6 +1665,7 @@ if pagina == "💬 Atendimento":
                     )
                 )
 
+
                 if st.session_state.estado:
 
                     perfil = (
@@ -1264,27 +1679,26 @@ if pagina == "💬 Atendimento":
                         "aceitou_visita_reuniao"
                     ] = "Sim"
 
+
                     resultado_score = (
                         calcular_score(
                             perfil
                         )
                     )
 
+
                     st.session_state.estado[
                         "score"
-                    ] = (
-                        resultado_score[
-                            "score"
-                        ]
-                    )
+                    ] = resultado_score[
+                        "score"
+                    ]
 
                     st.session_state.estado[
                         "classificacao"
-                    ] = (
-                        resultado_score[
-                            "classificacao"
-                        ]
-                    )
+                    ] = resultado_score[
+                        "classificacao"
+                    ]
+
 
                     salvar_conversa(
                         id_conversa=(
@@ -1297,6 +1711,7 @@ if pagina == "💬 Atendimento":
                             st.session_state.estado
                         )
                     )
+
 
                 st.session_state[
                     "agendamento_confirmado"
@@ -1322,6 +1737,7 @@ if pagina == "💬 Atendimento":
                         observacao
                 }
 
+
                 st.session_state[
                     "mostrar_agendamento"
                 ] = False
@@ -1333,16 +1749,20 @@ if pagina == "💬 Atendimento":
                 st.rerun()
 
 
-    # ----------------------------------------------
+    # ==================================================
     # AGENDAMENTO CONFIRMADO
-    # ----------------------------------------------
+    # ==================================================
 
-    if st.session_state.agendamento_confirmado:
+    if (
+        st.session_state
+        .agendamento_confirmado
+    ):
 
         agendamento = (
             st.session_state
             .agendamento_confirmado
         )
+
 
         data_formatada = (
             datetime.strptime(
@@ -1356,9 +1776,11 @@ if pagina == "💬 Atendimento":
             )
         )
 
+
         st.success(
             "✅ Sua visita está agendada!"
         )
+
 
         st.info(
             f"📌 Código: "
@@ -1376,19 +1798,60 @@ if pagina == "💬 Atendimento":
 
 
     # ==================================================
-    # RESUMO PARA O CORRETOR
+    # RESUMO
     # ==================================================
 
     st.divider()
 
-    st.subheader(
-        "📋 Resumo para o Corretor"
+
+    estado_atual = (
+        st.session_state.estado
     )
 
-    st.caption(
-        "Consolidação automática das principais "
-        "informações comerciais do lead."
+
+    intencao_atual = (
+        estado_atual.get(
+            "perfil",
+            {}
+        ).get(
+            "intencao"
+        )
+        if estado_atual
+        else None
     )
+
+
+    if intencao_atual == "Investimento":
+
+        st.subheader(
+            "📋 Resumo para o Especialista"
+        )
+
+        st.caption(
+            "Consolidação automática do perfil "
+            "de investimento do lead."
+        )
+
+        texto_botao_resumo = (
+            "📋 Gerar resumo para o especialista"
+        )
+
+
+    else:
+
+        st.subheader(
+            "📋 Resumo para o Corretor"
+        )
+
+        st.caption(
+            "Consolidação automática das principais "
+            "informações comerciais do lead."
+        )
+
+        texto_botao_resumo = (
+            "📋 Gerar resumo para o corretor"
+        )
+
 
     if not st.session_state.estado:
 
@@ -1397,10 +1860,11 @@ if pagina == "💬 Atendimento":
             "o resumo do lead."
         )
 
+
     else:
 
         if st.button(
-            "📋 Gerar resumo para o corretor",
+            texto_botao_resumo,
             use_container_width=True
         ):
 
@@ -1415,6 +1879,7 @@ if pagina == "💬 Atendimento":
                 )
             )
 
+
         if st.session_state.resumo_corretor:
 
             st.success(
@@ -1426,17 +1891,29 @@ if pagina == "💬 Atendimento":
                 language=None
             )
 
-            st.caption(
-                "O resumo pode ser copiado "
-                "e encaminhado ao corretor responsável."
-            )
+
+            if intencao_atual == "Investimento":
+
+                st.caption(
+                    "O resumo pode ser encaminhado "
+                    "ao especialista em investimentos "
+                    "imobiliários."
+                )
+
+            else:
+
+                st.caption(
+                    "O resumo pode ser encaminhado "
+                    "ao corretor responsável."
+                )
 
 
-    # ----------------------------------------------
+    # ==================================================
     # MENSAGEM AUTOMÁTICA
-    # ----------------------------------------------
+    # ==================================================
 
     mensagem_automatica = None
+
 
     if (
         "mensagem_automatica"
@@ -1450,9 +1927,9 @@ if pagina == "💬 Atendimento":
         )
 
 
-    # ----------------------------------------------
+    # ==================================================
     # CHAT
-    # ----------------------------------------------
+    # ==================================================
 
     mensagem_digitada = (
         st.chat_input(
@@ -1460,15 +1937,16 @@ if pagina == "💬 Atendimento":
         )
     )
 
+
     mensagem_usuario = (
         mensagem_automatica
         or mensagem_digitada
     )
 
 
-    # ----------------------------------------------
+    # ==================================================
     # PROCESSAMENTO IA
-    # ----------------------------------------------
+    # ==================================================
 
     if mensagem_usuario:
 
@@ -1478,9 +1956,10 @@ if pagina == "💬 Atendimento":
             .copy()
         )
 
-        id_mensagem_usuario = (
-            str(uuid4())
+        id_mensagem_usuario = str(
+            uuid4()
         )
+
 
         entrada = {
 
@@ -1508,6 +1987,7 @@ if pagina == "💬 Atendimento":
                 .isoformat()
         }
 
+
         with st.spinner(
             "Analisando sua solicitação..."
         ):
@@ -1519,6 +1999,7 @@ if pagina == "💬 Atendimento":
                 )
             )
 
+
         st.session_state.estado = (
             resultado[
                 "estado_atualizado"
@@ -1527,6 +2008,11 @@ if pagina == "💬 Atendimento":
 
         st.session_state.resumo_corretor = None
 
+
+        # ------------------------------------------
+        # APRESENTAÇÃO DE IMÓVEIS
+        # ------------------------------------------
+
         if (
             resultado.get(
                 "acao"
@@ -1534,11 +2020,39 @@ if pagina == "💬 Atendimento":
             == "apresentar_imoveis"
         ):
 
-            resposta_exibida = (
-                "Encontrei algumas opções "
-                "compatíveis com o seu perfil. "
-                "Veja os imóveis abaixo 👇"
+            intencao_resultado = (
+                st.session_state
+                .estado
+                .get(
+                    "perfil",
+                    {}
+                )
+                .get(
+                    "intencao"
+                )
             )
+
+
+            if (
+                intencao_resultado
+                == "Investimento"
+            ):
+
+                resposta_exibida = (
+                    "Encontrei algumas oportunidades "
+                    "compatíveis com o seu perfil "
+                    "de investimento. "
+                    "Veja abaixo 👇"
+                )
+
+            else:
+
+                resposta_exibida = (
+                    "Encontrei algumas opções "
+                    "compatíveis com o seu perfil. "
+                    "Veja os imóveis abaixo 👇"
+                )
+
 
         else:
 
@@ -1548,6 +2062,11 @@ if pagina == "💬 Atendimento":
                 ]
             )
 
+
+        # ------------------------------------------
+        # HISTÓRICO
+        # ------------------------------------------
+
         st.session_state.historico.append(
             {
                 "role": "user",
@@ -1556,15 +2075,19 @@ if pagina == "💬 Atendimento":
             }
         )
 
+
         st.session_state.historico.append(
             {
-                "role":
-                    "assistant",
-
+                "role": "assistant",
                 "content":
                     resposta_exibida
             }
         )
+
+
+        # ------------------------------------------
+        # SALVAR CONVERSA
+        # ------------------------------------------
 
         salvar_conversa(
             id_conversa=(
@@ -1577,6 +2100,11 @@ if pagina == "💬 Atendimento":
                 st.session_state.estado
             )
         )
+
+
+        # ------------------------------------------
+        # SALVAR USUÁRIO
+        # ------------------------------------------
 
         salvar_mensagem(
             id_mensagem=(
@@ -1591,9 +2119,14 @@ if pagina == "💬 Atendimento":
             )
         )
 
+
+        # ------------------------------------------
+        # SALVAR ASSISTENTE
+        # ------------------------------------------
+
         salvar_mensagem(
-            id_mensagem=(
-                str(uuid4())
+            id_mensagem=str(
+                uuid4()
             ),
             id_conversa=(
                 st.session_state.id_conversa
@@ -1603,6 +2136,7 @@ if pagina == "💬 Atendimento":
                 resposta_exibida
             )
         )
+
 
         st.rerun()
 
@@ -1624,7 +2158,7 @@ elif pagina == "📊 Dashboard":
 
 
     # ==================================================
-    # COLETA DAS MÉTRICAS
+    # MÉTRICAS
     # ==================================================
 
     metricas = (
@@ -1640,64 +2174,55 @@ elif pagina == "📊 Dashboard":
     )
 
 
-    # ==================================================
-    # INDICADORES EXECUTIVOS
-    # ==================================================
+    total_leads = metricas[
+        "leads"
+    ]
 
-    total_leads = (
-        metricas[
-            "leads"
-        ]
-    )
+    total_quentes = classificacao[
+        "quentes"
+    ]
 
-    total_quentes = (
-        classificacao[
-            "quentes"
-        ]
-    )
-
-    total_agendamentos = (
-        metricas[
-            "agendamentos"
-        ]
-    )
+    total_agendamentos = metricas[
+        "agendamentos"
+    ]
 
 
     percentual_quentes = (
+
         round(
-            (
-                total_quentes
-                / total_leads
-                * 100
-            ),
+            total_quentes
+            / total_leads
+            * 100,
             1
         )
+
         if total_leads
+
         else 0
     )
 
 
     taxa_agendamento = (
+
         round(
-            (
-                total_agendamentos
-                / total_leads
-                * 100
-            ),
+            total_agendamentos
+            / total_leads
+            * 100,
             1
         )
+
         if total_leads
+
         else 0
     )
 
 
+    # ==================================================
+    # INDICADORES EXECUTIVOS
+    # ==================================================
+
     st.subheader(
         "📈 Indicadores Executivos"
-    )
-
-    st.caption(
-        "Visão rápida do desempenho comercial "
-        "dos atendimentos realizados pela aplicação."
     )
 
 
@@ -1744,16 +2269,18 @@ elif pagina == "📊 Dashboard":
 
 
     # ==================================================
-    # MÉTRICAS GERAIS
+    # VISÃO GERAL
     # ==================================================
 
     st.subheader(
         "📌 Visão Geral"
     )
 
+
     col1, col2, col3, col4 = (
         st.columns(4)
     )
+
 
     with col1:
 
@@ -1764,6 +2291,7 @@ elif pagina == "📊 Dashboard":
             ]
         )
 
+
     with col2:
 
         st.metric(
@@ -1772,6 +2300,7 @@ elif pagina == "📊 Dashboard":
                 "conversas"
             ]
         )
+
 
     with col3:
 
@@ -1782,6 +2311,7 @@ elif pagina == "📊 Dashboard":
             ]
         )
 
+
     with col4:
 
         st.metric(
@@ -1790,6 +2320,7 @@ elif pagina == "📊 Dashboard":
                 "agendamentos"
             ]
         )
+
 
     st.divider()
 
@@ -1802,9 +2333,11 @@ elif pagina == "📊 Dashboard":
         "🎯 Qualificação dos Leads"
     )
 
+
     col1, col2, col3, col4 = (
         st.columns(4)
     )
+
 
     with col1:
 
@@ -1815,6 +2348,7 @@ elif pagina == "📊 Dashboard":
             ]
         )
 
+
     with col2:
 
         st.metric(
@@ -1824,6 +2358,7 @@ elif pagina == "📊 Dashboard":
             ]
         )
 
+
     with col3:
 
         st.metric(
@@ -1832,6 +2367,7 @@ elif pagina == "📊 Dashboard":
                 "frios"
             ]
         )
+
 
     with col4:
 
@@ -1866,6 +2402,7 @@ elif pagina == "📊 Dashboard":
         dados_classificacao
     )
 
+
     st.divider()
 
 
@@ -1879,8 +2416,9 @@ elif pagina == "📊 Dashboard":
 
     st.caption(
         "Distribuição dos leads conforme "
-        "o objetivo identificado no atendimento."
+        "o objetivo identificado."
     )
+
 
     distribuicao_intencao = (
         obter_distribuicao_intencao()
@@ -1960,6 +2498,7 @@ elif pagina == "📊 Dashboard":
         dados_intencao
     )
 
+
     st.divider()
 
 
@@ -1971,9 +2510,11 @@ elif pagina == "📊 Dashboard":
         "🔥 Leads Prioritários"
     )
 
+
     leads_prioritarios = (
         listar_leads_prioritarios()
     )
+
 
     if leads_prioritarios:
 
@@ -1989,176 +2530,138 @@ elif pagina == "📊 Dashboard":
             "Nenhum lead qualificado ainda."
         )
 
+
     st.divider()
 
 
     # ==================================================
-    # FOLLOW-UP
+    # FOLLOW-UP AUTOMÁTICO
     # ==================================================
 
     st.subheader(
-        "🔔 Follow-up de Leads"
+        "🤖 Follow-up Automático"
     )
 
     st.caption(
-        "Conversas interrompidas podem ser "
-        "retomadas mantendo o contexto."
-    )
-
-    modo_demo = st.checkbox(
-        "🧪 Modo demonstração",
-        help=(
-            "Permite demonstrar o follow-up "
-            "sem aguardar 24 horas."
-        )
+        "O sistema identifica automaticamente "
+        "conversas sem interação há 24 horas "
+        "e envia uma mensagem contextual."
     )
 
 
-    pendentes = (
+    pendentes_reais = (
         listar_followups_pendentes(
             horas=24,
-            modo_demo=modo_demo
+            modo_demo=False
         )
     )
 
 
-    if not pendentes:
+    if pendentes_reais:
 
-        st.success(
-            "Nenhum follow-up pendente."
+        st.warning(
+            f"Existem "
+            f"{len(pendentes_reais)} "
+            f"conversa(s) aguardando processamento."
         )
 
     else:
 
-        st.write(
-            f"**{len(pendentes)} "
-            f"conversa(s) elegível(is) "
-            f"para follow-up.**"
+        st.success(
+            "Nenhum follow-up automático pendente."
         )
 
 
-        for item in pendentes:
+    # ==================================================
+    # MODO DEMONSTRAÇÃO
+    # ==================================================
 
-            estado_followup = (
-                item[
-                    "estado"
-                ]
+    st.markdown(
+        "### 🧪 Demonstração"
+    )
+
+    st.caption(
+        "Use este modo para demonstrar a automação "
+        "sem esperar 24 horas."
+    )
+
+
+    modo_demo = st.checkbox(
+        "Ativar modo demonstração"
+    )
+
+
+    if modo_demo:
+
+        pendentes_demo = (
+            listar_followups_pendentes(
+                horas=24,
+                modo_demo=True
+            )
+        )
+
+
+        if pendentes_demo:
+
+            st.info(
+                f"{len(pendentes_demo)} "
+                f"conversa(s) podem receber "
+                f"follow-up agora."
             )
 
-            perfil_followup = (
-                estado_followup.get(
-                    "perfil",
-                    {}
-                )
-            )
 
-
-            with st.container(
-                border=True
+            if st.button(
+                "⚙️ Processar follow-ups agora",
+                use_container_width=True,
+                type="primary"
             ):
 
-                col1, col2 = (
-                    st.columns(
-                        [3, 1]
+                quantidade = (
+                    processar_followups_automaticos(
+                        horas=24,
+                        modo_demo=True
                     )
                 )
 
 
-                with col1:
+                if quantidade > 0:
 
-                    st.write(
-                        "**Lead:**",
-                        item[
-                            "id_lead"
-                        ]
+                    st.success(
+                        f"✅ {quantidade} "
+                        f"follow-up(s) enviado(s) "
+                        f"automaticamente."
                     )
 
-                    st.write(
-                        "**Intenção:**",
-                        perfil_followup.get(
-                            "intencao"
-                        )
-                        or "Não definida"
-                    )
+                else:
 
-                    st.write(
-                        "**Região:**",
-                        perfil_followup.get(
-                            "regiao_bairro"
-                        )
-                        or "Não definida"
-                    )
-
-                    st.write(
-                        "**Última interação:**",
-                        formatar_data_hora(
-                            item[
-                                "ultima_interacao"
-                            ]
-                        )
+                    st.info(
+                        "Nenhum follow-up precisava "
+                        "ser enviado."
                     )
 
 
-                with col2:
-
-                    if st.button(
-                        "📨 Enviar follow-up",
-                        key=(
-                            "followup_"
-                            + item[
-                                "id_conversa"
-                            ]
-                        ),
-                        use_container_width=True
-                    ):
-
-                        mensagem = (
-                            gerar_mensagem_followup(
-                                estado_followup
-                            )
-                        )
-
-                        registrar_followup(
-                            id_lead=(
-                                item[
-                                    "id_lead"
-                                ]
-                            ),
-                            id_conversa=(
-                                item[
-                                    "id_conversa"
-                                ]
-                            ),
-                            mensagem=(
-                                mensagem
-                            )
-                        )
-
-                        salvar_mensagem(
-                            id_mensagem=(
-                                str(
-                                    uuid4()
-                                )
-                            ),
-                            id_conversa=(
-                                item[
-                                    "id_conversa"
-                                ]
-                            ),
-                            role="assistant",
-                            content=(
-                                mensagem
-                            )
-                        )
-
-                        st.rerun()
+                st.rerun()
 
 
-    # ==================================================
-    # INDICADORES DE FOLLOW-UP
-    # ==================================================
+        else:
+
+            st.success(
+                "Nenhuma conversa disponível "
+                "para demonstração."
+            )
+
 
     st.divider()
+
+
+    # ==================================================
+    # MÉTRICAS FOLLOW-UP
+    # ==================================================
+
+    metricas_followup = (
+        obter_metricas_followup()
+    )
+
 
     st.subheader(
         "📨 Indicadores de Follow-up"
@@ -2199,17 +2702,18 @@ elif pagina == "📊 Dashboard":
 
 
     # ==================================================
-    # HISTÓRICO DE FOLLOW-UP
+    # HISTÓRICO
     # ==================================================
 
     historico_followups = (
         listar_followups()
     )
 
+
     if historico_followups:
 
         st.markdown(
-            "### Histórico"
+            "### 📋 Histórico de Follow-ups"
         )
 
 
@@ -2229,19 +2733,16 @@ elif pagina == "📊 Dashboard":
                 with col_info:
 
                     st.markdown(
-                        f"### Follow-up "
+                        f"#### Follow-up "
                         f"#{followup['id']}"
                     )
+
 
                     st.write(
                         "**Lead:**",
                         followup[
                             "id_lead"
                         ]
-                    )
-
-                    st.write(
-                        "**Status do follow-up:**"
                     )
 
 
@@ -2253,13 +2754,13 @@ elif pagina == "📊 Dashboard":
                     ):
 
                         st.success(
-                            "📨 Enviado  →  ✅ Respondido"
+                            "📨 Enviado → ✅ Respondido"
                         )
 
                     else:
 
                         st.warning(
-                            "📨 Enviado  →  "
+                            "📨 Enviado → "
                             "⏳ Aguardando resposta"
                         )
 
@@ -2274,11 +2775,9 @@ elif pagina == "📊 Dashboard":
                     )
 
 
-                    if (
-                        followup[
-                            "respondido_em"
-                        ]
-                    ):
+                    if followup[
+                        "respondido_em"
+                    ]:
 
                         st.write(
                             "**Respondido em:**",
@@ -2298,7 +2797,7 @@ elif pagina == "📊 Dashboard":
 
 
                     with st.expander(
-                        "📩 Ver mensagem enviada"
+                        "📩 Ver mensagem"
                     ):
 
                         st.write(
@@ -2313,7 +2812,7 @@ elif pagina == "📊 Dashboard":
                     st.button(
                         "💬 Abrir conversa",
                         key=(
-                            "abrir_"
+                            "abrir_followup_"
                             + str(
                                 followup[
                                     "id"
@@ -2321,9 +2820,7 @@ elif pagina == "📊 Dashboard":
                             )
                         ),
                         use_container_width=True,
-                        on_click=(
-                            abrir_conversa
-                        ),
+                        on_click=abrir_conversa,
                         args=(
                             followup[
                                 "id_conversa"
@@ -2338,6 +2835,7 @@ elif pagina == "📊 Dashboard":
             "Nenhum follow-up enviado ainda."
         )
 
+
     st.divider()
 
 
@@ -2349,9 +2847,11 @@ elif pagina == "📊 Dashboard":
         "📅 Últimos agendamentos"
     )
 
+
     agendamentos = (
         listar_ultimos_agendamentos()
     )
+
 
     if agendamentos:
 
@@ -2367,6 +2867,7 @@ elif pagina == "📊 Dashboard":
             "Nenhum agendamento registrado."
         )
 
+
     st.divider()
 
 
@@ -2378,9 +2879,11 @@ elif pagina == "📊 Dashboard":
         "💬 Conversas recentes"
     )
 
+
     conversas = (
         listar_conversas_recentes()
     )
+
 
     if conversas:
 
