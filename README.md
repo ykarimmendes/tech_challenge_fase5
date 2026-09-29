@@ -697,11 +697,7 @@ Com o ambiente virtual ativado, instale as dependências do projeto:
 
 ```bash
 pip install -r requirements.txt
-
-E na seção **Estrutura do Repositório**, acrescentaria também:
-
-```text
-├── requirements.txt 
+```
 
 ---
 
