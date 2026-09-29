@@ -889,6 +889,8 @@ A arquitetura permite evoluções como:
 
 ---
 
+# Demonstração funcional (vídeo): https://youtu.be/YREtXLJSvH8
+
 # 🎬 Roteiro de Demonstração
 
 Uma demonstração funcional pode seguir esta sequência:
