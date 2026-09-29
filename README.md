@@ -699,12 +699,6 @@ Com o ambiente virtual ativado, instale as dependências do projeto:
 pip install -r requirements.txt
 ```
 
-E na seção **Estrutura do Repositório**, acrescentaria também:
-
-```bash
-├── requirements.txt
-```
-
 ---
 
 # 🤖 Instalação do Ollama
