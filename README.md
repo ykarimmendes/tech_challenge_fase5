@@ -31,7 +31,7 @@ A solução permite:
 
 | Integrante |Responsabilidade Principal |
 |---|---|
-| karim Mendes Yehia - RM 369430 - karim.mendes@gmail.com  | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
+| Karim Mendes Yehia - RM 369430 - karim.mendes@gmail.com  | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
 | Michele Rodrigues Hempel Lima - RM 369176 - engmichelerodrigues@gmail.com | Interface Streamlit, integração dos módulos, SQLite, follow-up, dashboard e consolidação da demonstração |
 | Wellington Fernandes do Carmo - RM 369631 - wellingtonfernandes@energisa.com.br | Fluxos funcionais, regras conversacionais, cenários, testes e documentação |
 | Rúben Gonçalves Rocha - RM 370092 - ruben@energisa.com.br | Bases de dados, qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
@@ -636,6 +636,7 @@ tech_challenge_fase5/
 ├── schemas.py
 ├── scoring.py
 ├── README.md
+├── requirements.txt
 ├── .env.example
 ├── .gitignore
 │
