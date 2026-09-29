@@ -29,12 +29,12 @@ A solução permite:
 
 ## 👥 Integrantes e Responsabilidades
 
-| Integrante | Responsabilidade Principal |
+| Integrante | E-mail | RM |Responsabilidade Principal |
 |---|---|
-| karim Mendes Yehia | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
-| Michele Rodrigues Hempel Lima | Interface Streamlit, integração dos módulos, SQLite, follow-up, dashboard e consolidação da demonstração |
-| Wellington Fernandes do Carmo | Fluxos funcionais, regras conversacionais, cenários, testes e documentação |
-| Rúben Gonçalves Rocha | Bases de dados, qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
+| karim Mendes Yehia | karim.mendes@gmail.com | 369430 | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
+| Michele Rodrigues Hempel Lima | engmichelerodrigues@gmail.com | 369176 | Interface Streamlit, integração dos módulos, SQLite, follow-up, dashboard e consolidação da demonstração |
+| Wellington Fernandes do Carmo | wellingtonfernandes@energisa.com.br | 369631 | Fluxos funcionais, regras conversacionais, cenários, testes e documentação |
+| Rúben Gonçalves Rocha | ruben@energisa.com.br | 370092 | Bases de dados, qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
 
 ---
 
