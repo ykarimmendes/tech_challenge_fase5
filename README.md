@@ -701,8 +701,7 @@ pip install -r requirements.txt
 E na seção **Estrutura do Repositório**, acrescentaria também:
 
 ```text
-├── requirements.txt streamlit scikit-learn
-```
+├── requirements.txt 
 
 ---
 
