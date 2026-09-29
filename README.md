@@ -799,6 +799,7 @@ O teste de integração com Ollama depende de:
 | `docs/organizacao/matriz_rastreabilidade.xlsx` | Rastreabilidade dos requisitos |
 | `docs/testes/criterios_de_aceite.md` | Critérios de aceite |
 | `docs/testes/roteiro_validacao_demo.md` | Roteiro de validação |
+| `docs/testes/Casos_de_Teste_e_Resultados.xlsx` | Casos de Testes e Evidência de Testes |
 
 ---
 
