@@ -693,10 +693,15 @@ source .venv/bin/activate
 
 ## 3. Instalar as dependências da POC
 
-Como o repositório ainda não possui um `requirements.txt` versionado, instale ao menos as dependências externas utilizadas pela aplicação:
+Com o ambiente virtual ativado, instale as dependências do projeto:
 
 ```bash
-pip install streamlit scikit-learn
+pip install -r requirements.txt
+
+E na seção **Estrutura do Repositório**, acrescentaria também:
+
+```text
+├── requirements.txt streamlit scikit-learn
 ```
 
 ---
