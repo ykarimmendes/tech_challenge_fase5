@@ -31,12 +31,10 @@ A solução permite:
 
 | Integrante | Responsabilidade Principal |
 |---|---|
-| Karim | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
-| Michele | Interface Streamlit, integração dos módulos, SQLite, follow-up, dashboard e consolidação da demonstração |
-| Wellington | Fluxos funcionais, regras conversacionais, cenários, testes e documentação |
-| Rúben | Bases de dados, qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
-
-> Antes da entrega final, incluir os nomes completos e RMs dos integrantes.
+| karim Mendes Yehia | Núcleo de IA, integração com LLM, prompts, estado e contrato do agente |
+| Michele Rodrigues Hempel Lima | Interface Streamlit, integração dos módulos, SQLite, follow-up, dashboard e consolidação da demonstração |
+| Wellington Fernandes do Carmo | Fluxos funcionais, regras conversacionais, cenários, testes e documentação |
+| Rúben Gonçalves Rocha | Bases de dados, qualificação, scoring, dashboard e apoio ao fluxo de agendamento |
 
 ---
 
